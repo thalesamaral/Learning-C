@@ -12,7 +12,7 @@ número de maçãs compradas, calcule e imprim1a o custo total da compra.
 int main(void){
 //Declarações
 	int numApple;
-	float custoTotal;
+	float custoTotal=0;
 	
 //Instruções
 	printf("Quantas macas deseja comprar?\n");
@@ -21,7 +21,7 @@ int main(void){
 	if(numApple < 12)
 		custoTotal += 1.30*numApple;
 	else
-		custoTotal += 1*numApple;
+		custoTotal += numApple;
 		
 	printf("\nO custo total de compra foi: %.2f",custoTotal);
 	
