@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "01/12/2021"
+//  Data....: "03/08/2024"
 /*	Objetivo:
 Faça um programa em C que receba o número de eleitores de um município, o número de 
 votos em branco, nulos e válidos de uma eleição, calcule e imprima o percentual que cada 

@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "01/12/2021"
+//  Data....: "03/08/2024"
 /*	Objetivo:
 Faça um programa em C que receba a quantidade de moedas, calcule e imprima o valor 
 total em reais. Considere moedas de 1, 5, 10, 25 e 50 centavos e moeda de 1 real.
