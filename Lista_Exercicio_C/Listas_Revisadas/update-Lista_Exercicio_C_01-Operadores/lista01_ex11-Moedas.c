@@ -1,19 +1,20 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "01/12/2021"
-/*	Objetivo: receba a quantidade de moedas, calcule e imprima o valor total em reais. 
-Considere moedas de 1, 5, 10, 25 e 50 centavos e moeda de 1 real.
+/*	Objetivo:
+Faça um programa em C que receba a quantidade de moedas, calcule e imprima o valor 
+total em reais. Considere moedas de 1, 5, 10, 25 e 50 centavos e moeda de 1 real.
 */
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(void){
-//Variaveis
+//Declarações
 	int moeda;
 	float valorTotal;
 	int qntMoedas, i;
 	
-//Instru��es
+//Instruções
 	//printf("");
 	//scanf("%",&);
 	printf("Quantidade de moedas: ");

@@ -1,17 +1,17 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "30/11/2021"
-/*  Objetivo: receba um número inteiro e imprima
-o seu antecessor, o número lido e seu sucessor.
+/*  Objetivo:
+FaÃ§a um programa em C que receba um nÃºmero inteiro e imprima o seu antecessor, o nÃºmero lido e seu sucessor.
 */
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(void){
-//Variaveis
+//DeclaraÃ§Ãµes
 	int num[2], i;
 	
-//Instruções
+//InstruÃ§Ãµes
 	printf("Digite um numero: ");
 	scanf("%d",&num[1]);
 	

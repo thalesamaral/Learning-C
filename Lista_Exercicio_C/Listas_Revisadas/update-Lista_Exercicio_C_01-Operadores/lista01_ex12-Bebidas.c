@@ -1,15 +1,16 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "01/12/2021"
-/*	Objetivo: Imagine a seguinte situaÁ„o: uma marca de bebidas fornece seus produtos em lata de 350ml,
-garrafa de 600ml e garrafa de 2litros. receba a quantidade comprada de cada tipo,
-calcule e imprima o total de litros comprados.
+/*	Objetivo:
+Imagine a seguinte situa√ß√£o: uma marca de bebidas fornece seus produtos em lata de 350ml, 
+garrafa de 600ml e garrafa de 2litros. Fa√ßa um programa em C que receba a quantidade 
+comprada de cada tipo, calcule e imprima o total de litros comprados.
 */
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(void){
-//Variaveis
+//Declara√ß√µes
 	int opcao;
 	int qnt;
 	int i;
@@ -17,7 +18,7 @@ int main(void){
 	char resp;
 	float litroTotal;
 	
-//InstruÁıes
+//Instru√ß√µes
 	//printf("");
 	//scanf("%",&);
 	do{

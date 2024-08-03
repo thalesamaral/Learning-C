@@ -1,19 +1,20 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "30/11/2021"
-/*	Objetivo:  leia três notas de um aluno, calcule e imprima a média do aluno.
-Utilize média ponderada com os pesos 2, 3 e 5.
+/*	Objetivo:
+FaÃ§a um programa em C que leia trÃªs notas de um aluno, calcule e imprima a mÃ©dia do aluno.
+Utilize mÃ©dia ponderada com os pesos 2, 3 e 5.
 */
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(void){
-//Variaveis
+//DeclaraÃ§Ãµes
 	float nota[2];
 	float media=0;
 	int i;
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	
