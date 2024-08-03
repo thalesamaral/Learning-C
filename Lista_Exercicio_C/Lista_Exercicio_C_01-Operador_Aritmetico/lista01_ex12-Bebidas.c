@@ -3,8 +3,8 @@
 //  Data....: "01/12/2021"
 /*	Objetivo:
 Imagine a seguinte situação: uma marca de bebidas fornece seus produtos em lata de 350ml, 
-garrafa de 600ml e garrafa de 2litros. Faça um programa em C que receba a quantidade 
-comprada de cada tipo, calcule e imprima o total de litros comprados.
+garrafa de 600ml e garrafa de 2 litros.
+Faça um programa em C que receba a quantidade comprada de cada tipo, calcule e imprima o total de litros comprados.
 */
 #include<stdio.h>
 #include<stdlib.h>
