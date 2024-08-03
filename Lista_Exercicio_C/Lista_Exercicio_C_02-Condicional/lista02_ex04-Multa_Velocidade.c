@@ -9,17 +9,18 @@ caso contrário (velocidade igual ou menor que 80 km/h) imprimir que O USUÁRIO 
 */
 #include<stdio.h>
 #include<stdlib.h>
+#define Limite_Rodovia 80
 
 int main(void){
 //Declarações
-	int speed;
+	float speed;
 	
 //Instruções
 	printf("Informe a velocidade do motorista em Km/h: ");
-	scanf("%d",&speed);
-	printf("\n%d Km/h\n",speed);
+	scanf("%f",&speed);
+	printf("\n%.2f Km/h\n",speed);
 	
-	if(speed > 80)
+	if(speed > Limite_Rodovia)
 		printf("O USUARIO ULTRAPASSOU A VELOCIDADE MAXIMA E SERA MULTADO");
 	else
 		printf("O USUARIO ESTA DENTRO DO LIMITE MAXIMO DE VELOCIDADE.");
