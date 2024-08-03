@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "05/08/2022"
+//  Data....: "03/08/2024"
 /*	Objetivo:
 Considere que a jornada de trabalho semanal de um funcionário é de 40 horas e que se o 
 funcionário trabalhar mais de 40 horas receberá hora extra, cujo cálculo é o valor da hora 

@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "01/12/2021"
+//  Data....: "03/08/2024"
 /*	Objetivo:
 Faça um programa em C que receba o sexo de uma pessoa, informado como "m" ou "f", 
 verifique e imprima por extenso: masculino ou feminino.

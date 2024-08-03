@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "01/12/2021"
+//  Data....: "03/08/2024"
 /*	Objetivo: 
 Considerando o cálculo do valor de uma conta de água, faça um programa em C que receba
 o tipo de consumidor (residencial, comercial ou industrial) e seu consumo de água em metros

@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "01/12/2021"
+//  Data....: "03/08/2024"
 /*	Objetivo:
 Faça um programa em C que receba o salário bruto de um funcionário, calcule e imprima o 
 seu salário líquido utilizando a seguinte regra:

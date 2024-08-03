@@ -12,19 +12,20 @@ o critério abaixo:
 */
 #include<stdio.h>
 #include<stdlib.h>
+#define Salario_Base 1050.00
 
 int main(void){
 //Declarações
-	float salario=1050;
+	float salario = Salario_Base;
 	int pecas;
 	
 //Instruções
-	printf("Salario Base %.2fR$\n\n",salario);
+	printf("Salario Base %.2fR$\n\n",Salario_Base);
 	printf("Numero de pecas fabricadas no mes: ");
 	scanf("%d",&pecas);
 	
 	if(pecas <= 500)
-		printf("\nVoce recebera o Salario Base: 1050,00 R$");
+		printf("\nVoce recebera o Salario Base: %.2fR$",Salario_Base);
 	else if(pecas <= 750){
 		salario += (pecas-500)*0.50;
 		printf("\nVoce recebera: %.2fR$",salario);

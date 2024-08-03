@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "01/12/2021"
+//  Data....: "03/08/2024"
 /*	Objetivo:
 Faça um programa em C que receba a velocidade de um motorista na rodovia.
 Caso esta velocidade seja maior que 80 quilômetros por hora, 

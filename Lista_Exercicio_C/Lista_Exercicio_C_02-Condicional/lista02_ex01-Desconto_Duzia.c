@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "01/12/2021"
+//  Data....: "03/08/2024"
 /*	Objetivo:
 Considere que em uma banca de feira, as maçãs custam R$ 1,30/cada, mas se for comprado 
 a partir de uma dúzia, baixam para R$ 1,00/cada. Faça um programa em C que receba o 
