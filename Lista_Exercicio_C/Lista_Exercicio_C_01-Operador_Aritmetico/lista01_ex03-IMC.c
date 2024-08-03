@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "05/08/2022"
+//  Data....: "03/08/2024"
 /*	Objetivo:
 Faça um programa em C para obter o peso de uma pessoa e informar ao usuário o valor do seu IMC (Índice de Massa Corporal).
 Sabe-se que IMC é dado pela divisão do peso pela altura ao quadrado.

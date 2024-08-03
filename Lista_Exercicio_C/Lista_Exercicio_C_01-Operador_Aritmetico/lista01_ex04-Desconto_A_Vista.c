@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "05/08/2022"
+//  Data....: "03/08/2024"
 /*	Objetivo:
 Faça um programa em C que leia o valor de uma determinada mercadoria de uma loja.
 Sabendo que o desconto para pagamento à vista é de 10% sobre o valor total, calcule o valor a ser pago à vista.
