@@ -1,15 +1,16 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "01/12/2021"
-/*	Objetivo:  receba o número de eleitores de um município, o número de votos em branco, 
-nulos e válidos de uma eleição, calcule e imprima o percentual que cada um representa em relação ao
-número de eleitores do município.
+/*	Objetivo:
+FaÃ§a um programa em C que receba o nÃºmero de eleitores de um municÃ­pio, o nÃºmero de 
+votos em branco, nulos e vÃ¡lidos de uma eleiÃ§Ã£o, calcule e imprima o percentual que cada 
+um representa em relaÃ§Ã£o ao nÃºmero de eleitores do municÃ­pio.
 */
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(void){
-//Variaveis
+//DeclaraÃ§Ãµes
 	int i;
 	int opcao;
 	int numEleitores;
@@ -17,7 +18,7 @@ int main(void){
 	float vBranco=0;
 	float vNulo=0;
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	

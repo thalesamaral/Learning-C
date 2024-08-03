@@ -1,17 +1,17 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "30/11/2021"
-/*	Objetivo:  receba as dimensões de um retângulo (base e altura),
-calcule e imprima a área deste retângulo.
+/*	Objetivo:
+FaÃ§a um programa em C que receba as dimensÃµes de um retÃ¢ngulo (base e altura), calcule e imprima a Ã¡rea deste retÃ¢ngulo.
 */
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(void){
-//Variaveis
+//DeclaraÃ§Ãµes
 	int base, altura;
 	
-//Instruções
+//InstruÃ§Ãµes
 	printf("Digite a base do retangulo: ");
 	scanf("%d",&base);
 	
@@ -20,7 +20,7 @@ int main(void){
 	
 	printf("A area do retangulo: %d\n\n", base*altura);
 	
-	//BONÛS: BORDA DO RETÂNGULO
+	//BONï¿½S: BORDA DO RETï¿½NGULO
 	for(int i=1; i<=altura; i++){
 		for(int j=1; j<=base; j++){
 			if(i == 1){
@@ -43,7 +43,7 @@ int main(void){
 				if(j == 1 || j == base){
 					printf("%c",186); // Linhas verticais
 				}else{
-					printf(" "); // Espaço interno
+					printf(" "); // Espaï¿½o interno
 				}
 			}
 		}

@@ -1,19 +1,19 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "04/08/2022"
-/*	Objetivo: Imagine a seguinte situação: Desconta-se inicialmente 10% do salário bruto do trabalhador como 
-contribuição à previdência social. Após esse desconto, há outro desconto de 5% sobre o valor restante do 
-salário bruto a título de um determinado imposto.
-leia o salário bruto de um cidadão e apresente o seu salário líquido.
+/*	Objetivo:
+Imagine a seguinte situaÃ§Ã£o: Desconta-se inicialmente 10% do salÃ¡rio bruto do trabalhador como contribuiÃ§Ã£o Ã  previdÃªncia social.
+ApÃ³s esse desconto, hÃ¡ outro desconto de 5% sobre o valor restante do salÃ¡rio bruto a tÃ­tulo de um determinado imposto.
+FaÃ§a um programa em C que leia o salÃ¡rio bruto de um cidadÃ£o e apresente o seu salÃ¡rio lÃ­quido.
 */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 int main(void){
-//Declarações
+//DeclaraÃ§Ãµes
 	float salarioBruto;
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	

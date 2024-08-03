@@ -1,20 +1,20 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "05/08/2022"
-/*	Objetivo: obter o peso e altura de uma pessoa e
-informar ao usu·rio o valor do seu IMC (Õndice de Massa Corporal).
-Sabe-se que IMC È dado pela divis„o do peso pela altura ao quadrado.
+/*	Objetivo:
+Fa√ßa um programa em C para obter o peso de uma pessoa e informar ao usu√°rio o valor do seu IMC (√çndice de Massa Corporal).
+Sabe-se que IMC √© dado pela divis√£o do peso pela altura ao quadrado.
 */
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(void){
-//Variaveis
+//Declara√ß√µes
 	float peso;
 	float altura, centimetros;
 	float imc;
 	
-//InstruÁıes
+//Instru√ß√µes
 	printf("Informe o seu peso em Kg: ");
 	scanf("%f", &peso);
 	printf("\nInforme sua altura em centimetros: ");

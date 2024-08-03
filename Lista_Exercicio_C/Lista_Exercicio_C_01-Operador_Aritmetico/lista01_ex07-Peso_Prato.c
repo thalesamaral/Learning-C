@@ -1,19 +1,19 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "30/11/2021"
-/*	Objetivo:  receba o valor do quilo de um restaurante e o peso do prato do cliente,
-calcule e imprima o valor a ser pago.
+/*	Objetivo:
+Faça um programa em C que receba o valor do quilo de um restaurante e o peso do prato do cliente, calcule e imprima o valor a ser pago.
 */
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(void){
-//Variaveis
+//Declarações
 	float valorKg;
 	float quilo;
 	float valorFinal;
 	
-//Instru��es
+//Instruções
 	printf("Valor de 1Kg em reais: ");
 	scanf("%f", &valorKg);
 	

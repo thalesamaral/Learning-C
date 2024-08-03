@@ -1,19 +1,20 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "05/08/2022"
-/*	Objetivo: leia o valor de uma determinada mercadoria de uma loja.
-Sabendo que o desconto para pagamento à vista é de 10% sobre o valor total, calcule o valor a ser pago à vista.
-Escreva o valor total, o valor do desconto e o valor a ser pago à vista.
+/*	Objetivo:
+FaÃ§a um programa em C que leia o valor de uma determinada mercadoria de uma loja.
+Sabendo que o desconto para pagamento Ã  vista Ã© de 10% sobre o valor total, calcule o valor a ser pago Ã  vista.
+Escreva o valor total, o valor do desconto e o valor a ser pago Ã  vista.
 */
 #include<stdio.h>
 #include<stdlib.h>
 
 int main(void){
-//Variaveis
+//DeclaraÃ§Ãµes
 	float valorTotal;
 	char respostaAVista;
 	
-//Instruções
+//InstruÃ§Ãµes
 	printf("Informe o valor da mercadoria: ");
 	scanf("%f", &valorTotal);
 	
@@ -22,7 +23,6 @@ int main(void){
 		printf("Vai pagar a vista? [S] ou [N]: ");
 			respostaAVista = getche();
 			respostaAVista = toupper(respostaAVista);
-	//Condições
 		if(respostaAVista != 'S' && respostaAVista != 'N'){
 			system("cls");
 			printf("Valor da mercadoria: %.2f\n", valorTotal);
