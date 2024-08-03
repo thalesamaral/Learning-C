@@ -14,18 +14,17 @@ int main(void){
 	char sexo;
 	
 //Instruções
-	do{
-		printf("Informe o sexo [M]ou[F]: ");
-		sexo = getche();
-		sexo = toupper(sexo);
-		
-		if(sexo=='M')
-			printf("\nMasculino");
-		else if(sexo=='F')
-			printf("\nFeminino");
-		else
-			printf("\n\nOpcao invalida, digite novamente!\n\n");
-	}while((sexo != 'M') && (sexo != 'F'));
+	printf("Digite [M] para Masculino\n");
+	printf("Digite [F] para Feminino\n");
+	printf("Informe sua opcao: ");
+	scanf("%c", &sexo);
+	
+	if(sexo=='M')
+		printf("\nMasculino\n");
+	else if(sexo=='F')
+		printf("\nFeminino\n");
+	else
+		printf("\n\nOpcao invalida!\n\n");
 	
 	return 0;
 }
