@@ -14,16 +14,13 @@ int main(void){
 	float pagamento;
 	
 //Instruções
-	//printf("");
-	//scanf("%",&);
-	
-	printf("Preco do litro da gasolina: ");
+	printf("\nPreco do litro da gasolina: ");
 	scanf("%f",&precoLgasolina);
 	
 	printf("Quantos reais deseja pagar: ");
 	scanf("%f",&pagamento);
 	
-	printf("Voce recebera %.4f Litros",pagamento/precoLgasolina);
+	printf("Voce recebera %.4f Litros\n",pagamento/precoLgasolina);
 	
 	return 0;
 }
