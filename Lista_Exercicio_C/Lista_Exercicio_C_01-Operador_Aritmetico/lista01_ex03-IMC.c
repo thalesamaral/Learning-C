@@ -23,27 +23,10 @@ int main(void){
 	
 	imc = (peso / (altura*altura));
 	printf("\n***************************\n");
-	printf("Seu IMC eh %.2f\n", imc);
-	
-//Tabela do IMC
-	if(imc >= 16 && imc <= 16.9){
-		printf("Muito abaixo do peso");
-	}else if(imc >= 17 && imc <= 18.4){
-		printf("Abaixo do peso");
-	}else if(imc >= 18.5 && imc <= 24.9){
-		printf("Peso normal");
-	}else if(imc >= 25 && imc <= 29.9){
-		printf("Acima do peso");
-	}else if(imc >= 30 && imc <= 34.9){
-		printf("Obesidade grau I");
-	}else if(imc >= 35 && imc <= 40){
-		printf("Obesidade grau II");
-	}else{
-		printf("Obesidade grau III");
-	}
+	printf("     Seu IMC: %.1f", imc);
 	printf("\n***************************\n\n");
 	
-	printf("****** Tabela do IMC ******\n");
+	printf("****** Tabela do IMC *****************************\n");
 	printf("*** Muito abaixo do peso: imc >= 16 && imc <= 16.9\n");
 	printf("*** Abaixo do peso......: imc >= 17 && imc <= 18.4\n");
 	printf("*** Peso normal.........: imc >= 18.5 && imc <= 24.9\n");
