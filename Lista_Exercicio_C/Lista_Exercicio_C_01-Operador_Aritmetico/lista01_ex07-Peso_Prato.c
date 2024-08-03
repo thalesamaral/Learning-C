@@ -14,11 +14,11 @@ int main(void){
 	float valorFinal;
 	
 //Instruções
-	printf("Valor de 1Kg em reais: ");
-	scanf("%f", &valorKg);
-	
 	printf("\nKg do prato: ");
 	scanf("%f", &quilo);
+	
+	printf("Valor de 1Kg em reais: ");
+	scanf("%f", &valorKg);
 	
 	valorFinal = valorKg * quilo;
 	printf("\nValor a ser pago %.2f reais",valorFinal);
