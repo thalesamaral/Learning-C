@@ -11,29 +11,17 @@ Escreva o valor total, o valor do desconto e o valor a ser pago à vista.
 
 int main(void){
 //Declarações
-	float valorTotal;
-	char respostaAVista;
+	float valorMercadoria;
 	
 //Instruções
 	printf("Informe o valor da mercadoria: ");
-	scanf("%f", &valorTotal);
-	
-	do{
-		printf("\nO desconto para pagamento a vista eh de 10%%!\n");
-		printf("Vai pagar a vista? [S] ou [N]: ");
-			respostaAVista = getche();
-			respostaAVista = toupper(respostaAVista);
-		if(respostaAVista != 'S' && respostaAVista != 'N'){
-			system("cls");
-			printf("Valor da mercadoria: %.2f\n", valorTotal);
-		}else if(respostaAVista == 'S'){
-			valorTotal -= valorTotal * 0.1;
-			printf("\n\nPagamento a vista com desconto: %.2f", valorTotal);
-		}else{
-			printf("\n\nPagamento total: %.2f",valorTotal);
-		}
-	}while(respostaAVista != 'S' && respostaAVista != 'N');
-	
+	scanf("%f", &valorMercadoria);
+	printf("\nO desconto para pagamento a vista eh de 10%%!\n\n");
+
+	printf("Valor da Mercadoria......: %.2f\n", valorMercadoria);
+	printf("Valor do Desconto de 10%%.: %.2f\n", valorMercadoria * 0.10);
+	printf("Valor A Vista............: %.2f\n", valorMercadoria * 0.90);
+
 	return 0;
 }
 
