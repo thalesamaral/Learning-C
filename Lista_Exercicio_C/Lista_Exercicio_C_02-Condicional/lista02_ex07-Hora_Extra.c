@@ -11,35 +11,32 @@ mês possua 4 semanas exatas).
 */
 #include<stdio.h>
 #include<stdlib.h>
+#define Hora_Mensal 160
 
 int main(void){
 //Declarações
-	float salarioHora;
-	float salarioTotal;
-	int horaTrabalhada;
+	float salarioHora, salarioTotal, salarioExtra;
+	float horaTrabalhada, horaExtra;
 	
 //Instruções
-	printf("Qual o salario por hora?\n");
+	printf("Horas trabalhadas no mes: ");
+	scanf("%f",&horaTrabalhada);
+
+	printf("Salario por hora: ");
 	scanf("%f",&salarioHora);
-	do{
-		printf("Quantas horas foram trabalhadas no mes?\n");
-		scanf("%d",&horaTrabalhada);
-		if(horaTrabalhada < 160){
-			printf("\nMinimo de 160 horas por mes!!\n");
-		}else if(horaTrabalhada > 160){
-			salarioTotal = 160 * salarioHora;
-			salarioHora += salarioHora/2;
-			salarioTotal += (horaTrabalhada-160) * salarioHora;
-			printf("Salario com hora extra: %f\n",salarioTotal);
-		}else{
-			salarioTotal = 160 * salarioHora;
-			printf("\nSalario sem hora extra: %f\n",salarioTotal);
-		}
-	}while(horaTrabalhada < 160);
+
+	if(horaTrabalhada == Hora_Mensal){
+		salarioTotal = Hora_Mensal * salarioHora;
+		printf("\nSalario sem hora extra: %.2f\n",salarioTotal);
+	}else if(horaTrabalhada > Hora_Mensal){
+		horaExtra = horaTrabalhada - Hora_Mensal;
+		salarioExtra = horaExtra * salarioHora * 1.5;
+		
+		salarioTotal = (Hora_Mensal * salarioHora) + salarioExtra;
+		printf("\nSalario com hora extra: %.2f\n",salarioTotal);
+	}else{
+		printf("\nAtencao!! Minimo de 160 horas por mes.\n");
+	}
 	
 	return 0;
 }
-
-
-// FIM *************************************************************************************************************************
-
