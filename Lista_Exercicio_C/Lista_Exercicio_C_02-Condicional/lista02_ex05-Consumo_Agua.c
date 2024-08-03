@@ -16,39 +16,39 @@ int main(void){
 //Declarações
 	float consumoM3;
 	float valorConta;
-	int tipo;
+	int tipoConsumidor;
 	
 //Instruções
-	do{
-		printf("Opcao [1] Residencial\n");
-		printf("Opcao [2] Comercial\n");
-		printf("Opcao [3] Industrial\n");
-		printf("Qual o tipo de consumidor\n");
-		scanf("%d",&tipo);
-	}while((tipo != 1) && (tipo != 2) && (tipo != 3));
-	
+	printf("Opcao [1] Residencial\n");
+	printf("Opcao [2] Comercial\n");
+	printf("Opcao [3] Industrial\n");
+	printf("Qual o tipo de consumidor\n");
+	scanf("%d",&tipoConsumidor);
+
 	printf("\nQual o consumo de agua em metros cubicos: ");
 	scanf("%f",&consumoM3);
-	switch(tipo){
+	switch(tipoConsumidor){
 		case 1:
 			valorConta = 5 + consumoM3*0.05;
 		break;
 		case 2:
 			valorConta = 500;
-			if(consumoM3 > 80)
+			if(consumoM3 > 80){
 				valorConta += (consumoM3-80)*0.03;
+			}
 		break;
 		case 3:
 			valorConta = 800;
-			if(consumoM3 > 100)
+			if(consumoM3 > 100){
 				valorConta += (consumoM3-100)*0.04;
+			}
 		break;
 		default:
-			printf("Opcao invalida!");
+			printf("Tipo de consumidor invalido!");
 		break;	
 	}
 	
-	printf("O valor do consumo de agua foi: %.2f",valorConta);
+	printf("\nO valor do consumo de agua foi: %.2f\n",valorConta);
 	
 	return 0;
 }
