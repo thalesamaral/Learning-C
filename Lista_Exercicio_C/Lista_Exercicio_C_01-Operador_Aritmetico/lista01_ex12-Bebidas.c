@@ -15,7 +15,6 @@ int main(void){
 	float litroTotal=0;
 	
 //Instruções
-
 	printf("Quantidade da bebida de 350ml: ");
 	scanf("%d",&qtdBebida);
 		litroTotal += qtdBebida*0.350;
@@ -27,7 +26,7 @@ int main(void){
 		litroTotal += qtdBebida*2;
 	
 	printf("\nQuantidade total em litros: %.4f", litroTotal);
-	
+
 	return 0;
 }
 
