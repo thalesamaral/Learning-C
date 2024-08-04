@@ -1,45 +1,42 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "05/08/2022"
-/*	Objetivo: */
-//  Entrada.: N∫ horas trabalhadas, sal·rio por h, sal·rio total.
-//  SaÌda...: sal·rio acrescido por horas extras.
+//  Data....: "03/08/2024"
+/*	Objetivo:
+Considere que a jornada de trabalho semanal de um funcion√°rio √© de 40 horas e que se o 
+funcion√°rio trabalhar mais de 40 horas receber√° hora extra, cujo c√°lculo √© o valor da hora 
+regular com um acr√©scimo de 50%. Escreva um programa em C que receba o n√∫mero de 
+horas trabalhadas em um m√™s, o sal√°rio por hora e escreva o sal√°rio total do funcion√°rio, 
+que dever√° ser acrescido das horas extras, caso tenham sido trabalhadas (considere que o 
+m√™s possua 4 semanas exatas).
+*/
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
+#define Hora_Mensal 160
 
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
-	float salarioHora;
-	float salarioTotal;
-	int horaTrabalhada;
+//Declara√ß√µes
+	float salarioHora, salarioTotal, salarioExtra;
+	float horaTrabalhada, horaExtra;
 	
-//InstruÁıes
-	//printf("");
-	//scanf("%",&);
-	
-	printf("Qual o sal·rio por hora?\n");
+//Instru√ß√µes
+	printf("Horas trabalhadas no mes: ");
+	scanf("%f",&horaTrabalhada);
+
+	printf("Salario por hora: ");
 	scanf("%f",&salarioHora);
-	do{
-		printf("Quantas horas foram trabalhadas no mÍs?\n");
-		scanf("%d",&horaTrabalhada);
-		if(horaTrabalhada < 160){
-			printf("\nMÌnimo de 160 horas por mÍs!!\n");
-		}else if(horaTrabalhada > 160){
-			salarioTotal = 160 * salarioHora;
-			salarioHora += salarioHora/2;
-			salarioTotal += (horaTrabalhada-160) * salarioHora;
-			printf("Sal·rio com hora extra: %f\n",salarioTotal);
-		}else{
-			salarioTotal = 160 * salarioHora;
-			printf("\nSal·rio sem hora extra: %f\n",salarioTotal);
-		}
-	}while(horaTrabalhada < 160);
+
+	if(horaTrabalhada == Hora_Mensal){
+		salarioTotal = Hora_Mensal * salarioHora;
+		printf("\nSalario sem hora extra: %.2f\n",salarioTotal);
+	}else if(horaTrabalhada > Hora_Mensal){
+		horaExtra = horaTrabalhada - Hora_Mensal;
+		salarioExtra = horaExtra * salarioHora * 1.5;
+		
+		salarioTotal = (Hora_Mensal * salarioHora) + salarioExtra;
+		printf("\nSalario com hora extra: %.2f\n",salarioTotal);
+	}else{
+		printf("\nAtencao!! Minimo de 160 horas por mes.\n");
+	}
 	
 	return 0;
 }
-
-
-// FIM *************************************************************************************************************************
-

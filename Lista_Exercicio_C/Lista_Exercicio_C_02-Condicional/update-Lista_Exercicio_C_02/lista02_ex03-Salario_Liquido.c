@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "03/08/2024"
+//  Data....: "01/12/2021"
 /*	Objetivo:
 Faça um programa em C que receba o salário bruto de um funcionário, calcule e imprima o 
 seu salário líquido utilizando a seguinte regra:
@@ -11,25 +11,24 @@ R$ 2.000,00, o valor arrecadado será de 11% sobre 1.200 e 20% sobre 800.
 */
 #include<stdio.h>
 #include<stdlib.h>
-#define Limite_Bruto 1200
-#define Desconto_Abaixo_Limite 0.89 //11% aplicado
-#define Desconto_Acima_Limite 0.8 //20% aplicado
 
 int main(void){
 //Declarações
 	float salBruto;
-	float salLiquido=0;
+	float salLiquido;
 	float valorExcedente;
 	
 //Instruções
-	printf("Informe o Salario bruto: ");
+	printf("Informe o Salario: ");
 	scanf("%f",&salBruto);
+	salLiquido = salBruto;
 	
-	if(salBruto <= Limite_Bruto){
-		salLiquido = salBruto * Desconto_Abaixo_Limite;
-	}else{
-		valorExcedente = salBruto - Limite_Bruto;
-		salLiquido = (Limite_Bruto * Desconto_Abaixo_Limite) + (valorExcedente * Desconto_Acima_Limite);
+	if(salBruto<=1200)
+		salLiquido -= (salBruto*11)/100;
+	else{
+		salLiquido -= (salBruto*11)/100;
+		valorExcedente = salBruto - 1200;
+		salLiquido -= (valorExcedente*20)/100;
 	}
 	
 	printf("\nSalario Bruto: %.2f\n",salBruto);
