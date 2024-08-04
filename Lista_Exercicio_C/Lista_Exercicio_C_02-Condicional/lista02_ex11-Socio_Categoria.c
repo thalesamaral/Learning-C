@@ -14,82 +14,107 @@ um patrimônio líquido de no mínimo R$ 10 milhão. Ou ser presidente da repúb
 */
 #include<stdio.h>
 #include<stdlib.h>
+#define PADRAO 1
+#define BRONZE 2
+#define PRATA 3
+#define OURO 4
+#define DIAMANTE 5
 
 int main(void){
 //Declarações
 	int anosPadrao, anosBronze, anosPrata;
 	float rendaMensal;
-	char resp;
 	int categoria;
-	int flag1 = 0;
-	int flag2 = 0;
-	int flag3 = 0;
+	int flag_barcoAncorado = 0;
+	int flag_patrimonio10M = 0;
+	int flag_presiOuGover = 0;
 	
 //Instruções
-	printf("Quantos anos como socio na Categoria Padrao: ");
-	scanf("%d",&anosPadrao);
-	printf("Quantos anos como socio na Categoria Bronze: ");
-	scanf("%d",&anosBronze);
-	printf("Quantos anos como socio na Categoria Prata: ");
-	scanf("%d",&anosPrata);
-	
-	printf("\nRenda Mensal: ");
-	scanf("%f",&rendaMensal);
-	
-	printf("\nPossui barco ancorado no clube?\n");
-		verificarResposta(resp);
-		if(resp == 'S')
-			flag1 = 1;
-	printf("\nPossui patrimonio liquido de no minimo 10M?\n");
-		verificarResposta(resp);
-		if(resp == 'S')
-			flag2 = 1;
 	printf("\nVoce eh presidente ou governador?\n");
-		verificarResposta(resp);
-		if(resp == 'S')
-			flag3 = 1;
+	printf("Digite [0]NAO ou [1]SIM: ");
+	scanf("%d",&flag_presiOuGover);
+
+	//PERGUNTAS DO CLUBE **************************************************************************
+	if(!flag_presiOuGover){ //REFUTA CONDIÇÃO DIAMANTE 1
+		printf("\nRenda Mensal: ");
+		scanf("%f",&rendaMensal);
+
+		if(rendaMensal >= 15000){
+			printf("\nPossui patrimonio liquido de no minimo 10M?\n");
+			printf("Digite [0]NAO ou [1]SIM: ");
+			scanf("%d",&flag_patrimonio10M);
+		}
+		if(rendaMensal >= 10000){
+			printf("\nPossui barco ancorado no clube?\n");
+			printf("Digite [0]NAO ou [1]SIM: ");
+			scanf("%d",&flag_barcoAncorado);
+		}
+
+		if(
+			!flag_barcoAncorado //REFUTA CONDIÇÃO DIAMANTE 2 & OURO 2
+			&&
+			(
+				(rendaMensal < 15000 || !flag_patrimonio10M)
+				&&
+				(rendaMensal > 7000 && rendaMensal < 10000)
+				/*
+				REFUTA CONDIÇÃO DIAMANTE 2
+				REFUTA CONDIÇÃO OURO 2 E VALOR 7000 DA CONDIÇÃO OURO 1
+				RESTANDO APENAS A PERGUNTA DE OURO 1
+				*/
+			)
+		){
+			printf("\nQuantos anos como socio na Categoria Prata: ");
+			scanf("%d",&anosPrata);
+		}
+		
+		if(rendaMensal < 5000){ //REFUTA CONDIÇÃO PRATA 2
+			printf("\nQuantos anos como socio na Categoria Bronze: "); //-> RESTANDO APENAS A PERGUNTA DA PRATA 1
+			scanf("%d",&anosBronze);
+		}
+		if((rendaMensal < 3000) && (anosBronze < 5)){ //REFUTA CONDIÇÃO BRONZE 2 & REFUTA CONDIÇÃO PRATA 1
+			printf("\nQuantos anos como socio na Categoria Padrao: "); //-> RESTANDO APENAS A PERGUNTA DE BRONZE 1
+			scanf("%d",&anosPadrao);
+		}
+	}
 	
-	if((anosPadrao<10) && (rendaMensal < 3000) && (flag3==0))
-		categoria = 1;
-	else if(((rendaMensal >= 15000) && (flag1 == 1) && (flag2 == 1)) || (flag3 == 1))
-		categoria = 5;
-	else if((anosPadrao>=10) || ((rendaMensal >= 3000) && (rendaMensal < 5000))){
-		categoria = 2;
-	}else if((anosBronze>=5) || (rendaMensal >= 5000))
-		categoria = 3;
-	else if((anosPrata>20) && (rendaMensal >= 7000))
-		categoria = 4;
-	else if((rendaMensal >= 10000) && (flag1 == 1))
-		categoria = 4;
+	//CATEGORIAS **********************************************************************************
+	if(
+		((rendaMensal >= 15000) && flag_barcoAncorado && flag_patrimonio10M) ||
+		flag_presiOuGover
+	)
+		categoria = DIAMANTE;
+	else if(
+			((anosPrata>=20) && (rendaMensal >= 7000)) ||
+			((rendaMensal >= 10000) && flag_barcoAncorado)
+		){
+		categoria = OURO;
+	}else if((anosBronze>=5) || (rendaMensal >= 5000)){
+		categoria = PRATA;
+	}else if((anosPadrao>=10) || (rendaMensal >= 3000)){
+			categoria = BRONZE;
+	}else if((anosPadrao<10) && (rendaMensal < 3000) && !flag_presiOuGover){
+		categoria = PADRAO;
+	}
 		
 	switch(categoria){
-		case 1:
-			printf("\n\nCategoria: PADRAO");
+		case PADRAO:
+			printf("\n\nCategoria: PADRAO\n\n");
 		break;
-		case 2:
-			printf("\n\nCategoria: BRONZE");
+		case BRONZE:
+			printf("\n\nCategoria: BRONZE\n\n");
 		break;
-		case 3:
-			printf("\n\nCategoria: PRATA");
+		case PRATA:
+			printf("\n\nCategoria: PRATA\n\n");
 		break;
-		case 4:
-			printf("\n\nCategoria: OURO");
+		case OURO:
+			printf("\n\nCategoria: OURO\n\n");
 		break;
-		case 5:
-			printf("\n\nCategoria: DIAMANTE");
+		case DIAMANTE:
+			printf("\n\nCategoria: DIAMANTE\n\n");
 		break;
 	}
 	
 	return 0;
 }
 
-int verificarResposta(int resposta){
-	
-	do{
-		printf("\n[S]sim ou nao[N]: ");
-		resposta = getche();
-		resposta = toupper(resposta);
-	}while((resposta != 'S') && (resposta != 'N'));
-	
-	return resposta;
-}
