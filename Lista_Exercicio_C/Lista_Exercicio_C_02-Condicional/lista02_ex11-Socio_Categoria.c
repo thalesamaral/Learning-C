@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "03/12/2021" - "05/08/2022"
+//  Data....: "04/08/2024"
 /*	Objetivo:
 Faça um programa em C que receba as informações que forem necessárias para imprimir a 
 categoria que o sócio de um clube terá. Considere os seguintes requisitos:
