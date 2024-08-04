@@ -13,30 +13,32 @@ de trabalho do empregado, e a mensagem “Requerer aposentadoria” ou “Não r
 */
 #include<stdio.h>
 #include<stdlib.h>
-#define anoAtual 2022
+#define anoAtual 2024
 
 int main(void){
 //Declarações
 	int age;
 	int workTime;
-	int birthDay;
-	int day1Job;
+	int birthYear;
+	int firstYearJob;
 	
 //Instruções
 	printf("Ano de Nascimento: ");
-	scanf("%d",&birthDay);
-	age = anoAtual - birthDay;
+	scanf("%d",&birthYear);
+	age = anoAtual - birthYear;
 	
-	printf("Ano de ingreeso ao trabalho: ");
-	scanf("%d",&day1Job);
-	workTime = anoAtual - day1Job;
+	printf("Ano de ingresso ao trabalho: ");
+	scanf("%d",&firstYearJob);
+	workTime = anoAtual - firstYearJob;
 	
 	printf("\nIdade: %d",age);
 	printf("\nTempo de Trabalho: %d\n",workTime);
 	
-	if((age >= 65) || (workTime >= 30))
-		printf("Requerer aposentadoria");
-	else if((age >= 60) && (workTime >= 25))
+	if(
+		(age >= 65)
+		|| (workTime >= 30)
+		|| ((age >= 60) && (workTime >= 25))
+	)
 		printf("Requerer aposentadoria");
 	else
 		printf("Nao requerer");
