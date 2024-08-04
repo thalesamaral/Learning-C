@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "03/12/2021" - "05/08/2022"
+//  Data....: "04/08/2024"
 /*	Objetivo:
 Faça um programa em C que receba as informações que forem necessárias para imprimir a 
 categoria que o sócio de um clube terá. Considere os seguintes requisitos:
@@ -22,9 +22,9 @@ um patrimônio líquido de no mínimo R$ 10 milhão. Ou ser presidente da repúb
 
 int main(void){
 //Declarações
-	int anosPadrao, anosBronze, anosPrata;
+	int anosPadrao=0, anosBronze=0, anosPrata=0;
 	float rendaMensal;
-	int categoria;
+	int categoria=0;
 	int flag_barcoAncorado = 0;
 	int flag_patrimonio10M = 0;
 	int flag_presiOuGover = 0;
@@ -35,7 +35,9 @@ int main(void){
 	scanf("%d",&flag_presiOuGover);
 
 	//PERGUNTAS DO CLUBE **************************************************************************
-	if(!flag_presiOuGover){ //REFUTA CONDIÇÃO DIAMANTE 1
+	if(flag_presiOuGover){
+		categoria = DIAMANTE;
+	}else{
 		printf("\nRenda Mensal: ");
 		scanf("%f",&rendaMensal);
 
@@ -49,54 +51,52 @@ int main(void){
 			printf("Digite [0]NAO ou [1]SIM: ");
 			scanf("%d",&flag_barcoAncorado);
 		}
-
-		if(
-			!flag_barcoAncorado //REFUTA CONDIÇÃO DIAMANTE 2 & OURO 2
-			&&
-			(
-				(rendaMensal < 15000 || !flag_patrimonio10M)
-				&&
-				(rendaMensal > 7000 && rendaMensal < 10000)
-				/*
-				REFUTA CONDIÇÃO DIAMANTE 2
-				REFUTA CONDIÇÃO OURO 2 E VALOR 7000 DA CONDIÇÃO OURO 1
-				RESTANDO APENAS A PERGUNTA DE OURO 1
-				*/
-			)
-		){
+		
+		//DIAMANTE 2 & OURO 2 & OURO 1(valor e pergunta)
+		if(flag_barcoAncorado && flag_patrimonio10M){
+			categoria = DIAMANTE;
+		}else if(rendaMensal >= 10000 && flag_barcoAncorado){
+			categoria = OURO;
+		}else if(rendaMensal >= 7000){
 			printf("\nQuantos anos como socio na Categoria Prata: ");
 			scanf("%d",&anosPrata);
 		}
 		
-		if(rendaMensal < 5000){ //REFUTA CONDIÇÃO PRATA 2
-			printf("\nQuantos anos como socio na Categoria Bronze: "); //-> RESTANDO APENAS A PERGUNTA DA PRATA 1
-			scanf("%d",&anosBronze);
+		//OURO 1 & PRATA 1(valor) & PRATA 2(pergunta)
+		if(!categoria){
+			if(anosPrata >= 20){
+				categoria = OURO;
+			}else if(rendaMensal >= 5000){
+				categoria = PRATA;
+			}else{
+				printf("\nQuantos anos como socio na Categoria Bronze: ");
+				scanf("%d",&anosBronze);
+			}
 		}
-		if((rendaMensal < 3000) && (anosBronze < 5)){ //REFUTA CONDIÇÃO BRONZE 2 & REFUTA CONDIÇÃO PRATA 1
-			printf("\nQuantos anos como socio na Categoria Padrao: "); //-> RESTANDO APENAS A PERGUNTA DE BRONZE 1
-			scanf("%d",&anosPadrao);
+
+		//PRATA 2 & BRONZE 2(valor) & BRONZE 1(pergunta)
+		if(!categoria){
+			if(anosBronze >= 5){
+				categoria = PRATA;
+			}else if(rendaMensal >= 3000){
+				categoria = BRONZE;
+			}else{
+				printf("\nQuantos anos como socio na Categoria Padrao: ");
+				scanf("%d",&anosPadrao);
+			}
 		}
+
+		//BRONZE 1 & PADRAO
+		if(!categoria){
+			if(anosPadrao >= 10){
+				categoria = BRONZE;
+			}else if(rendaMensal < 3000 && anosPadrao < 10){
+				categoria = PADRAO;
+			}
+		}	
 	}
 	
-	//CATEGORIAS **********************************************************************************
-	if(
-		((rendaMensal >= 15000) && flag_barcoAncorado && flag_patrimonio10M) ||
-		flag_presiOuGover
-	)
-		categoria = DIAMANTE;
-	else if(
-			((anosPrata>=20) && (rendaMensal >= 7000)) ||
-			((rendaMensal >= 10000) && flag_barcoAncorado)
-		){
-		categoria = OURO;
-	}else if((anosBronze>=5) || (rendaMensal >= 5000)){
-		categoria = PRATA;
-	}else if((anosPadrao>=10) || (rendaMensal >= 3000)){
-			categoria = BRONZE;
-	}else if((anosPadrao<10) && (rendaMensal < 3000) && !flag_presiOuGover){
-		categoria = PADRAO;
-	}
-		
+	//CATEGORIZAÇÃO **************************************************************************
 	switch(categoria){
 		case PADRAO:
 			printf("\n\nCategoria: PADRAO\n\n");
