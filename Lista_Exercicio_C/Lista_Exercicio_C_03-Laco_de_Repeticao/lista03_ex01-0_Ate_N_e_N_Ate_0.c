@@ -16,16 +16,17 @@ int main(void){
 	
 //Instruções	
 	do{
-		printf("Digite um n�mero positivo: ");
+		printf("Digite um numero inteiro positivo: ");
 		scanf("%d",&num);	
-	}while(num<0);
+	}while(num<=0);
 	
+	printf("\nZero -> Numero\n");
 	do{
 		printf("%d\n",i);
 		i++;
 	}while(i<=num);
 	
-	printf("\n");
+	printf("\nNumero -> Zero\n");
 	
 	do{
 		printf("%d\n",num);
