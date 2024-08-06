@@ -12,28 +12,32 @@ um código de produto negativo.
 
 int main(void){
 //Declarações
-	int cod, qtd;
-	float preco, precoInicial, preco20;
+	int cod, qtd=0;
+	float preco, precoTotal=0, preco20Total=0;
 	
 //Instruções
-	printf("Digite o c�digo do produto: ");
+	printf("Codigo do produto deve ser a partir de zero.\n");
+	printf("Digite -1 para finalizar o programa!\n\n");
+	printf("Digite o codigo do produto: ");
 	scanf("%d",&cod);
 	
-	while(cod > 0){	
-		printf("Pre�o do produto, c�digo %d: ",cod);
+	while(cod >= 0){
+		printf("Preco do produto (%d): ",cod);
 		scanf("%f",&preco);
 		
 		qtd++;
-		precoInicial += preco;
-		preco20 += preco+(preco*0.2);
-		printf("Pre�o com 20%%.............: %.2f",preco+preco*0.2);
+		precoTotal += preco;
+		preco20Total += preco*1.2;
 		
-		printf("\n\n==========================================\n");
-		printf("M�dia do pre�o inicial %.2f",precoInicial/qtd);
-		printf("\nM�dia do pre�o com 20%% %.2f",preco20/qtd);
-		printf("\n==========================================\n");
+		printf("==========================================\n");
+		printf("Total Preco inicial: %.2f\n",precoTotal);
+		printf("Total Preco 20%%: %.2f\n",preco20Total);
+		printf("\nQuantidade de produtos: %d\n\n",qtd);
+		printf("Media Preco inicial: %.2f\n",precoTotal/qtd);
+		printf("Media Preco 20%%: %.2f\n",preco20Total/qtd);
+		printf("==========================================\n\n\n");
 		
-		printf("\nDigite novo c�digo ou -1 para finalizar: ");
+		printf("Digite novo codigo ou -1 para finalizar: ");
 		scanf("%d",&cod);
 	}
 	
