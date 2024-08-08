@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "05/12/2021"
+//  Data....: "05/08/2024"
 /*	Objetivo:
 Uma empresa deseja aumentar seus preços em 20%. Faça um programa em C que leia o 
 código e o preço de custo de cada produto, calcule e imprima o novo preço e, ao final, as 

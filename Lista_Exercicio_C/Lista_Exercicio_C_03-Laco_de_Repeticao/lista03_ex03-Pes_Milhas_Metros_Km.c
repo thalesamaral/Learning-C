@@ -19,10 +19,10 @@ int main(void){
 //Instruções
 	printf("Digite o valor da medida: ");
 	scanf("%f",&medida);
-	while(medida > 0){
+	while(medida >= 0){
 		do{
 			printf("\nQual o tipo de medida?\n");
-			printf("[P]p�s ou milhas[M]\n");
+			printf("[P]pes ou milhas[M]\n");
 			resp = getche();
 			resp = toupper(resp);
 		}while((resp != 'P') && (resp != 'M'));
@@ -32,24 +32,22 @@ int main(void){
 			metro  = pes/3.28;
 			km     = metro/1000;
 			milhas = km/1.61;
-			printf("\nP�S...: %.2f\n",pes);
-			printf("MILHAS: %.2f\n",milhas);
 		}else{
 			milhas = medida;
 			km     = milhas*1.61;
 			metro  = km*1000;
 			pes    = metro*3.28;
-			printf("\nMILHAS: %.2f\n",milhas);
-			printf("P�S...: %.2f\n",pes);
 		}
-		
-		printf("METROS: %.2f\n",metro);
-		printf("KMs...: %.2f\n",km);
-		
+		printf("\nPES...: %.4f\n",pes);
+		printf("METROS: %.4f\n",metro);
+		printf("KMs...: %.4f\n",km);
+		printf("MILHAS: %.4f\n",milhas);
+
 		printf("\nDigite nova medida ou -1 para finalizar: ");
 		scanf("%f",&medida);
 	}
 	
+	printf("\nValor negativo foi digitado!\n\n");
 	
 	return 0;
 }
