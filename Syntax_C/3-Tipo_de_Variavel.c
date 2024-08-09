@@ -4,37 +4,42 @@
 
 void main(){
 
-    //Definindo Variáveis
-    int a;
-    float b;
-    char c;
-    bool d;
+    //Definindo Variï¿½veis
+    int varINT;
+    float varFLOAT;
+    char varCHAR;
+    bool varBOOL;
 
     //Passando Valores
-    a = 5;
-    b = 2.3;
-    c = 'a';
-    d = true; //true = 1, false = 0
+    varINT = 1;
+    varFLOAT = 1.100;
+    varCHAR = 'a';
+    varBOOL = true; //true = 1, false = 0
 
     //Escrevendo na Tela
-    printf("\n O valor de a = %d", a);
-    printf("\n O valor de b = %.1f", b);
-    printf("\n O valor de c = %c", c);
-    printf("\n O valor de d = %d\n", d);
+    printf("\n O valor de a = %d |int", varINT);
+    printf("\n O valor de b = %f |float f", varFLOAT);
+    printf("\n O valor de b = %g |float g", varFLOAT);
+    printf("\n O valor de c = %c |char", varCHAR);
+    printf("\n O valor de d = %d |bool true\n", varBOOL);
 
     //Lendo Valores
-    scanf("%d", &a);
-    scanf("%f", &b);
-    scanf("%c", &c);
-    scanf("%d", &d);
+    printf("\nint..: ");
+    scanf("%d", &varINT);
+    printf("float: ");
+    scanf("%f", &varFLOAT);
+    printf("char..: ");
+    fflush(stdin); //Limpa o Buffer setbuf(stdin, 0);
+    setbuf(stdin, 0);
+    scanf("%c", &varCHAR);
+    printf("bool.: = false");
+    varBOOL = false;
 
     //Escrevendo na Tela
-    printf("\n O valor de a = %d", a);
-    printf("\n O valor de b = %.1f", b);
-    printf("\n O valor de c = %c", c);
-    printf("\n O valor de d = %d\n", d);
-
-    //Pausando
-    system("pause");
+    printf("\n\n O valor de a = %d |int", varINT);
+    printf("\n O valor de b = %f |float f", varFLOAT);
+    printf("\n O valor de b = %g |float g", varFLOAT);
+    printf("\n O valor de c = %c |char", varCHAR);
+    printf("\n O valor de d = %d |bool false\n", varBOOL);
 
 }
