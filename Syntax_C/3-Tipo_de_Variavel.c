@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-void main(){
+int main(void){
 
     //Definindo Vari�veis
     int varINT;
@@ -42,4 +42,5 @@ void main(){
     printf("\n O valor de c = %c |char", varCHAR);
     printf("\n O valor de d = %d |bool false\n", varBOOL);
 
+    return 0;
 }
