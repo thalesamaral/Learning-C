@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "06/12/2021"
+//  Data....: "11/08/2024"
 /*	Objetivo:
 Uma cidade realizará eleições para prefeito em outubro e não confia na urna eletrônica 
 desenvolvida pelo TSE. Assim, consegue autorização junto ao TRE para desenvolver sua 
