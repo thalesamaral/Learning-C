@@ -16,13 +16,12 @@ int main(void){
 	float height1, height2, grow1, grow2;
 	int years;
 
-//Instruções	
-	//printf("Altura: %.2g",height1);
-
+//Instruções
 	printf("Pessoa 1 Altura: ");
 	scanf("%f",&height1);
 	printf("Crescimento por ano: ");
 	scanf("%f",&grow1);
+
 	printf("\nPessoa 2 Altura: ");
 	scanf("%f",&height2);
 	printf("Crescimento por ano: ");
