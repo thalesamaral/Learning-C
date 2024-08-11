@@ -23,12 +23,12 @@ int main(void){
 	float bloco;
 	
 //Instruções
-	printf("Quantas camadas voc� deseja em sua pir�mide: ");
+	printf("Quantas camadas voce deseja na piramide: ");
 	scanf("%d",&tamanho);
 	
 	for(i=1; i<=tamanho; i++){
 		camada = ((lados*canto)+(centro+canto));
-		printf("%d� Camada %d blocos\n",i,camada);
+		printf("%do Camada %d blocos\n",i,camada);
 		lados+=2;
 		centro=camada;
 	}
@@ -36,7 +36,7 @@ int main(void){
 	printf("\nQual o peso do bloco em Kg: ");
 	scanf("%f",&bloco);
 	
-	printf("\nO peso total da Pir�mide: %.1f Kg",(camada*bloco)+bloco);
+	printf("\nO peso total da Piramide: %.2f Kg",(camada*bloco)+bloco);
 	
 	return 0;
 }

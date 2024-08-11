@@ -36,7 +36,7 @@ int main(void){
 	printf("\nQual o peso do bloco em Kg: ");
 	scanf("%f",&bloco);
 	
-	printf("\nO peso total da Piramide: %.1f Kg",(camada*bloco)+bloco);
+	printf("\nO peso total da Piramide: %.2f Kg",(camada*bloco)+bloco);
 	
 	return 0;
 }
