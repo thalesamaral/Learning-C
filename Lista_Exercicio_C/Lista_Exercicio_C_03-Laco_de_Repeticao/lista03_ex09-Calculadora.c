@@ -24,62 +24,75 @@ Digite um operador: S
 
 int main(void){
 //Declarações
-	int op1, op2, flag = 0;
-	float valor=0;
-	char opera;
+	int op1, op2, flag;
+	float resultado=0;
+	char operador;
 	
 //Instruções
 	printf("================================\n");
 	printf("          CALCULADORA\n");
 	printf("================================\n");
-	printf("[+][-][*][/][S](sair)[L](limpar)\n");
+	printf("Operadores Validos:\n");
+	printf("[+][-][*][/][S]sair[L]limpar\n");
 	printf("--------------------------------\n");
-	
+	flag = 1;
+
 	do{
-		if(flag == 0){
-			printf("N�mero...: ");
+		if(flag){
+			printf("Numero...: ");
 			scanf("%d",&op1);
 		}
+
 		do{
 			printf("Operador.: ");
 			fflush(stdin);
-			scanf("%c",&opera);
-		}while((opera!='+')&&(opera!='-')&&(opera!='*')&&(opera!='/')&&(opera!='S')&&(opera!='L'));
+			scanf("%c",&operador);
+		}while((operador!='+')&&(operador!='-')&&(operador!='*')&&(operador!='/')&&(operador!='S')&&(operador!='L'));
 		
-		if(opera != 'S'){
-			if(opera != 'L'){
-				printf("N�mero...: ");
+		if(operador != 'S'){
+			if(operador != 'L'){
+				printf("Numero...: ");
 				scanf("%d",&op2);
 				
-				switch(opera){
+				switch(operador){
 					case '+':
-						valor = op1+op2;
+						resultado = op1+op2;
 					break;
 					case '-':
-						valor = op1-op2;
+						resultado = op1-op2;
 					break;
 					case '*':
-						valor = op1*op2;
+						resultado = op1*op2;
 					break;
 					case '/':
-						valor = op1/op2;
+						resultado = op1/op2;
 					break;
 				}
 				printf("-----------------\n");
-				printf("Resultado: %.2f\n",valor);
+				printf("Resultado: %.2f\n",resultado);
+				printf("-----------------\n");
 				
-				flag=1;
-				op1=valor;
-					
-			}else if(opera=='L'){
-				valor=0;
 				flag=0;
+				op1=resultado;
+					
+			}else if(operador == 'L'){
+				resultado=0;
 				op1=0;
-				printf("-----Limpar------\n");
+				flag=1;
+				system("cls");
+				printf("-----Limpar------\n\n\n");
+				printf("================================\n");
+				printf("          CALCULADORA\n");
+				printf("================================\n");
+				printf("Operadores Validos:\n");
+				printf("[+][-][*][/][S]sair[L]limpar\n");
+				printf("--------------------------------\n");
 			}
 		}
-	}while(opera!='S');
-	printf("-----Sair-------\n");
+	}while(operador!='S');
+
+	printf("-----Sair--------\n");
+
 	return 0;
 }
 
