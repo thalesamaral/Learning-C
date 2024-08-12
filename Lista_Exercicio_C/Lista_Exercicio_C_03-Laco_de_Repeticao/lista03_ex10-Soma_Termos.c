@@ -15,7 +15,7 @@ abaixo tem 6 termos: S = 1 + 1/2 - 3/4 + 5/8 - 7/16 + 9/32 - ..., etc.), calcule
 
 int main(void){
 //Declarações
-	int qtdTermos, i;
+	int qtdTermos, i, flag;
 	float resultadoS, numerador, denominador;
 	
 //Instruções
@@ -23,38 +23,32 @@ int main(void){
 	scanf("%d",&qtdTermos);
 	BARRA_DUPLA
 	
-	for(i=0; i<qtdTermos; i++){
-		printf("-------- %d Termo --------\n",i+1);
-		if(i==0){
+	flag = 1;
+	for(i=1; i<qtdTermos; i++){
+		printf("-------- %d Termo --------\n",i);
+		if(flag){
+			numerador = 1;
+			denominador = 2;
 			//1o TERMO: 1
 			resultadoS = 1;
 			printf("S = %g\n",resultadoS);
 			BARRA_SIMPLES
-		}else if(i == 1){
-			numerador = 1;
-			denominador = 2;
-			//2o TERMO: S{1} = S + (1/2{0,5})
+		}else if(i % 2 == 0){
 			printf("%g + %g/%g\n",resultadoS, numerador, denominador);
 			resultadoS += (numerador/denominador);
-			printf("S = %g\n",resultadoS);
-			BARRA_SIMPLES
-		}else if(i % 2 == 0){
-			numerador += 2;
-			denominador *= 2;
-			//3o TERMO: S{1,5} = S - (3/4{0,75})
-			printf("%g - %g/%g\n",resultadoS, numerador, denominador);
-			resultadoS -= (numerador/denominador); 
 			printf("S = %g\n",resultadoS);
 			BARRA_SIMPLES
 		}else if(i % 2 != 0){
-			numerador += 2;
-			denominador *= 2;
-			//4o TERMO: S{0,375} = S + (5/8{0,625})
-			printf("%g + %g/%g\n",resultadoS, numerador, denominador);
-			resultadoS += (numerador/denominador);
+			printf("%g - %g/%g\n",resultadoS, numerador, denominador);
+			resultadoS -= (numerador/denominador);
 			printf("S = %g\n",resultadoS);
 			BARRA_SIMPLES
 		}
+		if(!flag){
+			numerador += 2;
+			denominador *= 2;
+		}
+		flag=0;
 	}
 	BARRA_DUPLA
 	printf("Resultado de S: %f\n",resultadoS);
