@@ -7,12 +7,12 @@ gera grande confusão entre os moradores. Para diminuir a confusão o síndico r
 instalar um computador na portaria onde os moradores irão digitar o número de seu 
 apartamento e saber o valor da taxa de condomínio. Você deve escrever o programa em C 
 que fará tal função seguindo a regra:
-	o Cada andar tem 4 apartamentos, sendo dois com 3 quartos e 2 com 4 quartos. O 
+- Cada andar tem 4 apartamentos, sendo dois com 3 quartos e 2 com 4 quartos. O 
 	síndico resolveu cobrar uma taxa superior nos apartamentos de 4 quartos. Assim, os 
 	apartamentos de 3 quartos pagarão R$ 200,00 e os de 4 quartos R$ 250,00. Os 
 	apartamentos de 4 quartos são os com números pares e os de 3 quartos com números 
 	ímpares;
-	o Por ser o elevador o maior custo dentre as despesas do condomínio o síndico 
+- Por ser o elevador o maior custo dentre as despesas do condomínio o síndico 
 	resolveu cobrar uma taxa superior dos moradores de andares mais altos. Assim, a 
 	cada 3 andares será cobrado R$ 10,00. Por exemplo, os moradores do 1, 2 e 3 andar 
 	pagam R$ 10,00 a mais no condomínio, os moradores do 4, 5 e 6 pagam R$ 20,00, 
@@ -26,53 +26,54 @@ taxa de condomínio.
 */
 #include<stdio.h>
 #include<stdlib.h>
-#define TAM
+#define BARRA_DUPLA printf("=============================================\n");
 
 int main(void){
 //Declarações
 	int num, i;
-	float taxa, andar, apart;
+	float taxaApart, taxaAndar, apart, andar;
 	
 //Instruções
-	printf("=============================================\n");
-	printf("    Digite o n�mero do seu apartamento\n");
-	printf("Exemplo -> 0101: apartamento 01 do 01 andar.\n");
-	printf("Cada andar tem 4 apartamentos Ex: 0101 - 0104\n");
-	printf("=============================================\n");
-	
 	do{
-		printf("Digite o n�mero do seu apartamento: ");
+	system("cls");
+	BARRA_DUPLA
+	printf("    Digite o numero do seu apartamento\n");
+	printf("Exemplo -> 0101: 01(andar) 01(apartamento).\n");
+	printf("Cada andar tem 4 apartamentos Ex: 0101 - 0104\n");
+	BARRA_DUPLA
+		printf("Digite o numero do seu apartamento: ");
 		scanf("%d",&num);
 	}while((num <= 100) || (num % 100 > 4)); //ENQUANTO: num menor que 100 OU resto for maior que 4
 	
-	if((num % 2) != 0)
-		taxa = 200;
-	else if((num % 2) == 0)
-		taxa = 250;
+	if((num % 2) != 0) //Apartamento Ímpar
+		taxaApart = 200;
+	else if((num % 2) == 0) //Apartamento Par
+		taxaApart = 250;
 	
 	apart = (num % 100);
 	
-	printf("=============================================\n");
+	printf("\n");
+	BARRA_DUPLA
 	printf("Apartamentos pares com 4 quartos R$250,00\n");
-	printf("Apartamentos �mpares com 3 quartos R$200,00\n");
-	printf("=============================================\n");
-	printf("------------- APARTAMENTO: %.0f ----------------\n",apart);
-	printf("------------- TAXA ATUAL R$%.1f ------------\n",taxa);
+	printf("Apartamentos impares com 3 quartos R$200,00\n");
+	BARRA_DUPLA
+	printf("------------- APARTAMENTO: %g --------------\n",apart);
+	printf("------------- TAXA R$%.2f ---------------\n",taxaApart);
 	
-	andar = (num/100) - (num%100)/10; //Exemplo num{803}: (num/100){8,03} - {0,3}(10/ {3}(num%100))
+	andar = (num/100) - (num%100)/10; //Exemplo num{803}: (num/100){8,03} - {0,3}((num%100)/10)
 		
-	for(i=1; i<=andar; i=i+3){
-		taxa += 10;
-		//printf("Taxa: %.1f\n",taxa);
+	for(i=1; i<=andar; i+=3){
+		taxaAndar += 10;
 	}
 	
-	printf("=============================================\n");
-	printf("Ser� adicionado R$10,00 a cada 3 andares \n");
+	BARRA_DUPLA
+	printf("Sera adicionado R$10,00 a cada 3 andares \n");
 	printf("Exemplo: andares 1, 2, 3 recebem R$10,00 \n");
-	printf("Assim em diante: 4, 5, 6 recebem R$20,00... \n");
-	printf("=============================================\n");
-	printf("------------- ANDAR: %.0f ----------------------\n",andar);
-	printf("------------- TAXA ATUAL R$%.1f ------------\n",taxa);
+	printf("Assim em diante 4, 5, 6 recebem R$20,00 ... \n");
+	BARRA_DUPLA
+	printf("------------- ANDAR: %g --------------------\n",andar);
+	printf("------------- TAXA R$%.2f ----------------\n",taxaAndar);
+	printf("------------- TAXA FINAL R$%.2f ---------\n",taxaApart + taxaAndar);
 	
 	return 0;
 }
