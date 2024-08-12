@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "08/12/2021"
+//  Data....: "11/08/2024"
 /*	Objetivo:
 Faça um programa em C que receba a quantidade de termos da expressão (a expressão 
 abaixo tem 6 termos: S = 1 + 1/2 - 3/4 + 5/8 - 7/16 + 9/32 - ..., etc.), calcule e imprima o valor resultado de (S).
@@ -9,49 +9,57 @@ abaixo tem 6 termos: S = 1 + 1/2 - 3/4 + 5/8 - 7/16 + 9/32 - ..., etc.), calcule
 //  Saída   : resultado do calculo de todas as expressões.
 #include<stdio.h>
 #include<stdlib.h>
-#define TAM
+#define TAM 6
+#define BARRA_SIMPLES printf("--------------------------\n");
+#define BARRA_DUPLA printf("==========================\n");
 
 int main(void){
 //Declarações
 	int qtdTermos, i;
-	float S, topo, abaixo;
+	float resultadoS, numerador, denominador;
 	
 //Instruções
-	printf("Quantidade termos de express�es: ");
+	printf("Quantidade de termos de expressoes: ");
 	scanf("%d",&qtdTermos);
-	printf("=============================\n");
+	BARRA_DUPLA
 	
-	for(i=1; i<=qtdTermos; i++){
-		printf("%d� Termos\n",i);
-		if(i==1){
-			S=1; //1� TERMO
-			printf("S = %.0f\n",S);
-			printf("-----------------------------\n");
-		}else if(i==2){
-			topo = 1;
-			abaixo = 2;
-			S += S*(topo/abaixo); //S{1} = S + (S * 1/2{0,5}): 2� TERMO
-			printf(" + %.0f/%.0f\n",topo, abaixo);
-			printf("S = %.2f\n",S);
-			printf("-----------------------------\n");
-		}else if(i % 2 != 0){
-			topo += 2;
-			abaixo *= 2;
-			S -= S*(topo/abaixo); //S{1,5} = S - (S * 3/4{0,75}): 3� TERMO
-			printf(" - %.0f/%.0f\n",topo, abaixo);
-			printf("S = %f\n",S);
-			printf("-----------------------------\n");
+	for(i=0; i<qtdTermos; i++){
+		printf("-------- %d Termo --------\n",i+1);
+		if(i==0){
+			//1o TERMO: 1
+			resultadoS = 1;
+			printf("S = %g\n",resultadoS);
+			BARRA_SIMPLES
+		}else if(i == 1){
+			numerador = 1;
+			denominador = 2;
+			//2o TERMO: S{1} = S + (1/2{0,5})
+			printf("%g + %g/%g\n",resultadoS, numerador, denominador);
+			resultadoS += (numerador/denominador);
+			printf("S = %g\n",resultadoS);
+			BARRA_SIMPLES
 		}else if(i % 2 == 0){
-			topo += 2;
-			abaixo *= 2;
-			S += S*(topo/abaixo); //S{0,375} = S + (S * 5/8{0,625}): 4� TERMO
-			printf(" + %.0f/%.0f\n",topo, abaixo);
-			printf("S = %f\n",S);
-			printf("-----------------------------\n");
+			numerador += 2;
+			denominador *= 2;
+			//3o TERMO: S{1,5} = S - (3/4{0,75})
+			printf("%g - %g/%g\n",resultadoS, numerador, denominador);
+			resultadoS -= (numerador/denominador); 
+			printf("S = %g\n",resultadoS);
+			BARRA_SIMPLES
+		}else if(i % 2 != 0){
+			numerador += 2;
+			denominador *= 2;
+			//4o TERMO: S{0,375} = S + (5/8{0,625})
+			printf("%g + %g/%g\n",resultadoS, numerador, denominador);
+			resultadoS += (numerador/denominador);
+			printf("S = %g\n",resultadoS);
+			BARRA_SIMPLES
 		}
 	}
-	printf("Resultado de S: %f",S);
-	printf("\n=============================");
+	BARRA_DUPLA
+	printf("Resultado de S: %f\n",resultadoS);
+	BARRA_DUPLA
+	
 	return 0;
 }
 
