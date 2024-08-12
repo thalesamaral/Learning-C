@@ -27,28 +27,26 @@ int main(void){
 	for(i=1; i<qtdTermos; i++){
 		printf("-------- %d Termo --------\n",i);
 		if(flag){
+			//1o TERMO: S = 1
+			resultadoS = 1;
 			numerador = 1;
 			denominador = 2;
-			//1o TERMO: 1
-			resultadoS = 1;
-			printf("S = %g\n",resultadoS);
-			BARRA_SIMPLES
 		}else if(i % 2 == 0){
 			printf("%g + %g/%g\n",resultadoS, numerador, denominador);
 			resultadoS += (numerador/denominador);
-			printf("S = %g\n",resultadoS);
-			BARRA_SIMPLES
 		}else if(i % 2 != 0){
 			printf("%g - %g/%g\n",resultadoS, numerador, denominador);
 			resultadoS -= (numerador/denominador);
-			printf("S = %g\n",resultadoS);
-			BARRA_SIMPLES
 		}
+		
 		if(!flag){
 			numerador += 2;
 			denominador *= 2;
 		}
 		flag=0;
+
+		printf("S = %g\n",resultadoS);
+		BARRA_SIMPLES
 	}
 	BARRA_DUPLA
 	printf("Resultado de S: %f\n",resultadoS);
