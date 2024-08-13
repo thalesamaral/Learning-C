@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "08/12/2021" - "08/08/2022"
+//  Data....: "08/12/2021" - "08/08/2022" - "12/08/2024"
 /*	Objetivo:
 O Vaticano lhe encomendou um programa em C para "eleição" do Papa, onde somente 2 
 Cardeais concorrerão por vez esperando que um atinja 75% dos votos, caso isto não ocorra 
@@ -34,12 +34,12 @@ int main(void){
 
 		for (i=0; i < TAM; i++){
 			/* gerando valores aleatórios entre zero e 1 */
-			cont = rand() % 2;
-			//printf(" %d", cont);
+			voto = rand() % 2;
+			//printf(" %d", voto);
 			
-			if(!cont)
+			if(!voto)
 				qtdVoto0 ++;
-			else if(cont)
+			else if(voto)
 				qtdVoto1 ++;
 		}
 		votoTotal = qtdVoto0 + qtdVoto1;
@@ -53,7 +53,8 @@ int main(void){
 
 		//Sleep(1000); //{Timer de 1 sec para atualizar o srand()}
 	}while((porcentoVoto0 < 70) && (porcentoVoto1 < 70));
-	printf("\nTotal de Eleicoes: %d",eleicoes);
+
+	printf("\nTotal de Eleicoes: %d\n",eleicoes);
 	return 0;
 }
 
