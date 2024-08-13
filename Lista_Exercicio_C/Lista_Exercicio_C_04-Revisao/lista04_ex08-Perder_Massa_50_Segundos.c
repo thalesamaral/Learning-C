@@ -1,15 +1,15 @@
-// Sintese
-// Objetivo:
+// SÃ­ntese
 // Autor: Thales Amaral Lima
-// Data: 0/0/2020
+// Data: 0/0/2024
+/* Objetivo: */
 #include <stdio.h>
-#include <conio.h>
+
 int main(void){
-//Declarações
+//DeclaraÃ§Ãµes
 	float massa,grama;
 	int hora=3600,minuto=60,segundo=0,h,m,s;
 
-//Instruções
+//InstruÃ§Ãµes
 	printf("Digite a quantidade massa em gramas: ");
 	scanf("%f",&grama);
 	massa=grama;

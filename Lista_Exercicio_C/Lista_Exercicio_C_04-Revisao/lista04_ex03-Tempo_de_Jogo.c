@@ -1,9 +1,14 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<locale.h>
+// Síntese
+// Autor: Thales Amaral Lima
+// Data: 0/0/2024
+/* Objetivo: */
+#include <stdio.h>
+
 int jogo(){
+//Declarações
 	int h1,m1,h2,m2,t;
-		
+	
+//Instruções
 		printf("Digite a hora e depois os minutos do inicio do jogo\n");
 		scanf("%d%d",&h1,&m1);
 		printf("digite a hora e depois os minutos do fim do jogo\n");
@@ -25,7 +30,7 @@ int jogo(){
 	}
 	return t; 
 }
-main(){
+int main(void){
 	int partida;
 		partida=jogo();
 		printf("Tempo de jogo foi %d minutos",partida);

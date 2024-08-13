@@ -1,12 +1,15 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<locale.h>
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Declarações
+// SÃ­ntese
+// Autor: Thales Amaral Lima
+// Data: 0/0/2024
+/* Objetivo: */
+#include <stdio.h>
+
+int main(void){
+//DeclaraÃ§Ãµes
 	char sexo;
 	float alt, pesoIdeal;
-//Instruções
+	
+//InstruÃ§Ãµes
 	printf("Letra inicial do sexo(masculino/feminino)\n");
 	scanf("%c",&sexo);
 	sexo = toupper(sexo);

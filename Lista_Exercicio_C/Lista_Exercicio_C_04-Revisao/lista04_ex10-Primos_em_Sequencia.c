@@ -1,13 +1,14 @@
-// Sintese
-// Objetivo:
+// SÃ­ntese
 // Autor: Thales Amaral Lima
-// Data: 0/0/2020
+// Data: 0/0/2024
+/* Objetivo: */
 #include <stdio.h>
-#include <conio.h>
-main(){
-//Declarações
+
+int main(void){
+//DeclaraÃ§Ãµes
 	int num, cont, c2,c1,aux=0;
-//Instruções
+
+//InstruÃ§Ãµes
 	
 	do{
 		printf("Digite um numero\n");

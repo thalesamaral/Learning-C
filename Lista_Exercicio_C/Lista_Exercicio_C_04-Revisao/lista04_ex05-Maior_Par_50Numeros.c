@@ -1,10 +1,14 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<locale.h>
-main(){
-setlocale(LC_ALL,"Portuguese");
+// Síntese
+// Autor: Thales Amaral Lima
+// Data: 0/0/2024
+/* Objetivo: */
+#include <stdio.h>
+
+int main(void){
+//Declarações
 	int num,c,maior=0;
 	
+//Instruções
 	for(c = 1; c <= 50; c++){
 		printf("Digite 50 numeros: ");
 		scanf("%i",&num);
@@ -13,5 +17,5 @@ setlocale(LC_ALL,"Portuguese");
 				maior=num;
 		}
 	}
-	printf("O maior numero par �: %i",maior);
+	printf("O maior numero par �: %i",maior);
 }

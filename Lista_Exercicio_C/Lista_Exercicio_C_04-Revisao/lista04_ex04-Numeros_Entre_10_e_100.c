@@ -1,14 +1,15 @@
-// Sintese
-// Objetivo: Ler 50 numeros e ver quantos estão entre 10 e 100
+// SÃ­ntese
 // Autor: Thales Amaral Lima
-// Data: 28/02/2020
+// Data: 0/0/2024
+/* Objetivo: */
 #include <stdio.h>
 #include <conio.h>
-int main(void){
-//Declarações
-	int num,c,quant=0;
-//Instruções
 
+int main(void){
+//DeclaraÃ§Ãµes
+	int num,c,quant=0;
+
+//InstruÃ§Ãµes
 	for(c = 1; c <= 3; c++){
 		printf("Digite 50 numeros: ");
 		scanf("%i",&num);

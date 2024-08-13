@@ -1,14 +1,15 @@
-// Sintese
-// Objetivo:
+// SÃ­ntese
 // Autor: Thales Amaral Lima
-// Data: 29/02/2020
+// Data: 0/0/2024
+/* Objetivo: */
 #include <stdio.h>
-#include <conio.h>
+
 int main(void){
-//Declarações
+//DeclaraÃ§Ãµes
 	float media=0, maior, menor, cont=0, total=0;
 	int flag=0;
-//Instruções
+
+//InstruÃ§Ãµes
 
 	//printf("");
 	//scanf("%i",&);

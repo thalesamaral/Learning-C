@@ -1,13 +1,16 @@
+// SÃ­ntese
+// Autor: Thales Amaral Lima
+// Data: 0/0/2024
+/* Objetivo: */
 #include <stdio.h>
-#include <stdlib.h>
-#include <locale.h>
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Declarações
+
+int main(void){
+//DeclaraÃ§Ãµes
 	int cod, quant;
 	float conta;
-//Instruções
-	printf("Especificação  |Código|Preço\n");
+
+//InstruÃ§Ãµes
+	printf("Especificacao  |Codigo|Preco\n");
 	printf("Cachorro quente|0     |1,20\n");		
 	printf("Bauru simples  |1     |1,30\n");
 	printf("Bauru com ovo  |2     |1,50\n");
@@ -57,7 +60,7 @@ setlocale(LC_ALL,"Portuguese");
 			printf("O valor da conta eh %f",conta);
 		break;
 		default:
-	           printf("Opcao invalida\n");
+	    	printf("Opcao invalida\n");
 	    break;
 	}
 }
