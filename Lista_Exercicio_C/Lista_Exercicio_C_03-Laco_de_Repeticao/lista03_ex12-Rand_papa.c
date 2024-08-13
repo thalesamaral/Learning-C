@@ -18,8 +18,8 @@ Ao final ele deve informar o nome do Papa eleito
 
 int main(void){
 //Declarações
-	int i, cont, qtdVoto0, qtdVoto1, eleicoes=0;
-	float votoTotal, porcentoVoto0, porcentoVoto1;
+	int i, voto, votoTotal, qtdVoto0, qtdVoto1, eleicoes=0;
+	float porcentoVoto0, porcentoVoto1;
 	
 //Instruções
 	do{
