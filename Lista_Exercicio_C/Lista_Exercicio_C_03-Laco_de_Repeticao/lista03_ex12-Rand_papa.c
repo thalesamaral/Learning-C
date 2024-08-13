@@ -11,43 +11,49 @@ Ao final ele deve informar o nome do Papa eleito
 //  Entrada : somente 2 Cardeais concorrerão por vez.
 //  Saída   : esperando que um atinja 75% dos votos.
 #include<stdio.h>
-#include<stdlib.h>// necess�rio p/ as fun��es rand() e srand()
+#include<stdlib.h>// necessário p/ as funções rand() e srand()
+#include<time.h>// necessário p/ função time()
+#include<windows.h>// necessário p/ função Sleep()
 #define TAM 9
 
 int main(void){
 //Declarações
-	int i, cont, voto0, voto1, eleicoes=0;
-	float votoTotal;
+	int i, cont, qtdVoto0, qtdVoto1, eleicoes=0;
+	float votoTotal, porcentoVoto0, porcentoVoto1;
 	
 //Instruções
 	do{
-		voto0 = 0;
-		voto1 = 0;
-		printf("\nDigite [0] 1� Cardeal\n");
-		printf("Digite [1] 2� Cardeal\n");
+		qtdVoto0 = 0;
+		qtdVoto1 = 0;
+		printf("\nDigite [0] 1# Cardeal\n");
+		printf("Digite [1] 2# Cardeal\n");
 		//scanf("%d",&voto);
+		
+		//inicia o gerador de números pseudo-aleatórios usado pela função rand()
 		srand(time(NULL));
-		
+
 		for (i=0; i < TAM; i++){
-		    /* gerando valores aleat�rios entre zero e 1 */
-		    //printf("%d\n", rand() % 2);
-		    cont = rand() % 2;
-		    //printf("%d \n", cont);
-		    
-		    if(cont == 0)
-		    	voto0 ++;
-		    else if(cont == 1)
-		    	voto1 ++;
+			/* gerando valores aleatórios entre zero e 1 */
+			cont = rand() % 2;
+			//printf(" %d", cont);
+			
+			if(!cont)
+				qtdVoto0 ++;
+			else if(cont)
+				qtdVoto1 ++;
 		}
-		
-		votoTotal = voto0 + voto1;
-		
-		printf("\n1� Cardeal %d votos: %.2f%%\n",voto0,voto0*100/votoTotal);
-		printf("2� Cardeal %d votos: %.2f%%\n",voto1,voto1*100/votoTotal);
+		votoTotal = qtdVoto0 + qtdVoto1;
+		porcentoVoto0 = qtdVoto0*100/votoTotal;
+		porcentoVoto1 = qtdVoto1*100/votoTotal;
+
+		printf("\n\n1# Cardeal %d votos: %.2f%%\n",qtdVoto0, porcentoVoto0);
+		printf("2# Cardeal %d votos: %.2f%%\n",qtdVoto1, porcentoVoto1);
 		printf("==========================\n");
 		eleicoes++;
-	}while(((voto0*100/votoTotal) < 75) && ((voto1*100/votoTotal) < 75));
-	printf("\nTotal de Elei��es: %d",eleicoes);
+
+		//Sleep(1000); //{Timer de 1 sec para atualizar o srand()}
+	}while((porcentoVoto0 < 70) && (porcentoVoto1 < 70));
+	printf("\nTotal de Eleicoes: %d",eleicoes);
 	return 0;
 }
 
