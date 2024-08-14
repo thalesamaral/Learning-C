@@ -5,7 +5,6 @@
 Faça um programa em C que receba um valor e imprima se é positivo, negativo ou zero.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

@@ -13,7 +13,6 @@ Ou ter uma renda mensal mínima de R$ 10.000,00 e um barco ancorado no clube;
 um patrimônio líquido de no mínimo R$ 10 milhão. Ou ser presidente da república ou governador
 */
 #include<stdio.h>
-#include<stdlib.h>
 #define PADRAO 1
 #define BRONZE 2
 #define PRATA 3

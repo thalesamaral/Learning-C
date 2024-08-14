@@ -10,7 +10,6 @@ cúbicos. Calcule e imprima o valor de sua conta. O cálculo obedece as seguinte
 • Industrial: R$800,00 para os primeiros 100 m3 gastos mais R$ 0,04 por m3 gasto excedendo os 100 m3.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

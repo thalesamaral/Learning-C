@@ -7,7 +7,6 @@ a partir de uma dúzia, baixam para R$ 1,00/cada. Faça um programa em C que rec
 número de maçãs compradas, calcule e imprim1a o custo total da compra.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

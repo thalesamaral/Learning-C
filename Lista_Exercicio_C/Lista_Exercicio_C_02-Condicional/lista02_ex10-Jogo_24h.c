@@ -8,7 +8,6 @@ Sabe-se que o tempo máximo de duração do jogo é de 24 horas e que o jogo pod
 iniciar em um dia e terminar no dia seguinte.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

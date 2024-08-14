@@ -8,7 +8,6 @@ imprimir que O USUÁRIO ULTRAPASSOU A VELOCIDADE MÁXIMA E SERÁ MULTADO,
 caso contrário (velocidade igual ou menor que 80 km/h) imprimir que O USUÁRIO ESTÁ DENTRO DO LIMITE MÁXIMO DE VELOCIDADE.
 */
 #include<stdio.h>
-#include<stdlib.h>
 #define Limite_Rodovia 80
 
 int main(void){

@@ -7,7 +7,6 @@ verifique e imprima por extenso: masculino ou feminino.
 Senão, imprima uma mensagem informando que o valor digitado está incorreto.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

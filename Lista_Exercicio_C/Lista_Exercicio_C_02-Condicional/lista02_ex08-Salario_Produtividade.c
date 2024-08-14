@@ -11,7 +11,6 @@ o critério abaixo:
 • Quando o número de peças for superior a 750: recebe R$ 1.180,00 (fixo) mais R$ 0,75 por peça fabricada acima das 750.
 */
 #include<stdio.h>
-#include<stdlib.h>
 #define Salario_Base 1050.00
 
 int main(void){

@@ -10,7 +10,6 @@ seu salário líquido utilizando a seguinte regra:
 R$ 2.000,00, o valor arrecadado será de 11% sobre 1.200 e 20% sobre 800.
 */
 #include<stdio.h>
-#include<stdlib.h>
 #define Limite_Bruto 1200
 #define Desconto_Abaixo_Limite 0.89 //11% aplicado
 #define Desconto_Acima_Limite 0.8 //20% aplicado

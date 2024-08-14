@@ -10,7 +10,6 @@ que deverá ser acrescido das horas extras, caso tenham sido trabalhadas (consid
 mês possua 4 semanas exatas).
 */
 #include<stdio.h>
-#include<stdlib.h>
 #define Hora_Mensal 160
 
 int main(void){

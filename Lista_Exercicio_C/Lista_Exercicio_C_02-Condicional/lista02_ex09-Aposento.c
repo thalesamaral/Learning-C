@@ -12,7 +12,6 @@ nascimento e o ano de seu ingresso na empresa, calcule e imprima a idade e o tem
 de trabalho do empregado, e a mensagem “Requerer aposentadoria” ou “Não requerer”.
 */
 #include<stdio.h>
-#include<stdlib.h>
 #define anoAtual 2024
 
 int main(void){
