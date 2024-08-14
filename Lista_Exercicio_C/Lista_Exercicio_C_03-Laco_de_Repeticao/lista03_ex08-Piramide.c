@@ -14,7 +14,6 @@ que serão necessários para a construção da pirâmide e o peso total que a pi
 quando pronta.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

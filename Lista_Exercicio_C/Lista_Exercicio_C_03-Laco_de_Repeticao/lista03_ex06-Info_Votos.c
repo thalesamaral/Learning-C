@@ -18,7 +18,6 @@ votarão em um candidato ou nulo (informando qualquer outro número), não haven
 em branco.
 */
 #include<stdio.h>
-#include<stdlib.h>
 #define BARRA_DUPLA printf("==================================================\n");
 #define BARRA_SIMPLES printf("--------------------\n");
 

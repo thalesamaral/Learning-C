@@ -7,7 +7,6 @@ até o número informado pelo usuário e em seguida imprima, em ordem inversa (m
 menor), todos os números do número informado pelo usuário até zero (0).
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

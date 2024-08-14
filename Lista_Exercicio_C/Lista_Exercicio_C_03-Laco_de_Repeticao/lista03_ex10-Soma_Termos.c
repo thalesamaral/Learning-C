@@ -8,7 +8,6 @@ abaixo tem 6 termos: S = 1 + 1/2 - 3/4 + 5/8 - 7/16 + 9/32 - ..., etc.), calcule
 //  Entrada : qtd termos de expressões.
 //  Saída   : resultado do calculo de todas as expressões.
 #include<stdio.h>
-#include<stdlib.h>
 #define TAM 6
 #define BARRA_SIMPLES printf("--------------------------\n");
 #define BARRA_DUPLA printf("==========================\n");

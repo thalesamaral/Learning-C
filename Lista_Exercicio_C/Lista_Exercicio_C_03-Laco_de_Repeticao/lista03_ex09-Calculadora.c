@@ -19,7 +19,7 @@ Digite um operando: 3 O resultado é 5
 Digite um operador: S
 */
 #include<stdio.h>
-#include<stdlib.h>
+#include<stdlib.h> //system("cls");
 #define TAM
 
 int main(void){

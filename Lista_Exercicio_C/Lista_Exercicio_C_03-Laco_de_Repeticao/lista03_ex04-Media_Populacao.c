@@ -11,7 +11,6 @@ o salário e número de filhos. A prefeitura deseja saber:
 O final da leitura de dados se dará com a entrada de um salário negativo.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

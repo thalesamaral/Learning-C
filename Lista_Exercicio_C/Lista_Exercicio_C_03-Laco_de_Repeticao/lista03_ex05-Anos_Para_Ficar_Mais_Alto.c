@@ -9,7 +9,6 @@ para que a mais baixa seja maior que a outra. Caso isto não ocorra em 100 anos 
 mensagem de impossibilidade.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

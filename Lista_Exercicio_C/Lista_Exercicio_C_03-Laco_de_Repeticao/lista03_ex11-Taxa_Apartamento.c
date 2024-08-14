@@ -25,7 +25,7 @@ Seu programa em C deve receber o número do apartamento e apresentar o valor da
 taxa de condomínio.
 */
 #include<stdio.h>
-#include<stdlib.h>
+#include<stdlib.h> //system("cls");
 #define BARRA_DUPLA printf("=============================================\n");
 
 int main(void){

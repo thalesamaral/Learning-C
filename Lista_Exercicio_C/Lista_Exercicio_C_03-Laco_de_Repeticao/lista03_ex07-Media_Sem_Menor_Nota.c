@@ -10,8 +10,6 @@ um programa em C que receba o nome do estudante e suas 21 notas de prova, encont
 O programa deve encerrar quando for digitado "fim" para o nome.
 */
 #include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
 #define ALUNOS 3
 
 int main(void){
@@ -21,7 +19,7 @@ int main(void){
 	int i;
 	
 //Instruções
-	fflush(stdin); setbuf(stdin, 0);
+	fflush(stdin); //setbuf(stdin, 0);
 	printf("Digite -fim- para finalizar!\n");
 	printf("Nome do aluno: ");
 	scanf("%s",nome);
@@ -57,7 +55,7 @@ int main(void){
 		notaTotal = 0;
 		notaMenor = 10;
 		
-		fflush(stdin); setbuf(stdin, 0);
+		fflush(stdin); //setbuf(stdin, 0);
 		printf("Digite -fim- para finalizar!\n");
 		printf("Nome do novo aluno: ");
 		scanf("%s",nome);

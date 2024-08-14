@@ -9,7 +9,6 @@ há 3.28 pés em um metro e 1.61 quilômetros em uma milha. O programa em C deve
 a leitura de medidas assim que for digitado um valor negativo.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

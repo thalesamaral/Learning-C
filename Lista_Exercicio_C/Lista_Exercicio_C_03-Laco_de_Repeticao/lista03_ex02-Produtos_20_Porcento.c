@@ -8,7 +8,6 @@ médias dos preços com e sem aumento. A entrada de dados deve terminar quando f
 um código de produto negativo.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações
