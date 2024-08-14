@@ -6,7 +6,6 @@ Faça um programa em C que receba o preço do litro da gasolina e o valor que o 
 deseja abastecer, calcule e imprima a quantidade de litros correspondente a este valor.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

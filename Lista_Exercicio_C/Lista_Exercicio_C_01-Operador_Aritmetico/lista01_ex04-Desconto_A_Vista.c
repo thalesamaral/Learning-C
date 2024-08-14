@@ -7,7 +7,6 @@ Sabendo que o desconto para pagamento à vista é de 10% sobre o valor total, ca
 Escreva o valor total, o valor do desconto e o valor a ser pago à vista.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

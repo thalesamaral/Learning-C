@@ -6,7 +6,6 @@ Faça um programa em C que leia uma temperatura em graus Celsius e a transforme 
 Considere a fórmula: Farenheit = ((Celsius * 9) / 5) + 32.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

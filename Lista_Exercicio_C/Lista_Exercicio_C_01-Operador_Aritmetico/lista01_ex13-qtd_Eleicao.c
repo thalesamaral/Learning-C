@@ -7,7 +7,6 @@ votos em branco, nulos e válidos de uma eleição, calcule e imprima o percentu
 um representa em relação ao número de eleitores do município.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

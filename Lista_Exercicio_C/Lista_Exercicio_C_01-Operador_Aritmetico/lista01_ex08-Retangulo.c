@@ -5,7 +5,6 @@
 Faça um programa em C que receba as dimensões de um retângulo (base e altura), calcule e imprima a área deste retângulo.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

@@ -6,7 +6,6 @@ Faça um programa em C que leia três notas de um aluno, calcule e imprima a mé
 Utilize média ponderada com os pesos 2, 3 e 5.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

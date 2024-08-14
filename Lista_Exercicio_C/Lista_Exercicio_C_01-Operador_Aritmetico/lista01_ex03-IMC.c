@@ -6,7 +6,6 @@ Faça um programa em C para obter o peso de uma pessoa e informar ao usuário o 
 Sabe-se que IMC é dado pela divisão do peso pela altura ao quadrado.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações
@@ -34,7 +33,7 @@ int main(void){
 	printf("*** Obesidade grau I....: imc >= 30 && imc <= 34.9\n");
 	printf("*** Obesidade grau II...: imc >= 35 && imc <= 40\n");
 	printf("*** Obesidade grau III..: imc > 40\n\n");
-		
+	
 	return 0;
 }
 

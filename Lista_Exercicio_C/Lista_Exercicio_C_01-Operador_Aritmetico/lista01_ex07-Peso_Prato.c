@@ -5,7 +5,6 @@
 Faça um programa em C que receba o valor do quilo de um restaurante e o peso do prato do cliente, calcule e imprima o valor a ser pago.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

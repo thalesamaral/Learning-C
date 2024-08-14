@@ -7,8 +7,6 @@ Após esse desconto, há outro desconto de 5% sobre o valor restante do salário
 Faça um programa em C que leia o salário bruto de um cidadão e apresente o seu salário líquido.
 */
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 int main(void){
 //Declarações

@@ -7,7 +7,6 @@ garrafa de 600ml e garrafa de 2 litros.
 Faça um programa em C que receba a quantidade comprada de cada tipo, calcule e imprima o total de litros comprados.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações

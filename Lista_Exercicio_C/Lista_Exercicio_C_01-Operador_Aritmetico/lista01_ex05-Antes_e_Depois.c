@@ -5,7 +5,6 @@
 Faça um programa em C que receba um número inteiro e imprima o seu antecessor, o número lido e seu sucessor.
 */
 #include<stdio.h>
-#include<stdlib.h>
 
 int main(void){
 //Declarações
