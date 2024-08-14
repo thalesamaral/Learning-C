@@ -26,7 +26,7 @@ int main(void){
 	
 	printf("\nDigite o codigo para o pedido: ");
 	do{
-		scanf("%i",&cod);
+		scanf("%d",&cod);
 		if(cod < 0 || cod > 5)
 			printf("Codigo invalido\n");
 	}while(cod < 0 || cod > 5);
