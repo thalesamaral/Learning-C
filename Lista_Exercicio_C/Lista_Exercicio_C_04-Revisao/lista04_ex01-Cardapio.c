@@ -7,6 +7,7 @@ a ser pago por aquele lanche. Considere que a cada execução somente será calc
 item.
 */
 #include <stdio.h>
+#include <stdlib.h> //system();
 
 int main(void){
 //Declarações
@@ -14,27 +15,29 @@ int main(void){
 	float conta;
 
 //Instruções
-	printf("Especificacao  |Codigo|Preco\n");
-	printf("----------------------------\n");
-	printf("Cachorro quente|0     |1,20\n");
-	printf("Bauru simples  |1     |1,30\n");
-	printf("Bauru com ovo  |2     |1,50\n");
-	printf("Hamburguer     |3     |1,20\n");
-	printf("X Burguer      |4     |1,30\n");
-	printf("Refrigerante   |5     |1,00\n");
-	printf("----------------------------\n");
-	
-	printf("\nDigite o codigo para o pedido: ");
 	do{
+		printf("Especificacao  |Codigo|Preco\n");
+		printf("----------------------------\n");
+		printf("Cachorro quente|0     |1,20\n");
+		printf("Bauru simples  |1     |1,30\n");
+		printf("Bauru com ovo  |2     |1,50\n");
+		printf("Hamburguer     |3     |1,20\n");
+		printf("X Burguer      |4     |1,30\n");
+		printf("Refrigerante   |5     |1,00\n");
+		printf("----------------------------\n");
+		
+		printf("\nDigite o codigo para o pedido: ");
 		scanf("%d",&cod);
-		if(cod < 0 || cod > 5)
-			printf("Codigo invalido\n");
+		if(cod < 0 || cod > 5){
+			system("cls");
+			printf("Codigo invalido\n\n");
+		}
 	}while(cod < 0 || cod > 5);
 	
 	printf("Quantas unidades: ");
 	scanf("%d",&quant);
 	printf("\n");
-		
+	
 	switch(cod){
 		case 0:
 			conta = quant * 1.20;
