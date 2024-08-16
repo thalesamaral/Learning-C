@@ -12,9 +12,10 @@ jogo é de 24 horas e que o jogo pode iniciar em um dia e terminar no dia seguin
 
 int main(void){
 //Declarações
-	int horaInicio=10, minutoInicio=30;
-	int horaFim=9, minutoFim=0;
-	float duracao, totalInicio, totalFim;;
+	float horaInicio=10, minutoInicio=30;
+	float horaFim=10, minutoFim=29;
+	float duracao;
+	float totalInicio, totalFim;
 	
 //Instruções
 	/*
@@ -63,28 +64,30 @@ int main(void){
 	}while(minutoFim < 0 || minutoFim > 59);
 	*/
 	
-	totalInicio = (horaInicio * 60) + minutoInicio;
-	totalFim = (horaFim * 60) + minutoFim;
-	
-	totalInicio /= 60;
+	totalInicio = horaInicio + minutoInicio/60;
+	totalFim = horaFim + minutoFim/60;
+
 	printf("totalInicio: %g\n",totalInicio);
-	totalFim /= 60;
 	printf("totalFim: %g\n",totalFim);
+
+	//printf("Num = %f, intpart = %d, decpart = %f\n", num, intpart, decpart);
 
 	if(totalInicio > totalFim){
 		duracao = (24 - totalInicio) + totalFim;
+		int intpart = (int)duracao;
+		float decpart = duracao - intpart;
 		printf("\n==================================\n");
-		printf("  Duracao de %gh durante 2 dias!",duracao);
+		printf(" Duracao de %d:%gh durante 2 dias!",intpart,decpart*60);
 		printf("\n==================================\n");
 	}else if(totalInicio < totalFim){
 		duracao = (totalFim - totalInicio);
 		printf("\n==================================\n");
-		printf("  Duracao de %gh durante 1 dia!",duracao);
+		printf(" Duracao de %gh durante 1 dia!",duracao);
 		printf("\n==================================\n");
 	}else{
 		duracao = (totalFim + totalInicio);
 		printf("\n==================================\n");
-		printf("  Duracao de %gh durante 2 dias!",duracao);
+		printf(" Duracao de %gh durante 2 dias!",duracao);
 		printf("\n==================================\n");
 	}	
 	return 0;
