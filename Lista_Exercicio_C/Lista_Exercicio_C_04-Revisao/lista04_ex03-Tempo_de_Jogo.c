@@ -1,6 +1,6 @@
 // Síntese
 // Autor: Thales Amaral Lima
-// Data: 0/0/2024
+// Data: 15/08/2024
 /* Objetivo: */
 #include <stdio.h>
 
