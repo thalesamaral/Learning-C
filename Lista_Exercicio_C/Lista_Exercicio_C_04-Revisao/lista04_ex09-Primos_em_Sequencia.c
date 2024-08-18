@@ -11,49 +11,30 @@ primo!!!).
 
 int main(void){
 //Declarações
-	int num, contPrimos, i, j;
-	//c2,c1,aux=0;
+	int num, qtdDivisores;
 
 //Instruções
 	
 	do{
+		printf("Identificar numeros primos\n");
 		printf("Digite um numero: ");
 		scanf("%d",&num);
 		if(num<0){
 			system("cls");
-			printf("Numero invalido\n");
+			printf("Numero invalido\n\n");
 		}
 	}while(num<0);
 	
-	for(i=1; i<=num; i++){
-		printf("i %d\n",i);
-		for(j=1; j<=i; j++){
-			printf("j %d\n",j);
+	for(int i=1; i<=num; i++){
+		for(int j=1; j<=i; j++){
 			if(i%j == 0){
-				contPrimos++;
-				printf("cont %d\n",contPrimos);
+				qtdDivisores++;
 			}
 		}
-		if(contPrimos == 2){
-			printf("\nii %d\n",i);
+		if(qtdDivisores == 2){
+			printf("Primo: %d\n",i);
 		}
-		contPrimos=0;
+		qtdDivisores=0;
 	}
-	
-	/*
-	for(c1=0; c1<=num; c1++){
-		c1++;
-		for(c2=num; c2>=0; c2--){
-			c2--;
-			if(c2%c1 == 0){
-				if(c1 != aux){
-					printf("%d\n",c1);
-					aux = c1;
-				}
-			}
-		}
-	}
-	*/
-	
 }
 
