@@ -31,10 +31,10 @@ int main(void){
 		m -= 60;
 	}
 	s = segundo%minuto;
-	printf("\nsegundo %d - h %d - m %d - s %d\n",segundo,h,m,s);
+	//printf("\nsegundo %d - h %d - m %d - s %d\n",segundo,h,m,s);
 
-	printf("\nMassa inicial = %.0f",massaInicial);
-	printf("\nMassa final = %f",massa);
-	printf("\nTempo de processo = %i(hor) %i(min) %i(seg)\n",h,m,s);
+	printf("\nMassa inicial = %g",massaInicial);
+	printf("\nMassa final = %g",massa);
+	printf("\nTempo de processo = %d(hor) %d(min) %d(seg)\n",h,m,s);
 }
 
