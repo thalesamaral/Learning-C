@@ -1,39 +1,48 @@
 // Síntese
 // Autor: Thales Amaral Lima
-// Data: 0/0/2024
-/* Objetivo: */
+// Data: 18/08/2024
+/* Objetivo:
+Faça um programa em C que leia as médias finais de vários alunos de uma turma e mostre 
+a maior média, a menor média e a média aritmética da turma. O programa para quando 
+encontrar uma média negativa.
+*/
 #include <stdio.h>
 
 int main(void){
 //Declarações
-	float media=0, maior, menor, cont=0, total=0;
-	int flag=0;
+	float media=0, maior=0, menor, qtdAluno=0, totalMedia=0;
+	int flag=1;
 
 //Instruções
-
-	//printf("");
-	//scanf("%i",&);
-	
+	printf("Digite um valor negativo para finalizar!\n");
 	while(media >= 0){
-		printf("Qual a media do aluno:");
+		printf("Media do aluno: ");
 		scanf("%f",&media);
-		if (media >= 0){
-			if (media>maior)
+		if(media >= 0){
+			//VERIFICA MAIOR
+			if(media>maior){
 				maior=media;
-			if (media<menor)
-				menor=media;
-			while(flag==0){
-				menor=media;
-				flag=1;
 			}
-			cont ++;
-			total += media;
-		
-		}else
-			printf("Negativo\n");
+			//INICIA MENOR
+			if(flag){
+				menor=media;
+				flag=0;
+			}
+			//VERIFICA MENOR
+			if(media<menor){
+				menor=media;
+			}
+			qtdAluno ++;
+			totalMedia += media;
+		}else{
+			printf("\nNegativo confirmado!\n\n");
+		}
 	}
-	printf("maior media %f\n",maior);
-	printf("menor media %f\n",menor);
-	printf("Media da turma %f\n",total/cont);
+	
+	if(qtdAluno){
+		printf("Media da turma %g\n",totalMedia/qtdAluno);
+		printf("Maior media %g\n",maior);
+		printf("Menor media %g\n",menor);
+	}
 }
 
