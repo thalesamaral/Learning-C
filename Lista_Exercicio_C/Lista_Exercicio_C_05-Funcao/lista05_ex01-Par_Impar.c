@@ -1,27 +1,23 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "09/12/2021"
-/*	Objetivo: É necessário que seu programa como um todo leia um
-número inteiro n, verifica e imprime se este é par ou ímpar.*/
-//  Entrada.: Número.
-//  Saída...: Par ou Ímpar
+/*	Objetivo:
+1. FaÃ§a um programa em C que contenha subprograma. Ã‰ necessÃ¡rio que seu programa como um todo leia um nÃºmero inteiro n, verifica e imprime se este Ã© par ou Ã­mpar.
+*/
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
 #define TAM
-//Protótipo de Função
+
+//ProtÃ³tipo de FunÃ§Ã£o
 int verificarParImpar(int);
 
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	int num;
 	
-//Instruções
-	//printf("");
-	//scanf("%",&);
+//InstruÃ§Ãµes
 	
-	printf("Digite um número: ");
+	printf("Digite um nï¿½mero: ");
 	scanf("%d",&num);
 	
 	verificarParImpar(num);
@@ -29,7 +25,7 @@ setlocale(LC_ALL,"Portuguese");
 	if(num % 2 == 0)
 		printf("PAR!\n");
 	else
-		printf("ÍMPAR!\n");
+		printf("ï¿½MPAR!\n");
 	
 	return 0;
 }

@@ -1,24 +1,21 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "10/12/2021"
-/*	Objetivo: Seu programa deve ler o código e o preço de custo de cada produto e calcular o novo preço.
-Calcule também, a média dos preços com e sem aumento. Mostre o código e o novo preço de cada produto e, 
-no final, as médias.*/
+/*	Objetivo: Seu programa deve ler o cï¿½digo e o preï¿½o de custo de cada produto e calcular o novo preï¿½o.
+Calcule tambï¿½m, a mï¿½dia dos preï¿½os com e sem aumento. Mostre o cï¿½digo e o novo preï¿½o de cada produto e, 
+no final, as mï¿½dias.*/
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
-//Protótipo de Função
+
+//ProtÃ³tipo de FunÃ§Ã£o
 float calculaPreco20(int, float);
 
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	int codigo, qtd;
 	float preco, precoInicial, preco20;
 	
-//Instruções
-	//printf("");
-	//scanf("%",&);
+//InstruÃ§Ãµes
 	
 	printf("Digite -1 para finalizar!\n");
 	printf("Digite o Codigo: ");
@@ -26,7 +23,7 @@ setlocale(LC_ALL,"Portuguese");
 	
 	while(codigo >= 0){
 		do{
-			printf("Digite o preço: ");
+			printf("Digite o preï¿½o: ");
 			scanf("%f",&preco);
 			
 			qtd++;
@@ -35,8 +32,8 @@ setlocale(LC_ALL,"Portuguese");
 			preco20 += calculaPreco20(codigo, preco);
 			
 			printf("\n==========================================\n");
-			printf("Média do preço inicial %.2f",precoInicial/qtd);
-			printf("\nMédia do preço com 20%% %.2f",preco20/qtd);
+			printf("Mï¿½dia do preï¿½o inicial %.2f",precoInicial/qtd);
+			printf("\nMï¿½dia do preï¿½o com 20%% %.2f",preco20/qtd);
 			printf("\n==========================================\n\n");
 			
 			printf("Digite -1 para finalizar!\n");
@@ -49,9 +46,9 @@ setlocale(LC_ALL,"Portuguese");
 
 float calculaPreco20(int cod, float preco){
 	
-	printf("\nCódigo: %d Preço antigo: %.2f",cod,preco);
+	printf("\nCï¿½digo: %d Preï¿½o antigo: %.2f",cod,preco);
 	preco += (preco * 20)/100;
-	printf("\nCódigo: %d Preço novo: %.2f\n",cod,preco);
+	printf("\nCï¿½digo: %d Preï¿½o novo: %.2f\n",cod,preco);
 	
 	return preco;
 }

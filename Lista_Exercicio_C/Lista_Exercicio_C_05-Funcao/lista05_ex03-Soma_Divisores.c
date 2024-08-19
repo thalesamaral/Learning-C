@@ -1,32 +1,31 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "10/12/2021"
-/*	Objetivo: leia um número inteiro n, verifica e imprime se este é perfeito,
-se é abundante e se é deficiente.*/
+/*	Objetivo: leia um nï¿½mero inteiro n, verifica e imprime se este ï¿½ perfeito,
+se ï¿½ abundante e se ï¿½ deficiente.*/
 //  Entrada.:
-//  Saída...:
+//  Saï¿½da...:
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
-//Protótipo de Função
+
+//ProtÃ³tipo de FunÃ§Ã£o
 int verificarNumero(int);
 
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	int numero, ref;
 	
-//Instruções
-	printf("Digite um número: \n");
+//InstruÃ§Ãµes
+	printf("Digite um nï¿½mero: \n");
 	scanf("%d",&numero);
 	
 	ref = verificarNumero(numero);
 	if(ref == numero)
-		printf("\nNúmero Perfeito: %d\n",ref);
+		printf("\nNï¿½mero Perfeito: %d\n",ref);
 	else if(ref > numero)
-		printf("\nNúmero Abundante: %d\n",ref);
+		printf("\nNï¿½mero Abundante: %d\n",ref);
 	else if(ref < numero)
-		printf("\nNúmero Deficiente: %d\n",ref);
+		printf("\nNï¿½mero Deficiente: %d\n",ref);
 	
 	return 0;
 }

@@ -1,33 +1,30 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "11/12/2021"
-/*	Objetivo: escolher uma medida pés ou milhas,
+/*	Objetivo: escolher uma medida pï¿½s ou milhas,
 depois imprimir o valor em pes, milhas, metros e kms.*/
 //  Entrada : medida, resposta.
-//  Saída   : pes, milhas, metro, km.
+//  Saï¿½da   : pes, milhas, metro, km.
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
-//Protótipo de Função
+
+//ProtÃ³tipo de FunÃ§Ã£o
 void calcularPes(float);
 void calcularMilhas(float);
 
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	float medida;
 	char resp;
 	
-//Instruções
-	//printf("");
-	//scanf("%",&);
+//InstruÃ§Ãµes
 	
 	printf("Digite o valor da medida: ");
 	scanf("%f",&medida);
 	while(medida > 0){
 		do{
 			printf("\nQual o tipo de medida?\n");
-			printf("[P]pés ou milhas[M]\n");
+			printf("[P]pï¿½s ou milhas[M]\n");
 			resp = getche();
 			resp = toupper(resp);
 		}while((resp != 'P') && (resp != 'M'));
@@ -51,7 +48,7 @@ void calcularPes(float medida){
 	metro  = pes/3.28;
 	km     = metro/1000;
 	milhas = km/1.61;
-	printf("\nPÉS...: %f\n",pes);
+	printf("\nPï¿½S...: %f\n",pes);
 	printf("MILHAS: %f\n",milhas);
 	printf("METROS: %f\n",metro);
 	printf("KMs...: %f\n",km);
@@ -65,7 +62,7 @@ void calcularMilhas(float medida){
 	metro  = km*1000;
 	pes    = metro*3.28;
 	printf("\nMILHAS: %f\n",milhas);
-	printf("PÉS...: %f\n",pes);
+	printf("Pï¿½S...: %f\n",pes);
 	printf("METROS: %f\n",metro);
 	printf("KMs...: %f\n",km);
 }

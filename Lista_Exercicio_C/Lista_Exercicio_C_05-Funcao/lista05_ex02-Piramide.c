@@ -1,22 +1,21 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "09/12/2021"
 /*	Objetivo: */
 //  Entrada.:
-//  Saída...:
+//  Saï¿½da...:
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
 #define TAM
-//Protótipo de Função
+
+//ProtÃ³tipo de FunÃ§Ã£o
 void calculoPiramide(int);
 
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	int qtdCamadas;
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	
@@ -35,7 +34,7 @@ void calculoPiramide(int qtd){
 		centro += frente*cantos + cantos;
 		frente += 2;
 		camada = centro;
-		printf("%dª Camada: %d\n",i,camada);
+		printf("%dï¿½ Camada: %d\n",i,camada);
 	}
 	
 	

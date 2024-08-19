@@ -1,20 +1,19 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "10/12/2021"
 /*	Objetivo: celsiusFarenheit*/
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
 #define TAM
-//Protótipo de Função
+
+//ProtÃ³tipo de FunÃ§Ã£o
 float celsiusFarenheit(float);
 
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	float celsius=0, farenheit;
 	
-//Instruções
+//InstruÃ§Ãµes
 	do{
 		printf("Digite 999 para finalizar!\n");
 		printf("Digite os graus Celsius: ");

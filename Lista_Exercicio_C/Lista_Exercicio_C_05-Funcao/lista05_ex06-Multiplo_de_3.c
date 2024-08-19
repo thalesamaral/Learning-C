@@ -1,24 +1,21 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "10/12/2021"
-/*	Objetivo: leia um número inteiro N e imprima a soma dos números múltiplos de 3 do intervalo de de 0 a N.*/
+/*	Objetivo: leia um nï¿½mero inteiro N e imprima a soma dos nï¿½meros mï¿½ltiplos de 3 do intervalo de de 0 a N.*/
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
-//Protótipo de Função
+
+//ProtÃ³tipo de FunÃ§Ã£o
 int somaNumeroMultiplo(int);
 
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	int num;
 	
-//Instruções
-	//printf("");
-	//scanf("%",&);
+//InstruÃ§Ãµes
 	
 	do{
-		printf("Digite um número positivo: ");
+		printf("Digite um nï¿½mero positivo: ");
 		scanf("%d",&num);	
 	}while(num<0);
 		

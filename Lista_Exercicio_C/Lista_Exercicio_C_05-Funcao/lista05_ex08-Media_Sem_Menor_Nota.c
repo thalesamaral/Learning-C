@@ -1,25 +1,25 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "11/12/2021"
 /*	Objetivo: SOMENTE UM SUBPROGRAMA_receba o nome do estudante e suas 11 notas de prova, encontre as 10 maiores, 
-calcule e imprima a média e o grau correspondente para cada um dos alunos.*/
+calcule e imprima a mï¿½dia e o grau correspondente para cada um dos alunos.*/
 //  Entrada : nome, nota.
-//  Saída   : media do aluno sem a nota menor, grau da media.
+//  Saï¿½da   : media do aluno sem a nota menor, grau da media.
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
 #include<string.h>
 #define ALUNOS 3
-//Protótipo de Função
+
+//ProtÃ³tipo de FunÃ§Ã£o
 
 int main(void){
 setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	char nome[10];
 	float media, nota, notaMenor=10, notaTotal=0;
 	int i, flag;
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	
@@ -30,7 +30,7 @@ setlocale(LC_ALL,"Portuguese");
 	do{
 		for(i=1; i<=ALUNOS; i++){
 			do{
-				printf("%dª Nota do %s: ",i,nome);
+				printf("%dï¿½ Nota do %s: ",i,nome);
 				scanf("%f",&nota);
 			}while((nota<0) || (nota>10));
 			
@@ -45,7 +45,7 @@ setlocale(LC_ALL,"Portuguese");
 		notaTotal -= notaMenor;
 		printf("Total sem menor nota: %.0f\n",notaTotal);
 		media = notaTotal/(ALUNOS);
-		printf("Média: %.2f\n",media);
+		printf("Mï¿½dia: %.2f\n",media);
 		
 		if(media >= 9)
 			printf("grau A\n");

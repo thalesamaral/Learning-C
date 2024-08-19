@@ -1,40 +1,37 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "12/12/2021"
 /*	Objetivo: utilize um subprograma para calcular e imprimir (subprograma) o valor do saldo
-após a operação*/
-//  Entrada.: saldo conta bancária, operação bancária (débito ou crédito) e o valor desta operação.
-//  Saída...:
+apï¿½s a operaï¿½ï¿½o*/
+//  Entrada.: saldo conta bancï¿½ria, operaï¿½ï¿½o bancï¿½ria (dï¿½bito ou crï¿½dito) e o valor desta operaï¿½ï¿½o.
+//  Saï¿½da...:
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
-//Protótipo de Função
+
+//ProtÃ³tipo de FunÃ§Ã£o
 calcularSaldo(float, char, float);
 
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	float saldo, valorOp;
 	char operacao;
 	
-//Instruções
-	//printf("");
-	//scanf("%",&);
+//InstruÃ§Ãµes
 	
 	do{
-		printf("Saldo da conta bancária: ");
+		printf("Saldo da conta bancï¿½ria: ");
 		scanf("%f",&saldo);
 	}while(saldo<0);
 	
 	do{
-		printf("\nOperação bancária [C]crédito ou [D]débito: ");
+		printf("\nOperaï¿½ï¿½o bancï¿½ria [C]crï¿½dito ou [D]dï¿½bito: ");
 		operacao = getche();
 		operacao = toupper(operacao);
 	}while((operacao != 'C') && (operacao != 'D'));
 	
 	do{
 		printf("-1 para finalizar!\n");
-		printf("\nValor da operação: ");
+		printf("\nValor da operaï¿½ï¿½o: ");
 		scanf("%f",&valorOp);
 	}while(valorOp<0);
 	
