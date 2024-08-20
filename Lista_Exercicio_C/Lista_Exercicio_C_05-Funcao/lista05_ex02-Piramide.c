@@ -1,6 +1,6 @@
 //  Síntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "09/12/2021"
+//  Data....: "19/08/2024"
 /*	Objetivo:
 2. Considerando que aproximadamente 3650 a.C., na época conhecida como das pirâmides, 
 o faraó Djoser da III dinastia construiu a primeira grande pirâmide de Sakkara no mesmo 
@@ -13,36 +13,47 @@ quantidade de blocos da camada base da pirâmide, calcule e imprima a quantidade
 blocos que serão necessários para a construção da pirâmide e o peso total que a pirâmide terá 
 quando pronta.
 */
-// Entrada: Quantidade de blocos da camada base da pirâmide.
-// Saída: quantidade de blocos e o peso total que a pirâmide terá quando pronta.
+// Entrada..: Quantidade de blocos da camada base da pirâmide e o peso de um bloco.
+// Saída....: Quantidade de blocos e o peso total que a pirâmide terá quando pronta.
 #include<stdio.h>
-#include<stdlib.h>
-#define TAM
 
 //Protótipo de Função
-void calculoPiramide(int);
+int calcula_quantidade_blocos(int);
 
 int main(void){
 //Declarações
-	int qtdCamadas;
+	int qtdBase, qtdTotal;
+	float blocoPeso;
 	
 //Instruções
 	
-	printf("qtd Camadas: ");
-	scanf("%d",&qtdCamadas);
+	printf("Quantidade de blocos da camada base da piramide\n");
+	printf("Resposta: ");
+	scanf("%d",&qtdBase);
 	
-	calculoPiramide(qtdCamadas);
+	qtdTotal = calcula_quantidade_blocos(qtdBase);
 	
+	if(qtdTotal){
+		printf("\nPeso do bloco em Kg: ");
+		scanf("%f",&blocoPeso);
+		
+		printf("\nPeso total da Piramide. %.2f Kg\n",blocoPeso * qtdTotal);
+	}else{
+		printf("\nQuantidade de bloco invalida!\n");
+	}
+
 	return 0;
 }
 
-void calculoPiramide(int qtd){
-	int i, cantos=4, centro=1, frente=1, camada;
+int calcula_quantidade_blocos(int blocoBase){
+	int i=0, blocoTotal=0;
 	
-	for(i=1; i<=qtd; i++){
-		centro += frente*cantos + cantos;
-		frente += 2;
-		camada = centro;
-		printf("%d -> Camada: %d\n",i,camada);
+	while(blocoBase > 0){
+		i++;
+		printf("%do Camada - Blocos: %d\n",i, blocoBase);
+		blocoTotal += blocoBase;
+		blocoBase -= 1;
 	}
+
+	return blocoTotal;
 }
