@@ -8,24 +8,37 @@
 
 //Protótipo de Função
 float celsiusFarenheit(float);
+float valida_numero();
 
 int main(void){
 //Declarações
 	float celsius=0, farenheit;
 	
 //Instruções
-	do{
-		printf("Digite 999 para finalizar!\n");
-		printf("Digite os graus Celsius: ");
-		scanf("%f",&celsius);
-		
-		if(celsius != 999){
-			farenheit = celsiusFarenheit(celsius);
-			printf("\nOs graus em Farenheit: %.2f\n\n",farenheit);
-		}
-	}while(celsius != 999);
+	
+	celsius = valida_numero();
+	while(celsius){
+		farenheit = celsiusFarenheit(celsius);
+		printf("\nOs graus em Farenheit: %.2f\n\n",farenheit);
+
+		celsius = valida_numero();
+	}
 	
 	return 0;
+}
+
+float valida_numero(){
+	float celsius;
+	
+	printf("Digite 999 para finalizar!\n");
+	printf("Digite os graus Celsius: ");
+	scanf("%f",&celsius);
+	
+	if(celsius == 999){
+		return 0;
+	}else{
+		return celsius;
+	}
 }
 
 float celsiusFarenheit(float cel){
