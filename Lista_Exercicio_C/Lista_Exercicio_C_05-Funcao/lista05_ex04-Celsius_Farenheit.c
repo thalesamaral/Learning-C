@@ -1,47 +1,43 @@
 //  Síntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "10/12/2021"
-/*	Objetivo: celsiusFarenheit*/
+//  Data....: "19/08/2024"
+/*	Objetivo: 
+4. Faça um programa em C que contenha subprograma. É necessário que seu programa como 
+um todo leia uma série de temperaturas em graus Celsius, somente terminando quando for 
+digitado 999, e as transforme (cada uma delas) em Farenheit. Farenheit = ((Celsius * 9) / 5) 
++ 32.
+*/
 #include<stdio.h>
-#include<stdlib.h>
-#define TAM
 
 //Protótipo de Função
-float celsiusFarenheit(float);
-float valida_numero();
+void ler_temperatura();
+float celsius_farenheit(float);
 
 int main(void){
-//Declarações
-	float celsius=0, farenheit;
-	
 //Instruções
-	
-	celsius = valida_numero();
-	while(celsius){
-		farenheit = celsiusFarenheit(celsius);
-		printf("\nOs graus em Farenheit: %.2f\n\n",farenheit);
 
-		celsius = valida_numero();
-	}
-	
+	ler_temperatura();
 	return 0;
 }
 
-float valida_numero(){
-	float celsius;
+void ler_temperatura(){
+	float celsius, farenheit;
 	
-	printf("Digite 999 para finalizar!\n");
-	printf("Digite os graus Celsius: ");
-	scanf("%f",&celsius);
-	
-	if(celsius == 999){
-		return 0;
-	}else{
-		return celsius;
-	}
+	do{
+		printf("Digite 999 para finalizar!\n");
+		printf("Digite os graus Celsius: ");
+		scanf("%f",&celsius);
+		
+		if(celsius != 999){
+			farenheit = celsius_farenheit(celsius);
+			printf("\nOs graus em Farenheit: %.2f\n\n",farenheit);
+		}
+	}while(celsius != 999);
+
+	printf("\n\nFIM!\n\n");
 }
 
-float celsiusFarenheit(float cel){
+float celsius_farenheit(float cel){
 	float farenheit;
 	
 	farenheit = ((cel * 9) / 5) + 32;
