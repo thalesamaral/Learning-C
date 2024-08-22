@@ -12,13 +12,13 @@ negativo.
 #include<stdio.h>
 
 //Protótipo de Função
-float preco_20_porcento(float);
+void preco_20_porcento(float*);
 int valida_numero();
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	int codigo, qtd;
+	int codigo, qtd=0;
 	float preco, precoInicial=0, preco20=0;
 	
 //Instruções
@@ -31,13 +31,14 @@ int main(void){
 		qtd++;
 		precoInicial += preco;
 		
-		printf("\nCodigo: %d Preco antigo: %.2f",codigo, preco);
-		preco20 += preco_20_porcento(preco);
-		printf("\nCodigo: %d Preco novo..: %.2f\n",codigo,preco);
+		printf("\nCodigo: %d, Preco antigo: %.2f",codigo, preco);
+		preco_20_porcento(&preco);
+		preco20 += preco;
+		printf("\nCodigo: %d, Preco novo..: %.2f\n",codigo, preco);
 		
 		printf("\n==========================================\n");
-		printf("Media do preco inicial: %.2f",precoInicial/qtd);
-		printf("\nMedia do preco com 20%%: %.2f",preco20/qtd);
+		printf("Media do preco inicial.: %.2f",precoInicial/qtd);
+		printf("\nMedia do preco com 20%%.: %.2f",preco20/qtd);
 		printf("\n==========================================\n\n");
 		
 		codigo = valida_numero();
@@ -47,11 +48,10 @@ int main(void){
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
 
-float preco_20_porcento(float preco){
+void preco_20_porcento(float *preco){
 	
-	preco += (preco * 20)/100;
+	*preco = *preco * 1.20;
 	
-	return preco;
 }
 
 int valida_numero(){
