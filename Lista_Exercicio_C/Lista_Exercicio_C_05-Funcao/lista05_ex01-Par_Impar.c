@@ -5,28 +5,27 @@
 1. Faça um programa em C que contenha subprograma. É necessário que seu programa como um todo leia um número inteiro n, verifica e imprime se este é par ou ímpar.
 */
 #include<stdio.h>
-#define TAM
 
 //Protótipo de Função
-void verificarParImpar(int);
+void verificar_par_impar(int);
 
 int main(void){
 //Declarações
-	int num;
+	int numero;
 	
 //Instruções
 	
 	printf("Digite um numero: ");
-	scanf("%d",&num);
+	scanf("%d",&numero);
 	
-	verificarParImpar(num);
+	verificar_par_impar(numero);
 	
 	return 0;
 }
 
-void verificarParImpar(int n){
+void verificar_par_impar(int num){
 	
-	if(n % 2 == 0)
+	if(num % 2 == 0)
 		printf("\nPAR!\n");
 	else
 		printf("\nIMPAR!\n");
