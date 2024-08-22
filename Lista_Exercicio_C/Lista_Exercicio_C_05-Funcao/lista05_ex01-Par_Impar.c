@@ -9,6 +9,7 @@
 //Protótipo de Função
 void verificar_par_impar(int);
 
+//*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
 	int numero;
@@ -22,6 +23,7 @@ int main(void){
 	
 	return 0;
 }
+//*** FIM DO BLOCO PRINCIPAL **********************************************
 
 void verificar_par_impar(int num){
 	

@@ -20,6 +20,7 @@ quando pronta.
 //Protótipo de Função
 int calcula_quantidade_blocos(int);
 
+//*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
 	int qtdBase, qtdTotal;
@@ -44,6 +45,7 @@ int main(void){
 
 	return 0;
 }
+//*** FIM DO BLOCO PRINCIPAL **********************************************
 
 int calcula_quantidade_blocos(int blocoBase){
 	int i=0, blocoTotal=0;

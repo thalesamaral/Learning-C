@@ -13,12 +13,14 @@ digitado 999, e as transforme (cada uma delas) em Farenheit. Farenheit = ((Celsi
 void ler_temperatura();
 float celsius_farenheit(float);
 
+//*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Instruções
 
 	ler_temperatura();
 	return 0;
 }
+//*** FIM DO BLOCO PRINCIPAL **********************************************
 
 void ler_temperatura(){
 	float celsius, farenheit;
