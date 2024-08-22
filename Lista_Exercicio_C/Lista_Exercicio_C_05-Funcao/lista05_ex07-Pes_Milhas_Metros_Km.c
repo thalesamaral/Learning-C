@@ -16,7 +16,7 @@ assim que for digitado um valor negativo.
 void calcula_pes(float);
 void calcula_milhas(float);
 void valida_numero(float*);
-void valida_resp(char*);
+void valida_resposta(char*);
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
@@ -28,7 +28,7 @@ int main(void){
 	
 	valida_numero(&medida);
 	while(medida > 0){
-		valida_resp(&resposta);
+		valida_resposta(&resposta);
 		
 		if(resposta == 'P'){
 			calcula_pes(medida);
@@ -51,7 +51,7 @@ void valida_numero(float*medida){
 	}
 }
 
-void valida_resp(char *resposta){
+void valida_resposta(char *resposta){
 	
 	do{
 		fflush(stdin);
