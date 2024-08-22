@@ -22,26 +22,26 @@ se é abundante e se é deficiente.
 
 //Protótipo de Função
 int quantidade_divisor(int);
-int valida_numero(void);
-void mensagem_inicial(void);
+int valida_numero();
+void mensagem_inicial();
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	int numero, qtd;
+	int numero, qtdDivisores;
 	
 //Instruções
 	mensagem_inicial();
 
 	numero = valida_numero();
 	
-	qtd = quantidade_divisor(numero);
+	qtdDivisores = quantidade_divisor(numero);
 
-	if(qtd == numero)
+	if(qtdDivisores == numero)
 		printf("\nNumero Perfeito!\n");
-	else if(qtd > numero)
+	else if(qtdDivisores > numero)
 		printf("\nNumero Abundante!\n");
-	else if(qtd < numero)
+	else if(qtdDivisores < numero)
 		printf("\nNumero Deficiente!\n");
 	
 	return 0;
@@ -65,7 +65,7 @@ int valida_numero(){
 }
 
 int quantidade_divisor(int num){
-	int i, qtdDivisor;
+	int i, qtd;
 	
 	if(num == 1){
 		return 0;
@@ -73,12 +73,12 @@ int quantidade_divisor(int num){
 	printf("\nDivisores: ");
 	for(i=1; i<num; i++){
 		if(num % i == 0){
-			qtdDivisor += i;
+			qtd += i;
 			printf("%d; ",i);
 		}
-	}		
-	printf("\nSoma dos divisores: %d\n",qtdDivisor);
-	return qtdDivisor;
+	}
+	printf("\nSoma dos divisores: %d\n",qtd);
+	return qtd;
 }
 
 void mensagem_inicial(){
