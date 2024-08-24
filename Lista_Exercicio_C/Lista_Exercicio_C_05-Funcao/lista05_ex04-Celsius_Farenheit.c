@@ -10,7 +10,7 @@ digitado 999, e as transforme (cada uma delas) em Farenheit. Farenheit = ((Celsi
 #include<stdio.h>
 
 //Protótipo de Função
-int verifica_valor(float*);
+int valor_ou_fim(float*);
 float celsius_farenheit(float);
 
 //*** BLOCO PRINCIPAL *****************************************************
@@ -23,7 +23,7 @@ int main(void){
 	printf("Ou, digite 999 para finalizar!\n");
 
 	celsius=0;
-	while(verifica_valor(&celsius)){
+	while(valor_ou_fim(&celsius)){
 		farenheit = celsius_farenheit(celsius);
 		printf("\nOs graus em Farenheit: %.2f\n\n",farenheit);
 	};
@@ -35,20 +35,18 @@ int main(void){
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
 
-int verifica_valor(float*celsius){
+int valor_ou_fim(float*celsius){
 	float valor;
-	
-	do{
-		printf("Insira o valor: ");
-		scanf("%f",&valor);
-		
-		if(valor != 999){
-			*celsius = valor;
-			return 1;
-		}
-	}while(valor != 999);
 
-	return 0;
+	printf("Insira o valor: ");
+	scanf("%f",&valor);
+	
+	if(valor == 999){
+		return 0;
+	}else{
+		*celsius = valor;
+		return 1;
+	}
 }
 
 float celsius_farenheit(float cel){
