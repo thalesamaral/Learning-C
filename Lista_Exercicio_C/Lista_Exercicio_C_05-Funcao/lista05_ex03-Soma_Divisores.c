@@ -21,42 +21,45 @@ se é abundante e se é deficiente.
 #define BARRA_SIMPLES printf("------------------------------------------------------------\n");
 
 //Protótipo de Função
-int quantidade_divisor(int);
-int valida_numero(void);
-void mensagem_inicial(void);
+int soma_divisores_antes_de_n(int);
+int loop_valida_valor();
+void mensagem_inicial();
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	int numero, qtd;
+	int numero, somaDivisores;
 	
 //Instruções
 	mensagem_inicial();
 
-	numero = valida_numero();
+	printf("\nEscolha um numero inteiro e positivo\n");
+	numero = loop_valida_valor();
 	
-	qtd = quantidade_divisor(numero);
+	somaDivisores = soma_divisores_antes_de_n(numero);
 
-	if(qtd == numero)
+	printf("\nSoma dos divisores: %d\n",somaDivisores);
+
+	if(somaDivisores == numero)
 		printf("\nNumero Perfeito!\n");
-	else if(qtd > numero)
+	else if(somaDivisores > numero)
 		printf("\nNumero Abundante!\n");
-	else if(qtd < numero)
+	else if(somaDivisores < numero)
 		printf("\nNumero Deficiente!\n");
 	
 	return 0;
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
 
-int valida_numero(){
+int loop_valida_valor(){
 	int num;
 	
 	do{
-		printf("Digite um numero: ");
+		printf("Insira o valor: ");
 		scanf("%d",&num);
 		if(num <= 0){
 			system("cls");
-			printf("Numero invalido, apenas numeros positivos\n\n");
+			printf("Valor invalido, apenas numeros positivos\n\n");
 			mensagem_inicial();
 		}
 	}while(num <= 0);
@@ -64,21 +67,22 @@ int valida_numero(){
 	return num;
 }
 
-int quantidade_divisor(int num){
-	int i, qtdDivisor;
+int soma_divisores_antes_de_n(int num){
+	int i, soma;
 	
 	if(num == 1){
 		return 0;
 	}
+
 	printf("\nDivisores: ");
 	for(i=1; i<num; i++){
 		if(num % i == 0){
-			qtdDivisor += i;
+			soma += i;
 			printf("%d; ",i);
 		}
-	}		
-	printf("\nSoma dos divisores: %d\n",qtdDivisor);
-	return qtdDivisor;
+	}
+
+	return soma;
 }
 
 void mensagem_inicial(){
