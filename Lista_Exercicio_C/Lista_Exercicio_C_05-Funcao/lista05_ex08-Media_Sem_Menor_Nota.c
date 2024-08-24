@@ -1,10 +1,18 @@
 //  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "11/12/2021"
-/*	Objetivo: SOMENTE UM SUBPROGRAMA_receba o nome do estudante e suas 11 notas de prova, encontre as 10 maiores, 
-calcule e imprima a m�dia e o grau correspondente para cada um dos alunos.*/
+/*	Objetivo:
+8. Faça um programa em C que contenha SOMENTE UM subprograma. Considere que um 
+professor deseja automatizar seu sistema de pontuação. Ele faz 21 provas por semestre e 
+então calcula a média usando apenas as 20 maiores notas. Uma média de 9.0 ou mais 
+ganha um grau A; 8.0 a 8.9, um grau B; 7.0 a 7.9, um grau C; e 0.0 a 6.9, um grau D. É 
+necessário que seu programa como um todo leia o número da matrícula do estudante e suas 
+21 notas de prova, encontre as 20 maiores, calcule e imprima a média e o grau 
+correspondente para somente um aluno e encerre sua execução. Utilize as boas práticas, 
+não tendo leitura ou impressão dentro do subprograma.
+*/
 //  Entrada : nome, nota.
-//  Sa�da   : media do aluno sem a nota menor, grau da media.
+//  Saida   : media do aluno sem a nota menor, grau da media.
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
@@ -13,15 +21,12 @@ calcule e imprima a m�dia e o grau correspondente para cada um dos alunos.*/
 //Protótipo de Função
 
 int main(void){
-setlocale(LC_ALL,"Portuguese");
 //Declarações
 	char nome[10];
 	float media, nota, notaMenor=10, notaTotal=0;
 	int i, flag;
 	
 //Instruções
-	//printf("");
-	//scanf("%",&);
 	
 	printf("Nome do aluno: ");
 	//scanf("%s",nome);
