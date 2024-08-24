@@ -53,17 +53,17 @@ int main(void){
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
 
-int valor_ou_fim(int *codigo){
-	int num;
+int valor_ou_fim(int *valorRef){
+	int valor;
 	
 	printf("Insira o valor: ");
-	scanf("%d",&num);
+	scanf("%d",&valor);
 
-	if(num < 0){
+	if(valor < 0){
 		printf("\nNumero negativo. Programa finalizado!\n\n");
 		return 0;
 	}else{
-		*codigo = num;
+		*valorRef = valor;
 		return 1;
 	}
 }

@@ -33,7 +33,7 @@ int main(void){
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
 
-int valor_ou_fim(float*celsius){
+int valor_ou_fim(float*valorRef){
 	float valor;
 
 	printf("Insira o valor: ");
@@ -42,7 +42,7 @@ int valor_ou_fim(float*celsius){
 	if(valor == 999){
 		return 0;
 	}else{
-		*celsius = valor;
+		*valorRef = valor;
 		return 1;
 	}
 }

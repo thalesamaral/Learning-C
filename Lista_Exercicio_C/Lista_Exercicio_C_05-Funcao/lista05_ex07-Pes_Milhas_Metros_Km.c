@@ -43,7 +43,7 @@ int main(void){
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
 
-int valor_ou_fim(float *medida){
+int valor_ou_fim(float *valorRef){
 	float valor;
 
 	printf("\nInsira o valor: ");
@@ -53,7 +53,7 @@ int valor_ou_fim(float *medida){
 		printf("\nNumero negativo. Programa finalizado!\n\n");
 		return 0;
 	}else{
-		*medida = valor;
+		*valorRef = valor;
 		return 1;
 	}
 }
