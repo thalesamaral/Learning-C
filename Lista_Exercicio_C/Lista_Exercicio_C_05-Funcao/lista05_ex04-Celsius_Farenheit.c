@@ -22,12 +22,10 @@ int main(void){
 	printf("Digite os graus Celsius\n");
 	printf("Ou, digite 999 para finalizar!\n");
 
-	celsius=0;
 	while(valor_ou_fim(&celsius)){
 		farenheit = celsius_farenheit(celsius);
 		printf("\nOs graus em Farenheit: %.2f\n\n",farenheit);
 	};
-	
 
 	printf("\n\nFIM!\n\n");
 
