@@ -19,6 +19,8 @@ quando pronta.
 
 //Protótipo de Função
 int calcula_quantidade_blocos(int);
+int loop_int_positivo();
+float loop_float_positivo();
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
@@ -29,14 +31,13 @@ int main(void){
 //Instruções
 	
 	printf("Quantidade de blocos da camada base da piramide\n");
-	printf("Resposta: ");
-	scanf("%d",&qtdBlocoBase);
+	qtdBlocoBase = loop_int_positivo();
 	
 	qtdBlocoTotal = calcula_quantidade_blocos(qtdBlocoBase);
 	
 	if(qtdBlocoTotal){
-		printf("\nPeso do bloco em Kg: ");
-		scanf("%f",&blocoPeso);
+		printf("\nPeso do bloco em Kg\n");
+		blocoPeso = loop_float_positivo();
 		
 		printf("\nPeso total da Piramide. %.2f Kg\n",blocoPeso * qtdBlocoTotal);
 	}else{
@@ -46,6 +47,34 @@ int main(void){
 	return 0;
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
+
+int loop_int_positivo(){
+	int valor;
+	
+	do{
+		printf("Insira o valor: ");
+		scanf("%d",&valor);
+		if(valor <= 0){
+			printf("Valor invalido, apenas numeros positivos\n\n");
+		}
+	}while(valor <= 0);
+	
+	return valor;
+}
+
+float loop_float_positivo(){
+	float valor;
+	
+	do{
+		printf("Insira o valor: ");
+		scanf("%f",&valor);
+		if(valor <= 0){
+			printf("Valor invalido, apenas numeros positivos\n\n");
+		}
+	}while(valor <= 0);
+	
+	return valor;
+}
 
 int calcula_quantidade_blocos(int qtdInicial){
 	int i=0, qtdTotal=0;
