@@ -13,28 +13,48 @@ int soma_numero_multiplo_de_3(int);
 
 int main(void){
 //Declarações
-	int numero;
+	int numero, soma;
 	
 //Instruções
-	
+	printf("Numeros Multiplos de 3\n");
+	printf("No intervalo de 0 a N\n\n");
+
 	printf("Digite um numero: ");
 	scanf("%d",&numero);
 
-	printf("\n\nA soma dos Numeros Multiplos: %d\n\n",soma_numero_multiplo_de_3(numero));
+	if(numero){
+		soma = soma_numero_multiplo_de_3(numero);
+
+		if(soma){
+			printf("\n\nA soma dos Numeros Multiplos de 3: %d\n\n",soma);
+		}else{
+			printf("\n\nNao tem Numeros Multiplos de 3\n\n");
+		}
+	}
 	return 0;
 }
 
 int soma_numero_multiplo_de_3(int num){
 	int i, soma=0;
 	
-	printf("\nNo intervalo de 0 - %d\n",num);
-	printf("Numeros Multiplos de 3: ");
-	for(i=1; i<num; i++){
-		if(i % 3 == 0){
-			printf("%d; ",i);
-			soma += i;
+	printf("\nNo intervalo de 0 <-> %d\n",num);
+
+	if(num > 0){
+		for(i=1; i<num; i++){
+			if(i % 3 == 0){
+				printf("%d; ",i);
+				soma += i;
+			}
+		}
+	}else if(num < 0){
+		for(i=num+1; i<0; i++){
+			if(i % 3 == 0){
+				printf("%d; ",i);
+				soma += i;
+			}
 		}
 	}
+
 	return soma;
 }
 

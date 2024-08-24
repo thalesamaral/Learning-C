@@ -19,26 +19,27 @@ quando pronta.
 
 //Protótipo de Função
 int calcula_quantidade_blocos(int);
+int loop_int_positivo();
+float loop_float_positivo();
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	int qtdBase, qtdTotal;
+	int qtdBlocoBase, qtdBlocoTotal;
 	float blocoPeso;
 	
 //Instruções
 	
 	printf("Quantidade de blocos da camada base da piramide\n");
-	printf("Resposta: ");
-	scanf("%d",&qtdBase);
+	qtdBlocoBase = loop_int_positivo();
 	
-	qtdTotal = calcula_quantidade_blocos(qtdBase);
+	qtdBlocoTotal = calcula_quantidade_blocos(qtdBlocoBase);
 	
-	if(qtdTotal){
-		printf("\nPeso do bloco em Kg: ");
-		scanf("%f",&blocoPeso);
+	if(qtdBlocoTotal){
+		printf("\nPeso do bloco em Kg\n");
+		blocoPeso = loop_float_positivo();
 		
-		printf("\nPeso total da Piramide. %.2f Kg\n",blocoPeso * qtdTotal);
+		printf("\nPeso total da Piramide. %.2f Kg\n",blocoPeso * qtdBlocoTotal);
 	}else{
 		printf("\nQuantidade de bloco invalida!\n");
 	}
@@ -47,15 +48,43 @@ int main(void){
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
 
-int calcula_quantidade_blocos(int blocoBase){
-	int i=0, blocoTotal=0;
+int loop_int_positivo(){
+	int valor;
 	
-	while(blocoBase > 0){
+	do{
+		printf("Insira o valor: ");
+		scanf("%d",&valor);
+		if(valor <= 0){
+			printf("Valor invalido, apenas numeros positivos\n\n");
+		}
+	}while(valor <= 0);
+	
+	return valor;
+}
+
+float loop_float_positivo(){
+	float valor;
+	
+	do{
+		printf("Insira o valor: ");
+		scanf("%f",&valor);
+		if(valor <= 0){
+			printf("Valor invalido, apenas numeros positivos\n\n");
+		}
+	}while(valor <= 0);
+	
+	return valor;
+}
+
+int calcula_quantidade_blocos(int qtdInicial){
+	int i=0, qtdTotal=0;
+	
+	while(qtdInicial > 0){
 		i++;
-		printf("%do Camada - Blocos: %d\n",i, blocoBase);
-		blocoTotal += blocoBase;
-		blocoBase -= 1;
+		printf("%do Camada - Blocos: %d\n",i, qtdInicial);
+		qtdTotal += qtdInicial;
+		qtdInicial -= 1;
 	}
 
-	return blocoTotal;
+	return qtdTotal;
 }

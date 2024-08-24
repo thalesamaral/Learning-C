@@ -15,7 +15,7 @@ assim que for digitado um valor negativo.
 //Protótipo de Função
 void calcula_pes(float);
 void calcula_milhas(float);
-void valida_numero(float*);
+int valor_ou_fim(float*);
 void valida_resposta(char*);
 
 //*** BLOCO PRINCIPAL *****************************************************
@@ -26,8 +26,10 @@ int main(void){
 	
 //Instruções
 	
-	valida_numero(&medida);
-	while(medida > 0){
+	printf("Digite o valor da medida\n");
+	printf("Ou, digite -1 para finalizar!\n");
+	
+	while(valor_ou_fim(&medida)){
 		valida_resposta(&resposta);
 		
 		if(resposta == 'P'){
@@ -35,19 +37,24 @@ int main(void){
 		}else if(resposta == 'M'){
 			calcula_milhas(medida);
 		}
-		
-		valida_numero(&medida);
 	}
 	
 	return 0;
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
 
-void valida_numero(float*medida){	
-	printf("\nDigite o valor da medida: ");
-	scanf("%f",&*medida);
-	if(*medida < 0){
+int valor_ou_fim(float *valorRef){
+	float valor;
+
+	printf("\nInsira o valor: ");
+	scanf("%f",&valor);
+
+	if(valor < 0){
 		printf("\nNumero negativo. Programa finalizado!\n\n");
+		return 0;
+	}else{
+		*valorRef = valor;
+		return 1;
 	}
 }
 

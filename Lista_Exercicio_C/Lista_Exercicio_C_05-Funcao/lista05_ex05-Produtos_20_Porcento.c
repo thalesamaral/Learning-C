@@ -10,10 +10,13 @@ no final, as médias. A entrada de dados deve terminar quando for lido um códig
 negativo.
 */
 #include<stdio.h>
+#define BARRA_DUPLA printf("\n============================================================\n");
 
 //Protótipo de Função
+int valor_ou_fim(int*);
+float loop_valor_positivo();
 void preco_20_porcento(float*);
-int valida_numero();
+void mensagem_inicial();
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
@@ -22,31 +25,63 @@ int main(void){
 	float preco, precoInicial=0, preco20=0;
 	
 //Instruções
-	codigo = valida_numero();
 	
-	while(codigo >= 0){
-		printf("Digite o preco: ");
-		scanf("%f",&preco);
+	mensagem_inicial();
+
+	while(valor_ou_fim(&codigo)){
+		printf("\nPreco do produto\n");
+		preco = loop_valor_positivo();
 		
 		qtd++;
 		precoInicial += preco;
 		
-		printf("\nCodigo: %d, Preco antigo: %.2f",codigo, preco);
+		BARRA_DUPLA
+		printf("Codigo: %d, Preco antigo: %.2f\n",codigo, preco);
 		preco_20_porcento(&preco);
 		preco20 += preco;
-		printf("\nCodigo: %d, Preco novo..: %.2f\n",codigo, preco);
+		printf("Codigo: %d, Preco novo..: %.2f",codigo, preco);
 		
-		printf("\n==========================================\n");
-		printf("Media do preco inicial.: %.2f",precoInicial/qtd);
-		printf("\nMedia do preco com 20%%.: %.2f",preco20/qtd);
-		printf("\n==========================================\n\n");
-		
-		codigo = valida_numero();
+		BARRA_DUPLA
+		printf("Media do preco inicial.: %.2f\n",precoInicial/qtd);
+		printf("Media do preco com 20%%.: %.2f",preco20/qtd);
+		BARRA_DUPLA
+
+		mensagem_inicial();
 	}
 
 	return 0;
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
+
+int valor_ou_fim(int *valorRef){
+	int valor;
+	
+	printf("Insira o valor: ");
+	scanf("%d",&valor);
+
+	if(valor < 0){
+		printf("\nNumero negativo. Programa finalizado!\n\n");
+		return 0;
+	}else{
+		*valorRef = valor;
+		return 1;
+	}
+}
+
+float loop_valor_positivo(){
+	float valor;
+	
+	do{
+		printf("Insira o valor: ");
+		scanf("%f",&valor);
+		if(valor <= 0){
+			//system("cls");
+			printf("Valor invalido, apenas numeros positivos\n\n");
+		}
+	}while(valor <= 0);
+	
+	return valor;
+}
 
 void preco_20_porcento(float *preco){
 	
@@ -54,17 +89,7 @@ void preco_20_porcento(float *preco){
 	
 }
 
-int valida_numero(){
-	int num;
-	
-	do{
-		printf("Digite o numero do codigo: ");
-		scanf("%d",&num);
-		if(num < 0){
-			printf("\nNumero negativo. Programa finalizado!\n\n");
-			return -1;
-		}
-	}while(num < 0);
-	
-	return num;
+void mensagem_inicial(){
+	printf("\nDigite o numero do codigo\n");
+	printf("Ou, digite -1 para finalizar!\n\n");
 }
