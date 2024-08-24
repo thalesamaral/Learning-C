@@ -28,7 +28,6 @@ int main(void){
 	
 	mensagem_inicial();
 
-	codigo=0;
 	while(valor_ou_fim(&codigo)){
 		printf("\nPreco do produto\n");
 		preco = loop_valor_positivo();
