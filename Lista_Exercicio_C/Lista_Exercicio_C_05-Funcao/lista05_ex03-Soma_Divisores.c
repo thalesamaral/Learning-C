@@ -1,6 +1,6 @@
 //  Síntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "19/08/2024"
+//  Data....: "24/08/2024"
 /*	Objetivo:
 3. Considerando que: 
 	• Um número é perfeito se a soma de todos os seus divisores, exceto ele mesmo, é 
