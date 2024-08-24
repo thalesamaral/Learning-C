@@ -22,7 +22,7 @@ se é abundante e se é deficiente.
 
 //Protótipo de Função
 int soma_divisores_antes_de_n(int);
-int loop_valida_valor();
+int loop_valor_positivo();
 void mensagem_inicial();
 
 //*** BLOCO PRINCIPAL *****************************************************
@@ -34,7 +34,7 @@ int main(void){
 	mensagem_inicial();
 
 	printf("\nEscolha um numero inteiro e positivo\n");
-	numero = loop_valida_valor();
+	numero = loop_valor_positivo();
 	
 	somaDivisores = soma_divisores_antes_de_n(numero);
 
@@ -51,20 +51,20 @@ int main(void){
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
 
-int loop_valida_valor(){
-	int num;
+int loop_valor_positivo(){
+	int valor;
 	
 	do{
 		printf("Insira o valor: ");
-		scanf("%d",&num);
-		if(num <= 0){
+		scanf("%d",&valor);
+		if(valor <= 0){
 			system("cls");
 			printf("Valor invalido, apenas numeros positivos\n\n");
 			mensagem_inicial();
 		}
-	}while(num <= 0);
+	}while(valor <= 0);
 	
-	return num;
+	return valor;
 }
 
 int soma_divisores_antes_de_n(int num){
