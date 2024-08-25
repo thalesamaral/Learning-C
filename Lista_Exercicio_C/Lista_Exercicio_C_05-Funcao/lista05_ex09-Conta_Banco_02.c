@@ -6,10 +6,9 @@ b) Altere o programa anterior: Agora temos uma conta especial que possui saldo e
 especial, um valor de crédito pré-aprovado que somado ao saldo da conta. Agora, deve-se 
 verificar se o débito é possível considerando o saldo e o valor do limite especial;
 */
-// Entrada..: valor do saldo; operação (débito ou crédito); valor desta operação
+// Entrada..: valor do saldo; operação (débito ou crédito); valor desta operação; limite especial
 // Saída....: calcular e imprimir o valor do saldo após a operação
 #include<stdio.h>
-#include<stdlib.h>
 #include<ctype.h>
 
 //Protótipo de Função
@@ -20,7 +19,7 @@ float calcula_saldo_final(float, char, float, float);
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	float saldo, valorOperacao, credEspecial;
+	float saldo, valorOperacao, limiteEspecial;
 	char operacao;
 	
 //Instruções
@@ -28,7 +27,7 @@ int main(void){
 	saldo = loop_valor_positivo();
 
 	printf("\nInforme o Limite especial\n");
-	credEspecial = loop_valor_positivo();
+	limiteEspecial = loop_valor_positivo();
 	
 	printf("\nOperacao bancaria [C]Credito ou [D]Debito\n");
 	valida_resposta(&operacao);
@@ -36,8 +35,8 @@ int main(void){
 	printf("\nValor da operacao\n");
 	valorOperacao = loop_valor_positivo();
 	
-	if(saldo + credEspecial >= valorOperacao){
-		printf("\nSaldo final: %.2f\n\n",calcula_saldo_final(saldo, operacao, valorOperacao, credEspecial));
+	if(saldo + limiteEspecial >= valorOperacao){
+		printf("\nSaldo final: %.2f\n\n",calcula_saldo_final(saldo, operacao, valorOperacao, limiteEspecial));
 	}else{
 		printf("\nSaldo insuficiente!\n\n");
 	}
@@ -74,17 +73,15 @@ void valida_resposta(char *resposta){
 	}while((*resposta != 'C') && (*resposta != 'D'));
 }
 
-float calcula_saldo_final(float saldo, char op, float valor, float cred){
+float calcula_saldo_final(float saldo, char op, float valor, float limite){
 	
 	if(op == 'C'){
 		saldo += valor;
 	}else if(op == 'D'){
-		if(saldo + cred >= valor){
+		if(saldo + limite >= valor){
 			saldo -= valor;
 		}
 	}
 
 	return saldo;
 }
-
-

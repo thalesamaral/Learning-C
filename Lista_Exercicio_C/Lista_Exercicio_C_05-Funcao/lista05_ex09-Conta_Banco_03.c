@@ -8,7 +8,6 @@ saldo final, mas alterar o valor do saldo e do limite especial, quando for o cas
 // Entrada..: valor do saldo; operação (débito ou crédito); valor desta operação; limite especial
 // Saída....: calcular e imprimir o valor do saldo após a operação
 #include<stdio.h>
-#include<stdlib.h>
 #include<ctype.h>
 
 //Protótipo de Função

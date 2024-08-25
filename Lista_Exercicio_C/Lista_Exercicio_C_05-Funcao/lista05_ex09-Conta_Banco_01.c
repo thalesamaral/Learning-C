@@ -9,7 +9,6 @@ e utilize um subprograma para calcular e imprimir o valor do saldo após a opera
 // Entrada..: valor do saldo; operação (débito ou crédito); valor desta operação
 // Saída....: calcular e imprimir o valor do saldo após a operação
 #include<stdio.h>
-#include<stdlib.h>
 #include<ctype.h>
 
 //Protótipo de Função
