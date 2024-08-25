@@ -1,10 +1,11 @@
 //  Síntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "12/12/2021"
-/*	Objetivo: utilize um subprograma para calcular e imprimir (subprograma) o valor do saldo
-ap�s a opera��o*/
-//  Entrada.: saldo conta banc�ria, opera��o banc�ria (d�bito ou cr�dito) e o valor desta opera��o.
-//  Sa�da...:
+//  Data....: "24/08/2024"
+/*	Objetivo:
+a) Receba do usuário o valor do saldo de uma conta bancária,
+uma operação bancária (débito ou crédito) e o valor desta operação,
+e utilize um subprograma para calcular e imprimir o valor do saldo após a operação;
+*/
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -19,19 +20,19 @@ int main(void){
 //Instruções
 	
 	do{
-		printf("Saldo da conta banc�ria: ");
+		printf("Saldo da conta bancaria: ");
 		scanf("%f",&saldo);
 	}while(saldo<0);
 	
 	do{
-		printf("\nOpera��o banc�ria [C]cr�dito ou [D]d�bito: ");
+		printf("\nOperacao bancaria [C]Credito ou [D]Debito: ");
 		operacao = getche();
 		operacao = toupper(operacao);
 	}while((operacao != 'C') && (operacao != 'D'));
 	
 	do{
 		printf("-1 para finalizar!\n");
-		printf("\nValor da opera��o: ");
+		printf("\nValor da operacao: ");
 		scanf("%f",&valorOp);
 	}while(valorOp<0);
 	
