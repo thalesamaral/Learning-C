@@ -15,6 +15,7 @@ e utilize um subprograma para calcular e imprimir o valor do saldo após a opera
 //Protótipo de Função
 float loop_valor_positivo();
 void valida_resposta(char*);
+float calcula_saldo_final(float, char, float);
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
@@ -33,14 +34,7 @@ int main(void){
 	printf("\nValor da operacao\n");
 	valorOperacao = loop_valor_positivo();
 	
-	//calcularSaldo(saldo, operacao, valorOp);
-	if(operacao == 'C'){
-		saldo += valorOperacao;
-	}else if(operacao == 'D'){
-		saldo -= valorOperacao;
-	}
-
-	printf("\nSaldo final: %.2f",saldo);
+	printf("\nSaldo final: %.2f",calcula_saldo_final(saldo, operacao, valorOperacao));
 	
 	return 0;
 }
@@ -74,8 +68,7 @@ void valida_resposta(char *resposta){
 	}while((*resposta != 'C') && (*resposta != 'D'));
 }
 
-/*
-calcularSaldo(float saldo, char op, float valor){
+float calcula_saldo_final(float saldo, char op, float valor){
 	
 	if(op == 'C'){
 		saldo += valor;
@@ -83,6 +76,5 @@ calcularSaldo(float saldo, char op, float valor){
 		saldo -= valor;
 	}
 
-	printf("\nSaldo atual: %.2f",saldo);
+	return saldo;
 }
-*/

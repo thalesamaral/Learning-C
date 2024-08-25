@@ -1,27 +1,30 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "12/12/2021"
-/*	Objetivo: verificar se o debito é possível considerando o saldo e o valor do limite especial*/
+/*	Objetivo: verificar se o debito ï¿½ possï¿½vel considerando o saldo e o valor do limite especial*/
 //  Entrada.: conta especial que possui saldo e limite especial.
-//  Saída...:
+//  Saï¿½da...:
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
-//Protótipo de Função
+#include<ctype.h>
+
+//ProtÃ³tipo de FunÃ§Ã£o
+float loop_valor_positivo();
+void valida_resposta(char*);
 calcularSaldo(float, char, float, float);
 
+//*** BLOCO PRINCIPAL *****************************************************
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	float saldo, valorOp, credEspecial;
 	char operacao;
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	
 	do{
-		printf("Saldo da conta bancária: ");
+		printf("Saldo da conta bancï¿½ria: ");
 		scanf("%f",&saldo);
 	}while(saldo<0);
 	
@@ -31,13 +34,13 @@ setlocale(LC_ALL,"Portuguese");
 	}while(credEspecial<0);
 	
 	do{
-		printf("\nOperação bancária [C]crédito ou [D]débito: ");
+		printf("\nOperaï¿½ï¿½o bancï¿½ria [C]crï¿½dito ou [D]dï¿½bito: ");
 		operacao = getche();
 		operacao = toupper(operacao);
 	}while((operacao != 'C') && (operacao != 'D'));
 	
 	do{
-		printf("\nValor da operação: ");
+		printf("\nValor da operaï¿½ï¿½o: ");
 		scanf("%f",&valorOp);
 	}while(valorOp<0);
 	
@@ -45,6 +48,7 @@ setlocale(LC_ALL,"Portuguese");
 	
 	return 0;
 }
+//*** FIM DO BLOCO PRINCIPAL **********************************************
 
 calcularSaldo(float saldo, char op, float valor, float cred){
 	

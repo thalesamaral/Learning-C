@@ -1,28 +1,31 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "12/12/2021"
-/*	Objetivo: Agora seu subprograma não deve mais imprimir o valor do saldo, 
+/*	Objetivo: Agora seu subprograma nï¿½o deve mais imprimir o valor do saldo, 
 mas alterar o valor do saldo e do limite especial, quando for o caso.*/
-//  Entrada.: saldo conta bancária, operação bancária (débito ou crédito) e o valor desta operação.
-//  Saída...:
+//  Entrada.: saldo conta bancï¿½ria, operaï¿½ï¿½o bancï¿½ria (dï¿½bito ou crï¿½dito) e o valor desta operaï¿½ï¿½o.
+//  Saï¿½da...:
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
-//Protótipo de Função
+#include<ctype.h>
+
+//ProtÃ³tipo de FunÃ§Ã£o
+float loop_valor_positivo();
+void valida_resposta(char*);
 int calcularSaldo(float*, char, float, float*);
 
+//*** BLOCO PRINCIPAL *****************************************************
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	float saldo, valorOp, limiteEspecial;
 	char operacao;
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	
 	do{
-		printf("Saldo da conta bancária..: ");
+		printf("Saldo da conta bancï¿½ria..: ");
 		scanf("%f",&saldo);
 	}while(saldo<0);
 	
@@ -32,13 +35,13 @@ setlocale(LC_ALL,"Portuguese");
 	}while(limiteEspecial<0);
 	
 	do{
-		printf("\n[C]crédito ou [D]débito..: ");
+		printf("\n[C]crï¿½dito ou [D]dï¿½bito..: ");
 		operacao = getche();
 		operacao = toupper(operacao);
 	}while((operacao != 'C') && (operacao != 'D'));
 	
 	do{
-		printf("\nValor da operação........: ");
+		printf("\nValor da operaï¿½ï¿½o........: ");
 		scanf("%f",&valorOp);
 	}while(valorOp<0);
 	
@@ -51,6 +54,7 @@ setlocale(LC_ALL,"Portuguese");
 	
 	return 0;
 }
+//*** FIM DO BLOCO PRINCIPAL **********************************************
 
 int calcularSaldo(float *saldo, char op, float valor, float *limite){
 	float limiteEspecial;
