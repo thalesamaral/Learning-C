@@ -1,10 +1,12 @@
-//  Sintese
+//  Síntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "12/12/2021"
-/*	Objetivo: Agora seu subprograma n�o deve mais imprimir o valor do saldo, 
-mas alterar o valor do saldo e do limite especial, quando for o caso.*/
-//  Entrada.: saldo conta banc�ria, opera��o banc�ria (d�bito ou cr�dito) e o valor desta opera��o.
-//  Sa�da...:
+//  Data....: "24/08/2024"
+/*	Objetivo:
+c) Altere o programa anterior: Agora seu subprograma não deve apenas calcular o valor do 
+saldo final, mas alterar o valor do saldo e do limite especial, quando for o caso;
+*/
+// Entrada..: valor do saldo; operação (débito ou crédito); valor desta operação; limite especial
+// Saída....: calcular e imprimir o valor do saldo após a operação
 #include<stdio.h>
 #include<stdlib.h>
 #include<ctype.h>
@@ -12,74 +14,80 @@ mas alterar o valor do saldo e do limite especial, quando for o caso.*/
 //Protótipo de Função
 float loop_valor_positivo();
 void valida_resposta(char*);
-int calcularSaldo(float*, char, float, float*);
+float calcula_saldo_final(float, char, float, float);
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	float saldo, valorOp, limiteEspecial;
+	float saldo, valorOperacao, limiteEspecial;
 	char operacao;
 	
 //Instruções
-	//printf("");
-	//scanf("%",&);
+	printf("Saldo da conta bancaria\n");
+	saldo = loop_valor_positivo();
+
+	printf("\nInforme o Limite especial\n");
+	limiteEspecial = loop_valor_positivo();
 	
-	do{
-		printf("Saldo da conta banc�ria..: ");
-		scanf("%f",&saldo);
-	}while(saldo<0);
-	
-	do{
-		printf("Informe o Limite especial: ");
-		scanf("%f",&limiteEspecial);
-	}while(limiteEspecial<0);
-	
-	do{
-		printf("\n[C]cr�dito ou [D]d�bito..: ");
-		operacao = getche();
-		operacao = toupper(operacao);
-	}while((operacao != 'C') && (operacao != 'D'));
-	
-	do{
-		printf("\nValor da opera��o........: ");
-		scanf("%f",&valorOp);
-	}while(valorOp<0);
-	
-	//if(calcularSaldo(&saldo, operacao, valorOp, &limiteEspecial))
-		//printf("\nSaldo e limite insuficiente!");
+	printf("\nOperacao bancaria [C]Credito ou [D]Debito\n");
+	valida_resposta(&operacao);
+
+	printf("\nValor da operacao\n");
+	valorOperacao = loop_valor_positivo();
+
+	while(saldo + limiteEspecial < valorOperacao){
+		printf("\nSaldo e limite insuficiente!\n");
 		
-	calcularSaldo(&saldo, operacao, valorOp, &limiteEspecial);
+		printf("\nInforme o novo Saldo\n");
+		saldo = loop_valor_positivo();
+
+		printf("\nInforme o novo Limite especial\n");
+		limiteEspecial = loop_valor_positivo();
+	}
 	
-	printf("\nSaldo atual: %.2f",saldo);
+	printf("\nSaldo final: %.2f\n\n",calcula_saldo_final(saldo, operacao, valorOperacao, limiteEspecial));
 	
 	return 0;
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
 
-int calcularSaldo(float *saldo, char op, float valor, float *limite){
-	float limiteEspecial;
+float loop_valor_positivo(){
+	float valor;
 	
-	if(op == 'C')
-		*saldo += valor;
-	else
-		if(*saldo + *limite >= valor)
-			*saldo -= valor;
-		else{
-			while(*saldo + *limite < valor){
-				printf("\nSaldo e limite insuficiente!\n");
-				do{
-					printf("Informe o novo Limite especial: ");
-					scanf("%f",&limiteEspecial);
-				}while(limiteEspecial<0);
-				*limite = limiteEspecial;
-			}
-			*saldo -= valor;
-			//return 0;
+	do{
+		printf("Insira o valor: ");
+		scanf("%f",&valor);
+		if(valor <= 0){
+			printf("\nValor invalido, apenas numeros positivos\n\n");
 		}
+	}while(valor <= 0);
 	
-	//printf("\nSaldo atual: %.2f",saldo);
-	return 1;
-	
+	return valor;
 }
 
+void valida_resposta(char *resposta){
+	
+	do{
+		fflush(stdin);
+		printf("Resposta: ");
+		*resposta = getchar();
+		while (getchar() != '\n');
+		*resposta = toupper(*resposta);
+		if((*resposta != 'C') && (*resposta != 'D')){
+			printf("\nResposta invalida!\n\n");
+		}
+	}while((*resposta != 'C') && (*resposta != 'D'));
+}
 
+float calcula_saldo_final(float saldo, char op, float valor, float limite){
+	
+	if(op == 'C'){
+		saldo += valor;
+	}else if(op == 'D'){
+		if(saldo + limite >= valor){
+			saldo -= valor;
+		}
+	}
+
+	return saldo;
+}
