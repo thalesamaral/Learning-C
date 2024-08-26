@@ -8,7 +8,6 @@ conte e apresente quantos elementos pares e ímpares existem no vetor.
 //  Entrada.: vetor de int.
 //  Saida...: imprimir se eh par ou impar.
 #include<stdio.h>
-#include<stdlib.h>
 #define TAM 3
 
 //*** BLOCO PRINCIPAL *****************************************************

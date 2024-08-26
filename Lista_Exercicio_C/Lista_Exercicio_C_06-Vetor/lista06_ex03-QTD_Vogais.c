@@ -4,9 +4,8 @@
 /*	Objetivo: leia os elementos (um a um) de um vetor de 20 posi��es de caractere (char), 
 conte e apresente quantas vogais existem no vetor.*/
 //  Entrada.: vetor de char.
-//  Sa�da...: qtd vogais.
+//  Saida...: qtd vogais.
 #include<stdio.h>
-#include<stdlib.h>
 #define TAM 5
 
 //*** BLOCO PRINCIPAL *****************************************************
