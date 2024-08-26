@@ -1,13 +1,15 @@
 //  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "14/12/2021"
-/*	Objetivo: leia os elementos de um vetor de 20 posi��es de inteiros, conte e apresente 
-quantos elementos pares e �mpares existem no vetor.*/
+/*	Objetivo: 
+2. Faça um programa em C que leia os elementos de um vetor de 20 posições de inteiros, 
+conte e apresente quantos elementos pares e ímpares existem no vetor.
+*/
 //  Entrada.: vetor de int.
-//  Sa�da...: imprimir se � par ou �mpar.
+//  Saida...: imprimir se eh par ou impar.
 #include<stdio.h>
 #include<stdlib.h>
-#define TAM 5
+#define TAM 3
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
@@ -15,20 +17,19 @@ int main(void){
 	int valor[TAM], i, par=0, impar=0;
 	
 //Instruções
-	//printf("");
-	//scanf("%",&);
 	
 	for(i=0; i<TAM; i++){
-		printf("%d� valor: ",i+1);
+		printf("%do Valor: ",i+1);
 		scanf("%d",&valor[i]);
-		if(valor[i] % 2 == 0)
+		if(valor[i] % 2 == 0){
 			par++;
-		else
+		}else{
 			impar++;
+		}
 	}
 	
 	printf("\nPar: %d\n",par);
-	printf("�mpar: %d",impar);
+	printf("Impar: %d\n",impar);
 	
 	return 0;
 }

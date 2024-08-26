@@ -8,7 +8,6 @@ e apresente o vetor na ordem inversa à leitura.
 //  Entrada.: vetor de float.
 //  Saída...: imprimir a sequencia inversa.
 #include<stdio.h>
-#include<stdlib.h>
 #define TAM 3
 
 //*** BLOCO PRINCIPAL *****************************************************
