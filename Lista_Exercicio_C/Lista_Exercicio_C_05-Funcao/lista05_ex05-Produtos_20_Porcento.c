@@ -1,58 +1,95 @@
-//  Sintese
+//  S√≠ntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "10/12/2021"
-/*	Objetivo: Seu programa deve ler o cÛdigo e o preÁo de custo de cada produto e calcular o novo preÁo.
-Calcule tambÈm, a mÈdia dos preÁos com e sem aumento. Mostre o cÛdigo e o novo preÁo de cada produto e, 
-no final, as mÈdias.*/
+//  Data....: "22/08/2024"
+/*	Objetivo:
+5. Fa√ßa um programa em C que contenha subprograma. √â necess√°rio que seu programa como 
+um todo trate uma empresa que deseja aumentar seus pre√ßos em 20%. Seu programa deve 
+ler o c√≥digo e o pre√ßo de custo de cada produto e calcular o novo pre√ßo. Calcule tamb√©m, a 
+m√©dia dos pre√ßos com e sem aumento. Mostre o c√≥digo e o novo pre√ßo de cada produto e, 
+no final, as m√©dias. A entrada de dados deve terminar quando for lido um c√≥digo de produto 
+negativo.
+*/
 #include<stdio.h>
-#include<stdlib.h>
-#include<locale.h>
-//ProtÛtipo de FunÁ„o
-float calculaPreco20(int, float);
+#define BARRA_DUPLA printf("\n============================================================\n");
 
+//Prot√≥tipo de Fun√ß√£o
+int valor_ou_fim(int*);
+float loop_valor_positivo();
+void preco_20_porcento(float*);
+void mensagem_inicial();
+
+//*** BLOCO PRINCIPAL *****************************************************
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
-	int codigo, qtd;
-	float preco, precoInicial, preco20;
+//Declara√ß√µes
+	int codigo, qtd=0;
+	float preco, precoInicial=0, preco20=0;
 	
-//InstruÁıes
-	//printf("");
-	//scanf("%",&);
+//Instru√ß√µes
 	
-	printf("Digite -1 para finalizar!\n");
-	printf("Digite o Codigo: ");
-	scanf("%d",&codigo);
-	
-	while(codigo >= 0){
-		do{
-			printf("Digite o preÁo: ");
-			scanf("%f",&preco);
-			
-			qtd++;
-			precoInicial += preco;
-			
-			preco20 += calculaPreco20(codigo, preco);
-			
-			printf("\n==========================================\n");
-			printf("MÈdia do preÁo inicial %.2f",precoInicial/qtd);
-			printf("\nMÈdia do preÁo com 20%% %.2f",preco20/qtd);
-			printf("\n==========================================\n\n");
-			
-			printf("Digite -1 para finalizar!\n");
-			printf("Digite o Codigo: ");
-			scanf("%d",&codigo);
-		}while(codigo > 0);
-	}
-	return 0;
-}/////////////////////
+	mensagem_inicial();
 
-float calculaPreco20(int cod, float preco){
+	while(valor_ou_fim(&codigo)){
+		printf("\nPreco do produto\n");
+		preco = loop_valor_positivo();
+		
+		qtd++;
+		precoInicial += preco;
+		
+		BARRA_DUPLA
+		printf("Codigo: %d, Preco antigo: %.2f\n",codigo, preco);
+		preco_20_porcento(&preco);
+		preco20 += preco;
+		printf("Codigo: %d, Preco novo..: %.2f",codigo, preco);
+		
+		BARRA_DUPLA
+		printf("Media do preco inicial.: %.2f\n",precoInicial/qtd);
+		printf("Media do preco com 20%%.: %.2f",preco20/qtd);
+		BARRA_DUPLA
+
+		mensagem_inicial();
+	}
+
+	return 0;
+}
+//*** FIM DO BLOCO PRINCIPAL **********************************************
+
+int valor_ou_fim(int *valorRef){
+	int valor;
 	
-	printf("\nCÛdigo: %d PreÁo antigo: %.2f",cod,preco);
-	preco += (preco * 20)/100;
-	printf("\nCÛdigo: %d PreÁo novo: %.2f\n",cod,preco);
-	
-	return preco;
+	printf("Insira o valor: ");
+	scanf("%d",&valor);
+
+	if(valor < 0){
+		printf("\nNumero negativo. Programa finalizado!\n\n");
+		return 0;
+	}else{
+		*valorRef = valor;
+		return 1;
+	}
 }
 
+float loop_valor_positivo(){
+	float valor;
+	
+	do{
+		printf("Insira o valor: ");
+		scanf("%f",&valor);
+		if(valor <= 0){
+			//system("cls");
+			printf("Valor invalido, apenas numeros positivos\n\n");
+		}
+	}while(valor <= 0);
+	
+	return valor;
+}
+
+void preco_20_porcento(float *preco){
+	
+	*preco = *preco * 1.20;
+	
+}
+
+void mensagem_inicial(){
+	printf("\nDigite o numero do codigo\n");
+	printf("Ou, digite -1 para finalizar!\n\n");
+}

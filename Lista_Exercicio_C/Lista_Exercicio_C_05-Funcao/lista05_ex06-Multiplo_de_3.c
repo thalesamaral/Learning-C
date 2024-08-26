@@ -1,41 +1,60 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "10/12/2021"
-/*	Objetivo: leia um número inteiro N e imprima a soma dos números múltiplos de 3 do intervalo de de 0 a N.*/
+//  Data....: "22/08/2024"
+/*	Objetivo:
+6. FaÃ§a um programa em C que contenha subprograma. Ã‰ necessÃ¡rio que seu programa como 
+um todo leia um nÃºmero inteiro N e imprima a soma dos nÃºmeros mÃºltiplos de 3 do intervalo 
+de de 0 a N.
+*/
 #include<stdio.h>
-#include<stdlib.h>
-#include<locale.h>
-//Protótipo de Função
-int somaNumeroMultiplo(int);
+
+//ProtÃ³tipo de FunÃ§Ã£o
+int soma_numero_multiplo_de_3(int);
 
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
-	int num;
+//DeclaraÃ§Ãµes
+	int numero, soma;
 	
-//Instruções
-	//printf("");
-	//scanf("%",&);
-	
-	do{
-		printf("Digite um número positivo: ");
-		scanf("%d",&num);	
-	}while(num<0);
-		
-	printf("\nA soma dos Numeros Multiplos: %d",somaNumeroMultiplo(num));
+//InstruÃ§Ãµes
+	printf("Numeros Multiplos de 3\n");
+	printf("No intervalo de 0 a N\n\n");
+
+	printf("Digite um numero: ");
+	scanf("%d",&numero);
+
+	if(numero){
+		soma = soma_numero_multiplo_de_3(numero);
+
+		if(soma){
+			printf("\n\nA soma dos Numeros Multiplos de 3: %d\n\n",soma);
+		}else{
+			printf("\n\nNao tem Numeros Multiplos de 3\n\n");
+		}
+	}
 	return 0;
 }
 
-int somaNumeroMultiplo(int n){
+int soma_numero_multiplo_de_3(int num){
 	int i, soma=0;
 	
-	for(i=1; i<n; i++){
-		if(i % 3 == 0){
-			printf("\nNumeros Multiplos: %d",i);
-			soma += i;
+	printf("\nNo intervalo de 0 <-> %d\n",num);
+
+	if(num > 0){
+		for(i=1; i<num; i++){
+			if(i % 3 == 0){
+				printf("%d; ",i);
+				soma += i;
+			}
+		}
+	}else if(num < 0){
+		for(i=num+1; i<0; i++){
+			if(i % 3 == 0){
+				printf("%d; ",i);
+				soma += i;
+			}
 		}
 	}
+
 	return soma;
-	//printf("\nA soma dos Numeros Multiplos: %d",soma);
 }
 

@@ -1,56 +1,79 @@
-//  Sintese
+//  S√≠ntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "12/12/2021"
-/*	Objetivo: utilize um subprograma para calcular e imprimir (subprograma) o valor do saldo
-apÛs a operaÁ„o*/
-//  Entrada.: saldo conta banc·ria, operaÁ„o banc·ria (dÈbito ou crÈdito) e o valor desta operaÁ„o.
-//  SaÌda...:
+//  Data....: "24/08/2024"
+/*	Objetivo:
+a) Receba do usu√°rio o valor do saldo de uma conta banc√°ria,
+uma opera√ß√£o banc√°ria (d√©bito ou cr√©dito) e o valor desta opera√ß√£o,
+e utilize um subprograma para calcular e imprimir o valor do saldo ap√≥s a opera√ß√£o;
+*/
+// Entrada..: valor do saldo; opera√ß√£o (d√©bito ou cr√©dito); valor desta opera√ß√£o
+// Sa√≠da....: calcular e imprimir o valor do saldo ap√≥s a opera√ß√£o
 #include<stdio.h>
-#include<stdlib.h>
-#include<locale.h>
-//ProtÛtipo de FunÁ„o
-calcularSaldo(float, char, float);
+#include<ctype.h>
 
+//Prot√≥tipo de Fun√ß√£o
+float loop_valor_positivo();
+void valida_resposta(char*);
+float calcula_saldo_final(float, char, float);
+
+//*** BLOCO PRINCIPAL *****************************************************
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
-	float saldo, valorOp;
+//Declara√ß√µes
+	float saldo, valorOperacao;
 	char operacao;
 	
-//InstruÁıes
-	//printf("");
-	//scanf("%",&);
+//Instru√ß√µes
 	
-	do{
-		printf("Saldo da conta banc·ria: ");
-		scanf("%f",&saldo);
-	}while(saldo<0);
+	printf("Saldo da conta bancaria\n");
+	saldo = loop_valor_positivo();
 	
-	do{
-		printf("\nOperaÁ„o banc·ria [C]crÈdito ou [D]dÈbito: ");
-		operacao = getche();
-		operacao = toupper(operacao);
-	}while((operacao != 'C') && (operacao != 'D'));
+	printf("\nOperacao bancaria [C]Credito ou [D]Debito\n");
+	valida_resposta(&operacao);
+
+	printf("\nValor da operacao\n");
+	valorOperacao = loop_valor_positivo();
 	
-	do{
-		printf("-1 para finalizar!\n");
-		printf("\nValor da operaÁ„o: ");
-		scanf("%f",&valorOp);
-	}while(valorOp<0);
-	
-	calcularSaldo(saldo, operacao, valorOp);
+	printf("\nSaldo final: %.2f",calcula_saldo_final(saldo, operacao, valorOperacao));
 	
 	return 0;
 }
+//*** FIM DO BLOCO PRINCIPAL **********************************************
 
-calcularSaldo(float saldo, char op, float valor){
+float loop_valor_positivo(){
+	float valor;
 	
-	if(op == 'C')
-		saldo += valor;
-	else
-		saldo -= valor;
-
-	printf("\nSaldo atual: %.2f",saldo);
+	do{
+		printf("Insira o valor: ");
+		scanf("%f",&valor);
+		if(valor <= 0){
+			printf("\nValor invalido, apenas numeros positivos\n\n");
+		}
+	}while(valor <= 0);
+	
+	return valor;
 }
 
+void valida_resposta(char *resposta){
+	
+	do{
+		fflush(stdin);
+		printf("Resposta: ");
+		*resposta = getchar();
+		while (getchar() != '\n');
+		*resposta = toupper(*resposta);
+		if((*resposta != 'C') && (*resposta != 'D')){
+			printf("\nResposta invalida!\n\n");
+		}
+	}while((*resposta != 'C') && (*resposta != 'D'));
+}
 
+float calcula_saldo_final(float saldo, char op, float valor){
+	
+	if(op == 'C'){
+		saldo += valor;
+	}else if(op == 'D'){
+		saldo -= valor;
+	}
+
+	return saldo;
+}

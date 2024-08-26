@@ -1,48 +1,99 @@
-//  Sintese
+//  Síntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "10/12/2021"
-/*	Objetivo: leia um n�mero inteiro n, verifica e imprime se este � perfeito,
-se � abundante e se � deficiente.*/
-//  Entrada.:
-//  Sa�da...:
+//  Data....: "24/08/2024"
+/*	Objetivo:
+3. Considerando que: 
+	• Um número é perfeito se a soma de todos os seus divisores, exceto ele mesmo, é 
+igual ao próprio número. Por exemplo, o número 6 é perfeito porque 1 + 2 + 3 = 6;
+	• Um número é abundante se a soma de todos os seus divisores, exceto ele mesmo, é 
+maior do que o próprio número. Por exemplo, o número 12 é abundante porque 1 + 2 
++ 3 + 4 + 6 = 16;
+	• Um número é deficiente se a soma de todos os seus divisores, exceto ele mesmo, é 
+menor do que o próprio número. Por exemplo, o número 10 é deficiente porque 1 + 2 
++ 5 = 8.
+Faça um programa em C que contenha subprograma. É necessário que seu 
+programa como um todo leia um número inteiro n, verifica e imprime se este é perfeito, 
+se é abundante e se é deficiente.
+*/
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
-//Prot�tipo de Fun��o
-int verificarNumero(int);
+#define BARRA_DUPLA printf("============================================================\n");
+#define BARRA_SIMPLES printf("------------------------------------------------------------\n");
 
+//Protótipo de Função
+int soma_divisores_antes_de_n(int);
+int loop_int_positivo();
+void mensagem_inicial();
+
+//*** BLOCO PRINCIPAL *****************************************************
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
-	int numero, ref;
+//Declarações
+	int numero, somaDivisores;
 	
-//Instru��es
-	printf("Digite um n�mero: \n");
-	scanf("%d",&numero);
+//Instruções
+	mensagem_inicial();
+
+	printf("\nEscolha um numero inteiro e positivo\n");
+	numero = loop_int_positivo();
 	
-	ref = verificarNumero(numero);
-	if(ref == numero)
-		printf("\nN�mero Perfeito: %d\n",ref);
-	else if(ref > numero)
-		printf("\nN�mero Abundante: %d\n",ref);
-	else if(ref < numero)
-		printf("\nN�mero Deficiente: %d\n",ref);
+	somaDivisores = soma_divisores_antes_de_n(numero);
+
+	printf("\nSoma dos divisores: %d\n",somaDivisores);
+
+	if(somaDivisores == numero)
+		printf("\nNumero Perfeito!\n");
+	else if(somaDivisores > numero)
+		printf("\nNumero Abundante!\n");
+	else if(somaDivisores < numero)
+		printf("\nNumero Deficiente!\n");
 	
 	return 0;
 }
+//*** FIM DO BLOCO PRINCIPAL **********************************************
 
-int verificarNumero(int num){
-	int i, somaDivisor;
+int loop_int_positivo(){
+	int valor;
 	
-	printf("Divisores: ");
-	for(i=1; i<num; i++){
-		if(num % i == 0){
-			somaDivisor += i;
-			printf("%d ",i);
+	do{
+		printf("Insira o valor: ");
+		scanf("%d",&valor);
+		if(valor <= 0){
+			system("cls");
+			printf("Valor invalido, apenas numeros positivos\n\n");
+			mensagem_inicial();
 		}
-	}		
+	}while(valor <= 0);
 	
-	return somaDivisor;
-	
+	return valor;
 }
 
+int soma_divisores_antes_de_n(int num){
+	int i, soma;
+	
+	if(num == 1){
+		return 0;
+	}
+
+	printf("\nDivisores: ");
+	for(i=1; i<num; i++){
+		if(num % i == 0){
+			soma += i;
+			printf("%d; ",i);
+		}
+	}
+
+	return soma;
+}
+
+void mensagem_inicial(){
+	BARRA_DUPLA
+	printf(" Numero Perfeito: se N for igual a soma de\n");
+	printf(" seus divisores positivos diferentes de N\n");
+	BARRA_SIMPLES
+	printf(" Numero Abundante: se N for maior que a soma de\n");
+	printf(" seus divisores positivos diferentes de N\n");
+	BARRA_SIMPLES
+	printf(" Numero Deficiente: se N for menor que a soma de\n");
+	printf(" seus divisores positivos diferentes de N\n");
+	BARRA_DUPLA
+}

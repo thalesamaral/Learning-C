@@ -1,44 +1,44 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "09/12/2021"
-/*	Objetivo: É necessário que seu programa como um todo leia um
-número inteiro n, verifica e imprime se este é par ou ímpar.*/
-//  Entrada.: Número.
-//  Saída...: Par ou Ímpar
+//  Data....: "19/08/2024"
+/*	Objetivo:
+1. FaÃ§a um programa em C que contenha subprograma. Ã‰ necessÃ¡rio que seu programa como um todo leia um nÃºmero inteiro n, verifica e imprime se este Ã© par ou Ã­mpar.
+Utilize as boas prÃ¡ticas, nÃ£o tendo leitura ou impressÃ£o dentro do subprograma.
+*/
 #include<stdio.h>
-#include<stdlib.h>
-#include<locale.h>
-#define TAM
-//Protótipo de Função
-int verificarParImpar(int);
+#define PAR 1
+#define IMPAR 2
 
+//ProtÃ³tipo de FunÃ§Ã£o
+int verificar_par_impar(int);
+
+//*** BLOCO PRINCIPAL *****************************************************
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
-	int num;
+//DeclaraÃ§Ãµes
+	int numero, resultado;
 	
-//Instruções
-	//printf("");
-	//scanf("%",&);
+//InstruÃ§Ãµes
 	
-	printf("Digite um número: ");
-	scanf("%d",&num);
+	printf("Digite um numero: ");
+	scanf("%d",&numero);
 	
-	verificarParImpar(num);
+	resultado = verificar_par_impar(numero);
 	
-	if(num % 2 == 0)
-		printf("PAR!\n");
-	else
-		printf("ÍMPAR!\n");
+	if(resultado == PAR){
+		printf("\nPAR!\n");
+	}else if(resultado == IMPAR){
+		printf("\nIMPAR!\n");
+	}
 	
 	return 0;
 }
+//*** FIM DO BLOCO PRINCIPAL **********************************************
 
-int verificarParImpar(int n){
+int verificar_par_impar(int num){
 	
-	if(n % 2 == 0)
-		return n;
+	if(num % 2 == 0)
+		return PAR;
 	else
-		return n;
+		return IMPAR;
 	
 }
