@@ -71,7 +71,7 @@ float calcula_saldo_final(float saldo, char op, float valor){
 	
 	if(op == 'C'){
 		saldo += valor;
-	}else if(op == 'C'){
+	}else if(op == 'D'){
 		saldo -= valor;
 	}
 
