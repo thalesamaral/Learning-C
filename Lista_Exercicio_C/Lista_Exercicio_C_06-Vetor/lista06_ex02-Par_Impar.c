@@ -1,26 +1,25 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "14/12/2021"
-/*	Objetivo: leia os elementos de um vetor de 20 posições de inteiros, conte e apresente 
-quantos elementos pares e ímpares existem no vetor.*/
+/*	Objetivo: leia os elementos de um vetor de 20 posiï¿½ï¿½es de inteiros, conte e apresente 
+quantos elementos pares e ï¿½mpares existem no vetor.*/
 //  Entrada.: vetor de int.
-//  Saída...: imprimir se é par ou ímpar.
+//  Saï¿½da...: imprimir se ï¿½ par ou ï¿½mpar.
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
 #define TAM 5
 
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//DeclaraÃ§Ãµes
 	int valor[TAM], i, par=0, impar=0;
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	
 	for(i=0; i<TAM; i++){
-		printf("%dº valor: ",i+1);
+		printf("%dï¿½ valor: ",i+1);
 		scanf("%d",&valor[i]);
 		if(valor[i] % 2 == 0)
 			par++;
@@ -29,10 +28,8 @@ setlocale(LC_ALL,"Portuguese");
 	}
 	
 	printf("\nPar: %d\n",par);
-	printf("Ímpar: %d",impar);
+	printf("ï¿½mpar: %d",impar);
 	
 	return 0;
 }
-
-
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************

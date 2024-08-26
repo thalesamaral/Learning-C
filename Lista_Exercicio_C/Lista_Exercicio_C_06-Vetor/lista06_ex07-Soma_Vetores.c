@@ -1,34 +1,33 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "15/12/2021"
-/*	Objetivo: leia dois vetores de 10 posições (cada) e faça a soma escalar dos elementos 
-(posição 0 do primeiro vetor com posição 0 do segundo vetor, posição 1 do primeiro vetor com posição 1 do 
+/*	Objetivo: leia dois vetores de 10 posiï¿½ï¿½es (cada) e faï¿½a a soma escalar dos elementos 
+(posiï¿½ï¿½o 0 do primeiro vetor com posiï¿½ï¿½o 0 do segundo vetor, posiï¿½ï¿½o 1 do primeiro vetor com posiï¿½ï¿½o 1 do 
 segundo vetor, etc.), colocando o resultado em um terceiro vetor. Por fim, apresente os elementos apenas 
 do terceiro vetor.*/
 //  Entrada.: Dois vetores de int.
-//  Saída...: Um vetor para soma.
+//  Saï¿½da...: Um vetor para soma.
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
 #define TAM 5
 
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//DeclaraÃ§Ãµes
 	int i, vet1[TAM], vet2[TAM], vetSoma[TAM];
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	
 	for(i=0; i<TAM; i++){
-		printf("Vetor 1 - %dº valor: ",i+1);
+		printf("Vetor 1 - %dï¿½ valor: ",i+1);
 		scanf("%d",&vet1[i]);
 	}
 	
 	printf("\n");
 	for(i=0; i<TAM; i++){
-		printf("Vetor 2 - %dº valor: ",i+1);
+		printf("Vetor 2 - %dï¿½ valor: ",i+1);
 		scanf("%d",&vet2[i]);
 	}
 	
@@ -38,11 +37,9 @@ setlocale(LC_ALL,"Portuguese");
 	
 	printf("\n");
 	for(i=0; i<TAM; i++){
-		printf("Vetor Soma - %dº valor: %d\n",i+1,vetSoma[i]);
+		printf("Vetor Soma - %dï¿½ valor: %d\n",i+1,vetSoma[i]);
 	}
 		
 	return 0;
 }
-
-
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************

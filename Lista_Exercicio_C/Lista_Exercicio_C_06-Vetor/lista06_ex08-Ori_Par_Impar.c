@@ -1,32 +1,31 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "15/12/2021"
-/*	Objetivo: crie 3 vetores de 20 posições, chamados: original, pares e ímpares. Em seguida 
-leia os elementos do original, teste seus valores (pares ou ímpares) e coloque nos respectivos vetores do 
-início para o final. Garanta que as posições “vazias” dos vetores pares e ímpares estejam com zero.*/
-//  Entrada.: Três vetores: Original, pares ímpares.
-//  Saída...: Organizar pares e ímpares.
+/*	Objetivo: crie 3 vetores de 20 posiï¿½ï¿½es, chamados: original, pares e ï¿½mpares. Em seguida 
+leia os elementos do original, teste seus valores (pares ou ï¿½mpares) e coloque nos respectivos vetores do 
+inï¿½cio para o final. Garanta que as posiï¿½ï¿½es ï¿½vaziasï¿½ dos vetores pares e ï¿½mpares estejam com zero.*/
+//  Entrada.: Trï¿½s vetores: Original, pares ï¿½mpares.
+//  Saï¿½da...: Organizar pares e ï¿½mpares.
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
 #define TAM 4
 
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//DeclaraÃ§Ãµes
 	int original[TAM], par[TAM], impar[TAM];
 	int i=0, j=0, k=0, l=0;
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	
 	for(i=0; i<TAM; i++){
-		printf("%dº valor: ",i+1);
+		printf("%dï¿½ valor: ",i+1);
 		scanf("%d",&original[i]);
 		
 		if(original[i] % 2 == 0)
-			par[j++] = original[i];//K++ e J++ é Pós incremento, portanto,
+			par[j++] = original[i];//K++ e J++ ï¿½ Pï¿½s incremento, portanto,
 		else
 			impar[k++] = original[i];//primeiro usa o valor depois incrementa.
 
@@ -41,13 +40,13 @@ setlocale(LC_ALL,"Portuguese");
 	}
 	
 	for(i=0; i<TAM; i++){
-		printf("Vetor Par - %dº valor: %d\n",i+1,par[i]);
+		printf("Vetor Par - %dï¿½ valor: %d\n",i+1,par[i]);
 	}
 	
 	for(i=0; i<TAM; i++){
-		printf("Vetor Ímpar - %dº valor: %d\n",i+1,impar[i]);
+		printf("Vetor ï¿½mpar - %dï¿½ valor: %d\n",i+1,impar[i]);
 	}
 	
 	return 0;
 }
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************

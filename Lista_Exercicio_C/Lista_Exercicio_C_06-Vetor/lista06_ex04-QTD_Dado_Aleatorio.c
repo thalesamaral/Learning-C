@@ -1,21 +1,20 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "14/12/2021"
-/*	Objetivo: Lançamento de dado*/
-//  Entrada.: dado quantidade de jogadas, Nºs de 1 a 6 de forma aleatoria.
-//  Saída...: quantidade de ocorrências de 1 a 6.
+/*	Objetivo: Lanï¿½amento de dado*/
+//  Entrada.: dado quantidade de jogadas, Nï¿½s de 1 a 6 de forma aleatoria.
+//  Saï¿½da...: quantidade de ocorrï¿½ncias de 1 a 6.
 #include<stdio.h>
-#include<stdlib.h>// necessário p/ as funções rand() e srand()
-#include<locale.h>
+#include<stdlib.h>// necessï¿½rio p/ as funï¿½ï¿½es rand() e srand()
 #define TAM 10
 
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//DeclaraÃ§Ãµes
 	int i, dado[TAM];
 	int um=0, dois=0, tres=0, quatro=0, cinco=0, seis=0;
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	
@@ -23,7 +22,7 @@ setlocale(LC_ALL,"Portuguese");
 		
 	for(i=0; i<TAM; i++){
 		
-		dado[i] = (rand() % 6) + 1; //iría começar com 0 mas adicionei +1.
+		dado[i] = (rand() % 6) + 1; //irï¿½a comeï¿½ar com 0 mas adicionei +1.
 		if(dado[i] == 1)
 			um++;
 		else
@@ -43,13 +42,11 @@ setlocale(LC_ALL,"Portuguese");
 	}
 	
 	for(i=0; i<TAM; i++){
-		printf("\n%dº valor: %d",i+1,dado[i]);
+		printf("\n%dï¿½ valor: %d",i+1,dado[i]);
 	}
 	
 	printf("\n\n1) %d - 2) %d - 3) %d - 4) %d - 5) %d - 6) %d",um,dois,tres,quatro,cinco,seis);
 	
 	return 0;
 }
-
-
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************

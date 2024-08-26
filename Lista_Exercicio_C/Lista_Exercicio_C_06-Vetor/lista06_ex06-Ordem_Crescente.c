@@ -1,27 +1,26 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "15/12/2021"
-/*	Objetivo: leia os elementos de um vetor de 20 posições de inteiros, verifique e informe se 
-o vetor está ordenado em ordem crescente. Ou seja, se os valores das posições do vetor apresentam os 
+/*	Objetivo: leia os elementos de um vetor de 20 posiï¿½ï¿½es de inteiros, verifique e informe se 
+o vetor estï¿½ ordenado em ordem crescente. Ou seja, se os valores das posiï¿½ï¿½es do vetor apresentam os 
 valores aumentando.*/
 //  Entrada.: Um vetor de int.
-//  Saída...: Informar se a sequêcia é crescente ou não.
+//  Saï¿½da...: Informar se a sequï¿½cia ï¿½ crescente ou nï¿½o.
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
 #define TAM 3
 
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//DeclaraÃ§Ãµes
 	int v[TAM], i, j, flag=0;
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	
 	for(i=0; i<TAM; i++){
-		printf("%dº valor: ",i+1);
+		printf("%dï¿½ valor: ",i+1);
 		scanf("%d",&v[i]);
 	}
 	
@@ -32,12 +31,10 @@ setlocale(LC_ALL,"Portuguese");
 	}
 	
 	if(flag==1)
-		printf("\nNão é crescente");
+		printf("\nNï¿½o ï¿½ crescente");
 	else
-		printf("\nÉ crescente");
+		printf("\nï¿½ crescente");
 	
 	return 0;
 }
-
-
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************

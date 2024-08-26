@@ -1,33 +1,32 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "14/12/2021"
-/*	Objetivo: leia os elementos de um vetor de 20 posições de inteiros e apresente o vetor. 
-Em seguida troque o primeiro elemento com o último, o segundo com o penúltimo, o terceiro com o 
-antepenúltimo, e assim sucessivamente. Por fim, apresente novamente o vetor depois das trocas.*/
+/*	Objetivo: leia os elementos de um vetor de 20 posiï¿½ï¿½es de inteiros e apresente o vetor. 
+Em seguida troque o primeiro elemento com o ï¿½ltimo, o segundo com o penï¿½ltimo, o terceiro com o 
+antepenï¿½ltimo, e assim sucessivamente. Por fim, apresente novamente o vetor depois das trocas.*/
 //  Entrada.: Um vetor de int.
-//  Saída...: vetor valores invertidos
+//  Saï¿½da...: vetor valores invertidos
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
 #define TAM 5
 
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//DeclaraÃ§Ãµes
 	int i, j, v[TAM], aux;
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	
 	for(i=0; i<TAM; i++){
-		printf("%dº valor: ",i+1);
+		printf("%dï¿½ valor: ",i+1);
 		scanf("%d",&v[i]);
 	}
 	
 	printf("\nAntes\n");
 	for(i=0; i<TAM; i++){
-		printf("%dº valor: %d\n",i,v[i]);
+		printf("%dï¿½ valor: %d\n",i,v[i]);
 	}
 	
 	for(i=0, j=TAM-1; i<TAM/2; i++, j--){
@@ -38,11 +37,9 @@ setlocale(LC_ALL,"Portuguese");
 	
 	printf("\nDepois");
 	for(i=0; i<TAM; i++){
-		printf("\n%dº valor: %d",i,v[i]);
+		printf("\n%dï¿½ valor: %d",i,v[i]);
 	}
 	
 	return 0;
 }
-
-
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************

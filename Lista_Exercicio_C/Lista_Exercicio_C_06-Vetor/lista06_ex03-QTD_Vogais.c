@@ -1,22 +1,21 @@
-//  Sintese
+//  SÃ­ntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "14/12/2021"
-/*	Objetivo: leia os elementos (um a um) de um vetor de 20 posições de caractere (char), 
+/*	Objetivo: leia os elementos (um a um) de um vetor de 20 posiï¿½ï¿½es de caractere (char), 
 conte e apresente quantas vogais existem no vetor.*/
 //  Entrada.: vetor de char.
-//  Saída...: qtd vogais.
+//  Saï¿½da...: qtd vogais.
 #include<stdio.h>
 #include<stdlib.h>
-#include<locale.h>
 #define TAM 5
 
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//DeclaraÃ§Ãµes
 	char vetor[TAM];
 	int i, vogal=0;
 	
-//Instruções
+//InstruÃ§Ãµes
 	//printf("");
 	//scanf("%",&);
 	
@@ -34,6 +33,4 @@ setlocale(LC_ALL,"Portuguese");
 	
 	return 0;
 }
-
-
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************
