@@ -1,48 +1,45 @@
 //  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "15/12/2021"
-/*	Objetivo: leia um vetor num�rico de 20 posi��es e o compacte considerando zero como valor in�til, 
-ou seja, mova os elementos diferentes de zero, sem alterar a ordem deles, para o in�cio do vetor, 
-deixando os zeros no final do vetor.*/
+/*	Objetivo:
+7. Faça um programa em C que leia um vetor numérico de 20 posições e o compacte 
+considerando zero como valor inútil, ou seja, mova os elementos diferentes de zero, sem 
+alterar a ordem deles, para o início do vetor, deixando os zeros no final do vetor.
+*/
 //  Entrada.: Um vetor de int.
-//  Sa�da...: realocar os valores zero para o final da lista.
+//  Saida...: realocar os valores zero para o final da lista.
 #include<stdio.h>
 #include<stdlib.h>
-#define TAM 10
+#define TAM 3
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	int i=0, j=0, vet[TAM];
+	int i, j, vet[TAM];
 	
 //Instruções
-	//printf("");
-	//scanf("%",&);
-	
+	printf("\nVetor 1\n");
 	for(i=0; i<TAM; i++){
-		printf("Vetor 1 - %d� valor: ",i+1);
+		printf("%do Valor: ",i+1);
 		scanf("%d",&vet[i]);
 	}
 	
 	for(i=0; i<TAM; i++){
 		j = i;
-		if(vet[i] == 0){
-			while(i<TAM-1){
-				vet[i] = vet[i+1];
-				i++;
+		if(vet[j] == 0){
+			while(j<TAM-1){
+				vet[j] = vet[j+1];
+				j++;
 			}
-			vet[i]=0;
+			vet[j]=0;
 		}
-		i = j;
 	}
 	
+	printf("\nVetor Organizado\n");
 	for(i=0; i<TAM; i++){
-		printf("Vetor Organizado - %d� valor: %d\n",i+1,vet[i]);
+		printf("%do Valor: %d\n",i+1,vet[i]);
 	}
 	
 	return 0;
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
-
-
-
