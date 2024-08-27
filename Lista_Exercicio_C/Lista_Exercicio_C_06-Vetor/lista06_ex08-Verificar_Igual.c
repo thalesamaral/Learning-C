@@ -1,9 +1,9 @@
 //  Síntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "15/12/2021"
+//  Data....: "27/08/2024"
 /*	Objetivo:
 8. Faça um programa em C que leia um vetor de 20 posições, verifique se existem valores 
-iguais dentro dele e os escreva na tela
+iguais dentro dele e os escreva na tela.
 */
 //  Entrada.: um vetor de int.
 //  Saida...: imprime valores iguais.
@@ -13,7 +13,7 @@ iguais dentro dele e os escreva na tela
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	int i=0, j=0, vet[TAM], flag=0, valorIgual;
+	int i, j, vet[TAM], flag, flagJaRepetido;
 	
 //Instruções	
 	printf("\nVetor\n");
@@ -22,18 +22,27 @@ int main(void){
 		scanf("%d",&vet[i]);
 	}
 	
-	for(i=0; i<TAM; i++){
-		for(j=i+1; j<TAM; j++){
+	for(i=0; i<TAM-1; i++){
+		flagJaRepetido = 0;
+
+		for(j=0; j<i; j++){
 			if(vet[i] == vet[j]){
-				//valorIgual = vet[i];
-				printf("\n%do Valor: %d",i+1, vet[i]);
-				printf("\n%do Valor: %d\n",j+1, vet[j]);
-				flag=1;
+				flagJaRepetido = 1;
 				break;
 			}
 		}
+
+		if(!flagJaRepetido){
+			for(j=i+1; j<TAM; j++){
+				if(vet[i] == vet[j]){
+					printf("\nValor repetido: %d",vet[i]);
+					flag = 1;
+					break;
+				}
+			}
+		}
 	}
-	
+
 	if(!flag){
 		printf("\nNao tem repetidos!\n");
 	}
