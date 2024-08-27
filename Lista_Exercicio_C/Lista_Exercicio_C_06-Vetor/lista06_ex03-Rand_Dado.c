@@ -1,6 +1,6 @@
 //  Síntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "14/12/2021"
+//  Data....: "27/08/2024"
 /*	Objetivo:
 3. Tentando descobrir se um dado era viciado, um honesto dono de cassino o lançou 100 vezes. 
 Você deve apresentar o número de ocorrências de cada face, ou seja, em quantos dos 
@@ -13,7 +13,6 @@ saber qual função faz isto em C e como utilizá-la.
 #include<stdio.h>
 #include<stdlib.h> //necessário p/ as funções rand() e srand()
 #include<time.h> //necessário p/ função time()
-#include<windows.h> //necessário p/ função Sleep()
 
 #define TAM 10
 
