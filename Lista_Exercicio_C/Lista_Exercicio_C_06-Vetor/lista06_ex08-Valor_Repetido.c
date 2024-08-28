@@ -13,7 +13,7 @@ iguais dentro dele e os escreva na tela.
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	int i, j, vet[TAM], flag, flagJaRepetido;
+	int i, j, vet[TAM], flagTemRepetido, flagJaRepetiu;
 	
 //Instruções	
 	printf("\nVetor\n");
@@ -23,27 +23,34 @@ int main(void){
 	}
 	
 	for(i=0; i<TAM-1; i++){
-		flagJaRepetido = 0;
+		flagJaRepetiu = 0;
 
+		/*
+		Verifica todas as posições de J até o I atual
+		Caso tenha algum repetido, quer dizer que já foi imprimido.
+		*/
 		for(j=0; j<i; j++){
 			if(vet[i] == vet[j]){
-				flagJaRepetido = 1;
+				flagJaRepetiu = 1;
+				flagTemRepetido = 1;
 				break;
 			}
 		}
 
-		if(!flagJaRepetido){
+		/*
+		Verifica o I atual com todas as posições de J que começa em i+1
+		*/
+		if(!flagJaRepetiu){
 			for(j=i+1; j<TAM; j++){
 				if(vet[i] == vet[j]){
 					printf("\nValor repetido: %d",vet[i]);
-					flag = 1;
 					break;
 				}
 			}
 		}
 	}
 
-	if(!flag){
+	if(!flagTemRepetido){
 		printf("\nNao tem repetidos!\n");
 	}
 		
