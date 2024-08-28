@@ -10,7 +10,6 @@ vetor. Por fim, apresente os elementos apenas do terceiro vetor.
 //  Entrada.: Dois vetores de int.
 //  Saida...: Soma dois vetores e armazena o resultado em um terceito vetor.
 #include<stdio.h>
-#include<stdlib.h>
 #define TAM 3
 
 //*** BLOCO PRINCIPAL *****************************************************

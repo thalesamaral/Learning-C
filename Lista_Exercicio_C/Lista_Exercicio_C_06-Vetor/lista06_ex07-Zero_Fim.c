@@ -9,7 +9,6 @@ alterar a ordem deles, para o início do vetor, deixando os zeros no final do ve
 //  Entrada.: Um vetor de int.
 //  Saida...: realocar os valores zero para o final da lista.
 #include<stdio.h>
-#include<stdlib.h>
 #define TAM 3
 
 //*** BLOCO PRINCIPAL *****************************************************

@@ -10,7 +10,6 @@ vetores pares e ímpares estejam com zero.
 //  Entrada.: Tres vetores: Original, pares impares.
 //  Saida...: Separar pares e impares.
 #include<stdio.h>
-#include<stdlib.h>
 #define TAM 4
 
 //*** BLOCO PRINCIPAL *****************************************************
