@@ -17,6 +17,7 @@ int main(void){
     //char str2[TAM];
     char str1[] = "banana";
     char str2[] = "bola";
+    char str3[TAM];
 
 //Instruções
   //Limpa o Buffer
@@ -30,16 +31,19 @@ int main(void){
   //scanf("%s", str1);
   
   //Lê a String - Limpa as casas não utilizadas
-  //printf("Digite outro texto: ");
-  //scanf("%s", str2);
-  //fgets(str2, 255, stdin);
-  //str2[strlen(str2)-1] = '\0';
+  printf("Digite o texto 3: ");
+  //scanf("%s", str3); //Verifica uma palavra
+  ///*
+  fgets(str3, 255, stdin); //Verifica + de uma palavra
+  str3[strlen(str3)-1] = '\0';
+  //*/
   
   //Imprime a variável na tela
   BARRA_SIMPLES
   puts("Imprime a variavel na tela"); //pula linha
   printf("str1: %s\n", str1);  //puts(str1);
   printf("str2: %s\n", str2);
+  printf("str2: %s\n", str3);
 
   //Retorna o tamanho da string
   BARRA_SIMPLES
@@ -47,6 +51,7 @@ int main(void){
   puts("strlen(str)........:");
   printf("str1: %lu\n", strlen(str1));
   printf("str2: %lu\n", strlen(str2));
+  printf("str3: %lu\n", strlen(str3));
 
   /*
   Retorna o valor da comparação das duas strings. Zero se forem iguais,
@@ -66,8 +71,8 @@ int main(void){
   //Copia a segunda string para a primeira
   BARRA_SIMPLES
   printf("Copia a segunda string para a primeira\n");
-  printf("strcpy(str1, str2).:\n");
-  strcpy(str1, "Nova string");
+  printf("strcpy(str1, str3).:\n");
+  strcpy(str1, str3);
   printf("str1: %s\n",str1);
 
   return 0;
