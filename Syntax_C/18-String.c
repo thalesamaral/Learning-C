@@ -26,17 +26,13 @@ int main(void){
   puts("Ola mundo!");
   
   //Lê a String
-  BARRA_SIMPLES
-  //printf("Digite um texto: ");
-  //scanf("%s", str1);
-  
-  //Lê a String - Limpa as casas não utilizadas
-  printf("Digite o texto 3: ");
   //scanf("%s", str3); //Verifica uma palavra
-  ///*
-  fgets(str3, 255, stdin); //Verifica + de uma palavra
+  
+  //Lê a String & Limpa as casas não utilizadas
+  BARRA_SIMPLES
+  printf("Digite o texto 3: ");
+  fgets(str3, TAM, stdin); //Verifica + de uma palavra
   str3[strlen(str3)-1] = '\0';
-  //*/
   
   //Imprime a variável na tela
   BARRA_SIMPLES
