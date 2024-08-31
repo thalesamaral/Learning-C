@@ -12,14 +12,14 @@ José Pereira Silva = JPS.
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	char texto[TAM], iniciais[TAM];
+	char texto[] = "Thales Amaral Lima", iniciais[TAM];
 	int i, j=0, tamanhoTexto;
 
 //Instruções
 	printf("Digite Nome completo: ");
-	fgets(texto, TAM, stdin);
+	//fgets(texto, TAM, stdin);
 	tamanhoTexto = strlen(texto);
-	texto[tamanhoTexto-1] = '\0'; //Ignora as casas não utilizadas
+	//texto[tamanhoTexto] = '\0'; //Ignora as casas não utilizadas
 	puts(texto);
 	
 	for(i=0; i<tamanhoTexto; i++){
@@ -32,8 +32,8 @@ int main(void){
 		}
 	}
 
-	printf("\nIniciais do Nome completo\n");
-	printf("%s ",iniciais); //puts(iniciais);
+	printf("\nIniciais do Nome completo: ");
+	printf("%s\n",iniciais); //puts(iniciais);
 	
 	return 0;
 }
