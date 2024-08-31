@@ -54,7 +54,7 @@ int main(void){
 	case 2:
 		txtFinal[j++] = texto[0];
 		txtFinal[j++] = '.';
-		txtFinal[j++] = ' ';
+		txtFinal[j++] = '\0';
 	break;
 	default:
 		txtFinal[j++] = texto[0];
