@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "18/12/2021"
+//  Data....: "31/08/2024"
 /*	Objetivo:
 2. Faça um programa em C que receba uma senha e verifique se está correta. A senha correta 
 deve ser “pipoca”.

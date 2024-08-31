@@ -18,7 +18,6 @@ int main(void){
 //Instruções
 	//setbuf(stdin, 0); fflush(stdin);
 	printf("Digite um texto: ");
-	//scanf("%s",text);
 	fgets(texto, TAM, stdin);
 	texto[strlen(texto)-1] = '\0'; //Limpa as casas não utilizadas
 	puts(texto);

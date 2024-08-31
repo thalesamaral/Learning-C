@@ -1,27 +1,32 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "18/12/2021"
-/*	Objetivo: receba 2 textos, concatene-os e apresente o texto concatenado. Exemplo: 
-primeiro = "Bom dia, " e segundo = "mo�ada!", ent�o concatenado = "Bom dia, mo�ada!".*/
-//  Entrada.:
-//  Sa�da...:
+/*	Objetivo:
+3. Faça um programa em C que receba 2 textos, concatene-os e apresente o texto concatenado.
+Exemplo: primeiro = "Bom dia, " e segundo = "moçada!", então concatenado = "Bom dia, moçada!".
+*/
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #define TAM 15
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	char text1[TAM], text2[TAM];
+	char texto1[TAM], texto2[TAM];
 
 //Instruções
-	printf("Digite uma palavra: ");
-	gets(text1);
-	printf("Digite a segunda..: ");
-	gets(text2);
+	printf("Digite o texto 1: ");
+	fgets(texto1, TAM, stdin);
+	texto1[strlen(texto1)-1] = '\0'; //Limpa as casas não utilizadas
+	puts(texto1);
 	
-	printf("%s",strcat(text1, text2));
+	printf("Digite o texto 2: ");
+	fgets(texto2, TAM, stdin);
+	texto2[strlen(texto2)-1] = '\0'; //Limpa as casas não utilizadas
+	puts(texto2);
+	
+	puts("\nConcatenacao");
+	printf("%s",strcat(texto1, texto2));
 	
 	return 0;
 }
