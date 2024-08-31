@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "18/12/2021"
+//  Data....: "31/08/2024"
 /*	Objetivo:
 3. Faça um programa em C que receba 2 textos, concatene-os e apresente o texto concatenado.
 Exemplo: primeiro = "Bom dia, " e segundo = "moçada!", então concatenado = "Bom dia, moçada!".
@@ -19,7 +19,7 @@ int main(void){
 	fgets(texto1, TAM, stdin);
 	texto1[strlen(texto1)-1] = '\0'; //Limpa as casas não utilizadas
 	puts(texto1);
-	
+
 	printf("Digite o texto 2: ");
 	fgets(texto2, TAM, stdin);
 	texto2[strlen(texto2)-1] = '\0'; //Limpa as casas não utilizadas
