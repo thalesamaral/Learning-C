@@ -13,41 +13,65 @@ as iniciais deste nome. Exemplo: José Pereira Silva = Silva, J. P.
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	char texto[] = "José Pereira Silva", iniciais[TAM], txtFinal[TAM];
-	int i, j=0, tamanhoTexto;
+	char texto[] = "ab cd ef", txtFinal[TAM];
+	int i, j, posUltimoNome, tamanhoTexto, qtdPalavra=0;
 
 //Instruções
 	printf("Digite Nome completo: ");
-	fgets(texto, TAM, stdin);
+	//fgets(texto, TAM, stdin);
 	tamanhoTexto = strlen(texto);
-	texto[tamanhoTexto-1] = '\0'; //Ignora as casas não utilizadas
+	//texto[tamanhoTexto-1] = '\0'; //Ignora as casas não utilizadas
+	printf("\n%d\n",tamanhoTexto);
 	puts(texto);
-	
-	/*
+
+	// #Quantidade de palavras
 	for(i=0; i<tamanhoTexto; i++){
-		if(i == 0){
-			iniciais[j++] = texto[i];
-		}else{
-			if((texto[i] == ' ') && (texto[i+1] != '\0')){
-				iniciais[j++] = texto[i+1];
-			}
+		if((texto[i] == ' ') && (texto[i+1] != '\0')){
+			qtdPalavra++;
+		}else if(texto[i+1] == '\0'){
+			qtdPalavra++;
 		}
 	}
-	*/
-
+	printf("\nQuantidade de palavras: %d\n",qtdPalavra);
+	
 	for(i=tamanhoTexto; i>=0; i--){
-
-		if(i == 0){
-			iniciais[j++] = texto[i];
-		}else{
-			if((texto[i] == ' ') && (texto[i+1] != '\0')){
-				iniciais[j++] = texto[i+1];
+		if(texto[i] == ' '){
+			j=0;
+			posUltimoNome = i+1;
+			for(posUltimoNome; i < tamanhoTexto; i++){
+				txtFinal[j++] = texto[i];
 			}
+			txtFinal[j++] = ',';
+			txtFinal[j++] = ' ';
+			break;
 		}
 	}
+	
+	switch(qtdPalavra){
+	case 1:
+		puts(texto);
+	break;
+	case 2:
+		txtFinal[j++] = texto[0];
+		txtFinal[j] = '.';
+	break;
+	default:
+		txtFinal[j++] = texto[0];
+		txtFinal[j++] = '.';
+		txtFinal[j++] = ' ';
+		for(i=0; i<tamanhoTexto; i++){
+			if(texto[i] == ' ' && i+1 != posUltimoNome){
+				txtFinal[j++] = texto[i+1];
+				txtFinal[j++] = '.';
+				txtFinal[j++] = ' ';
+			}
+		}
+	break;
+	}
+
 
 	printf("\nIniciais do Nome completo\n");
-	printf("%s ",iniciais); //puts(iniciais);
+	printf("%s ",txtFinal); //puts(iniciais);
 	
 	return 0;
 }
