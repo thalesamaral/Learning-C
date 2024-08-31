@@ -13,16 +13,16 @@ as iniciais deste nome. Exemplo: José Pereira Silva = Silva, J. P.
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	char texto[] = "ab cd ef", txtFinal[TAM];
+	char texto[] = "Thales Amaral Lima", txtFinal[TAM];
 	int i, j, posUltimoNome, tamanhoTexto, qtdPalavra=0;
 
 //Instruções
 	printf("Digite Nome completo: ");
 	//fgets(texto, TAM, stdin);
-	tamanhoTexto = strlen(texto);
 	//texto[tamanhoTexto-1] = '\0'; //Ignora as casas não utilizadas
-	printf("\n%d\n",tamanhoTexto);
 	puts(texto);
+	tamanhoTexto = strlen(texto);
+	//printf("tamanhoTexto %d\n",tamanhoTexto);
 
 	// #Quantidade de palavras
 	for(i=0; i<tamanhoTexto; i++){
@@ -32,13 +32,13 @@ int main(void){
 			qtdPalavra++;
 		}
 	}
-	printf("\nQuantidade de palavras: %d\n",qtdPalavra);
+	//printf("\nQuantidade de palavras: %d\n",qtdPalavra);
 	
 	for(i=tamanhoTexto; i>=0; i--){
 		if(texto[i] == ' '){
 			j=0;
 			posUltimoNome = i+1;
-			for(posUltimoNome; i < tamanhoTexto; i++){
+			for(i += 1; i < tamanhoTexto; i++){
 				txtFinal[j++] = texto[i];
 			}
 			txtFinal[j++] = ',';
@@ -53,7 +53,8 @@ int main(void){
 	break;
 	case 2:
 		txtFinal[j++] = texto[0];
-		txtFinal[j] = '.';
+		txtFinal[j++] = '.';
+		txtFinal[j++] = ' ';
 	break;
 	default:
 		txtFinal[j++] = texto[0];
@@ -69,9 +70,11 @@ int main(void){
 	break;
 	}
 
+	txtFinal[j-1] = '\0'; //Ignora as casas não utilizadas
 
-	printf("\nIniciais do Nome completo\n");
-	printf("%s ",txtFinal); //puts(iniciais);
+	printf("\nReferencia do Nome completo: ");
+	printf("%s\n",txtFinal);
+	//printf("\ntxtFinal %d\n",strlen(txtFinal));
 	
 	return 0;
 }
