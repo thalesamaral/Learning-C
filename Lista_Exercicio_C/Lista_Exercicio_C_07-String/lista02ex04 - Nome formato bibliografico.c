@@ -1,8 +1,8 @@
 // Sintese
 // Objetivo: 
-/* Faça um programa em C que receba um nome completo do usuário e apresente este nome no formato para
-referencial bibliográfico (Sobrenome + virgula + iniciais do nome + ponto) as iniciais deste nome. Exemplo:
-José Pereira Silva = Silva, J. P. */
+/* Faï¿½a um programa em C que receba um nome completo do usuï¿½rio e apresente este nome no formato para
+referencial bibliogrï¿½fico (Sobrenome + virgula + iniciais do nome + ponto) as iniciais deste nome. Exemplo:
+Josï¿½ Pereira Silva = Silva, J. P. */
 // Autor: Thales Amaral Lima
 // Data: 18/08/2020
 #include <stdio.h>
