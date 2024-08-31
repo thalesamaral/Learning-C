@@ -13,11 +13,11 @@ consoantes e conte a quantidade de palavras.
 int main(void){
 //Declarações
 	char text[TAM];
-	int i;
 	
 //Instruções
 	printf("Digite um texto: ");
-	gets(text);
+	scanf("%s",text);
+	//gets(text);
 	
 	printf("Quantidade de caractertes: %d",strlen(text));
 	
