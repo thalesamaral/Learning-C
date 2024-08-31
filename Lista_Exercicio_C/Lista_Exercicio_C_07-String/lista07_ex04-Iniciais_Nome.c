@@ -13,15 +13,16 @@ José Pereira Silva = JPS.
 int main(void){
 //Declarações
 	char texto[TAM], iniciais[TAM];
-	int i, j=0;
+	int i, j=0, tamanhoTexto;
 
 //Instruções
 	printf("Digite Nome completo: ");
 	fgets(texto, TAM, stdin);
-	texto[strlen(texto)-1] = '\0'; //Ignora as casas não utilizadas
+	tamanhoTexto = strlen(texto);
+	texto[tamanhoTexto-1] = '\0'; //Ignora as casas não utilizadas
 	puts(texto);
 	
-	for(i=0; i<strlen(texto); i++){
+	for(i=0; i<tamanhoTexto; i++){
 		if(i == 0){
 			iniciais[j++] = texto[i];
 		}else{
@@ -32,15 +33,7 @@ int main(void){
 	}
 
 	printf("\nIniciais do Nome completo\n");
-	for(i=0; i<strlen(iniciais); i++){
-		printf("%c",iniciais[i]);
-		
-	}
-	
-	//printf("%s ",iniciais);
-		
-	//printf("Iniciais do Nome completo:");
-	//puts(iniciais);
+	printf("%s ",iniciais); //puts(iniciais);
 	
 	return 0;
 }
