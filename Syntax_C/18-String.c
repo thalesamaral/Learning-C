@@ -1,39 +1,75 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>//gets, puts, strlen, strcpy, strcmp, strcat.
-/*strlen(str1).......: Retorna o tamanho da string
-  strcpy(str1, str2).: Copia a segunda string para a primeira
-  strcmp(str1, str2).: Retorna o valor da compara��o das duas strings. Zero se forem iguais, maior que zero 
-  	quando a primeira � maior que a segunda e menor que zero quando a primeira � menor que a segunda.
-  strcat(str1, str2).: Concatena a primeira string com a segunda*/
+/*
+strlen(str1).......: Retorna o tamanho da string
+strcpy(str1, str2).: Copia a segunda string para a primeira
+strcmp(str1, str2).: Retorna o valor da comparação das duas strings. Zero se forem iguais, maior que zero 
+quando a primeira é maior que a segunda e menor que zero quando a primeira é menor que a segunda.
+strcat(str1, str2).: Concatena a primeira string com a segunda
+*/
+#include <stdio.h>  //fgets, puts
+#include <string.h> //strlen, strcpy, strcmp, strcat
+#define TAM 25
+#define BARRA_SIMPLES printf("--------------------------------------------------\n");
 
-//Fun��o principal do programa
-void main(){
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//Declarações
+    //char str1[TAM];
+    //char str2[TAM];
+    char str1[] = "banana";
+    char str2[] = "bola";
 
-    //Vari�veis
-    char palavra[10];
+//Instruções
+  //Limpa o Buffer
+  setbuf(stdin, 0); //fflush(stdin);
 
-    //Instru��o
-    printf("Digite uma palavra: "); //puts("Digite uma palavra: ");
+  puts("Ola mundo!");
+  
+  //Lê a String
+  BARRA_SIMPLES
+  //printf("Digite um texto: ");
+  //scanf("%s", str1);
+  
+  //Lê a String - Limpa as casas não utilizadas
+  //printf("Digite outro texto: ");
+  //scanf("%s", str2);
+  //fgets(str2, 255, stdin);
+  //str2[strlen(str2)-1] = '\0';
+  
+  //Imprime a variável na tela
+  BARRA_SIMPLES
+  puts("Imprime a variavel na tela"); //pula linha
+  printf("str1: %s\n", str1);  //puts(str1);
+  printf("str2: %s\n", str2);
 
-    //Limpa o Buffer
-    setbuf(stdin, 0); //fflush(stdin);
+  //Retorna o tamanho da string
+  BARRA_SIMPLES
+  puts("Retorna o tamanho da string");
+  puts("strlen(str)........:");
+  printf("str1: %lu\n", strlen(str1));
+  printf("str2: %lu\n", strlen(str2));
 
-    //L� a String
-    fgets(palavra, 255, stdin);//gets(palavra); //scanf("%s", palavra);
-    
-    //Imprime a vari�vel na tela
-    printf("%s", palavra);//puts(palavra);
+  /*
+  Retorna o valor da comparação das duas strings. Zero se forem iguais,
+  maior que zero quando a primeira é maior que a segunda e menor que zero quando a primeira é menor que a segunda.
+  */
+  BARRA_SIMPLES
+  printf("Retorna o valor da comparacao das duas strings\n");
+  printf("strcmp(str1, str2).: %d\n", strcmp(str1, str2));
 
-    //Limpa as casas n�o utilizadas
-    palavra[strlen(palavra)-1] = '\0';//strlen(palavra);
+  //Concatena a primeira string com a segunda
+  BARRA_SIMPLES
+  printf("Concatena a primeira string com a segunda\n");
+  printf("strcat(str1, str2).:\n");
+  strcat(str1, str2);
+  printf("str1: %s\n",str1);
 
-    //Imprime na tela
-    printf("%s", palavra);
-    
+  //Copia a segunda string para a primeira
+  BARRA_SIMPLES
+  printf("Copia a segunda string para a primeira\n");
+  printf("strcpy(str1, str2).:\n");
+  strcpy(str1, "Nova string");
+  printf("str1: %s\n",str1);
 
-    //Pausa o programa ap�s executar
-    system("pause");
-
+  return 0;
 }
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************
