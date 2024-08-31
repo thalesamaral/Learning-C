@@ -7,7 +7,7 @@ consoantes e conte a quantidade de palavras.
 */
 #include <stdio.h>
 #include <string.h>
-#define TAM 4
+#define TAM 25
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
@@ -22,6 +22,7 @@ int main(void){
 	fgets(text, 255, stdin);
 	text[strlen(text)-1] = '\0';
 	puts(text);
+
 	// #1
 	tamanhoTexto = strlen(text);
 	printf("Quantidade de caractertes: %d",tamanhoTexto);
