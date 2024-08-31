@@ -7,7 +7,7 @@ deve ser “pipoca”.
 */
 #include <stdio.h>
 #include <string.h>
-#define TAM 25
+#define TAM 8 // 7 == pipoca + /0
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
@@ -17,13 +17,12 @@ int main(void){
 //Instruções
 	printf("Digite um texto: ");
 	fgets(texto, TAM, stdin);
-	texto[strlen(texto)-1] = '\0';
 	puts(texto);
 	
 	if(strcmp(texto, "pipoca") == 0){
-		printf("Senha correta");
+		printf("\nSenha correta\n");
 	}else{
-		printf("Senha incorreta");
+		printf("\nSenha incorreta\n");
 	}
 	
 	return 0;
