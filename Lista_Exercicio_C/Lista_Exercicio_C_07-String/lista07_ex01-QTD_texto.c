@@ -12,24 +12,24 @@ consoantes e conte a quantidade de palavras.
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	char text[TAM];
+	char texto[TAM];
 	int i, tamanhoTexto, qtdConsoante=0, qtdPalavra=0;
 	
 //Instruções
 	//setbuf(stdin, 0); fflush(stdin);
 	printf("Digite um texto: ");
 	//scanf("%s",text);
-	fgets(text, 255, stdin);
-	text[strlen(text)-1] = '\0';
-	puts(text);
+	fgets(texto, TAM, stdin);
+	texto[strlen(texto)-1] = '\0';
+	puts(texto);
 
 	// #1
-	tamanhoTexto = strlen(text);
+	tamanhoTexto = strlen(texto);
 	printf("Quantidade de caractertes: %d",tamanhoTexto);
 
 	// #2
 	for(i=0; i<tamanhoTexto; i++){
-		if((text[i]!='a') && (text[i]!='e') && (text[i]!='i') && (text[i]!='o') && (text[i]!='u') && (text[i]!=' ')){
+		if((texto[i]!='a') && (texto[i]!='e') && (texto[i]!='i') && (texto[i]!='o') && (texto[i]!='u') && (texto[i]!=' ')){
 			qtdConsoante++;
 		}
 	}
@@ -37,9 +37,9 @@ int main(void){
 
 	// #3
 	for(i=0; i<tamanhoTexto; i++){
-		if((text[i] == ' ') && (text[i+1] != '\0')){
+		if((texto[i] == ' ') && (texto[i+1] != '\0')){
 			qtdPalavra++;
-		}else if(text[i+1] == '\0'){
+		}else if(texto[i+1] == '\0'){
 			qtdPalavra++;
 		}
 	}

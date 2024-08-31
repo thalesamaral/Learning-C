@@ -1,26 +1,30 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "18/12/2021"
-/*	Objetivo: receba uma senha e verifique se est� correta. A senha correta deve ser �pipoca�.*/
-//  Entrada.:
-//  Sa�da...:
+/*	Objetivo:
+2. Faça um programa em C que receba uma senha e verifique se está correta. A senha correta 
+deve ser “pipoca”.
+*/
 #include <stdio.h>
 #include <string.h>
-#define TAM 15
+#define TAM 25
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	char text[TAM];
+	char texto[TAM];
 	
 //Instruções
 	printf("Digite um texto: ");
-	gets(text);
+	fgets(texto, TAM, stdin);
+	texto[strlen(texto)-1] = '\0';
+	puts(texto);
 	
-	if(strcmp(text, "pipoca")== 0)
+	if(strcmp(texto, "pipoca") == 0){
 		printf("Senha correta");
-	else
+	}else{
 		printf("Senha incorreta");
+	}
 	
 	return 0;
 }
