@@ -1,25 +1,21 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "18/12/2021"
-/*	Objetivo: receba um nome completo e apresente as iniciais. Exemplo: José Pereira Silva = JPS.*/
+/*	Objetivo: receba um nome completo e apresente as iniciais. Exemplo: Josï¿½ Pereira Silva = JPS.*/
 //  Entrada.:
-//  Saída...:
+//  Saï¿½da...:
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#include <locale.h>
 #define TAM 15
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//DeclaraÃ§Ãµes
 	char text[TAM], iniciais[TAM];
 	int i, j=0;
 
-//Instruções
-	//printf("");
-	//scanf("%",&);
-
+//InstruÃ§Ãµes
 	printf("Digite Nome completo: ");
 	gets(text);
 	
@@ -45,5 +41,4 @@ setlocale(LC_ALL,"Portuguese");
 	
 	return 0;
 }
-// FIM ***************************************************************************************************************************
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************

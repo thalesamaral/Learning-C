@@ -3,30 +3,23 @@
 //  Data....: "19/12/2021"
 /*	Objetivo: */
 //  Entrada.:
-//  Saída...:
+//  Saï¿½da...:
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define TAM 15
 
-#include <locale.h>
-#define TAM 50
-//Protótipo de funções
-void criptografar(char[], int);
-
+//*** BLOCO PRINCIPAL *****************************************************
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	char text[TAM];
 	int codigo;
 
-//Instruções
-	//printf("");
-	//scanf("%",&);
-
+//InstruÃ§Ãµes
 	printf("Digite um texto: ");
 	gets(text);
 	
-	printf("\nCódigo para criptografia: ");
+	printf("\nCï¿½digo para criptografia: ");
 	scanf("%d",&codigo);
 	
 	criptografar(text, codigo);

@@ -1,35 +1,31 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "19/12/2021"
-/*	Objetivo: receba um texto criptografado pelo método da questão anterior, 
+/*	Objetivo: receba um texto criptografado pelo mï¿½todo da questï¿½o anterior, 
 decriptografe e apresente o texto.*/
 //  Entrada.: texto
-//  Saída...: texto descriptografado
+//  Saï¿½da...: texto descriptografado
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define TAM 15
 
-#include <locale.h>
-#define TAM 60
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//DeclaraÃ§Ãµes
 	char text[TAM];
 	int i, posiMinusc=0, posiMaiusc=0, codigo;
 
-//Instruções
-	//printf("");
-	//scanf("%",&);
-
+//InstruÃ§Ãµes
 	printf("Digite um texto: ");
 	gets(text);
 	
-	printf("\nCódigo para decriptografia: ");
+	printf("\nCï¿½digo para decriptografia: ");
 	scanf("%d",&codigo);
 	
 	for(i=0; i<strlen(text); i++){
 		if((text[i] >= 97 && text[i] <= 122)||(text[i] >= 65 && text[i] <= 90)){
-			if(text[i] >= 97 && text[i] <= 122){//MÍNUSCULO: 97(a) - 122(z)
+			if(text[i] >= 97 && text[i] <= 122){//Mï¿½NUSCULO: 97(a) - 122(z)
 				posiMinusc = text[i] - 96;
 				if(posiMinusc > codigo)
 					text[i] = (96-codigo) + posiMinusc;
@@ -49,15 +45,9 @@ setlocale(LC_ALL,"Portuguese");
 	printf("\n====================\n");
 	printf("Descriptografando...\n");
 	printf("====================\n\n");
-	
-	//system("pause");
-	
+		
 	printf("\nResultado: %s",text);
 	
 	return 0;
 }
-
-
-
-// FIM *************************************************************************************************************************
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************

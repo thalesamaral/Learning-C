@@ -1,26 +1,22 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "18/12/2021"
-/*	Objetivo: receba um texto, converta todos os caracteres deste para maiúsculo e 
-apresente o texto após convertido. Observação: o código ASCII da letra ‘a’ (minúsculo) é 97 e o código da 
-letra ‘A’ (maiúsculo) é 65, o código da letra ‘z’ é 122 e o código da letra ‘Z’ é 90. Não utilize nenhuma função 
-além das vistas na aula.*/
+/*	Objetivo: receba um texto, converta todos os caracteres deste para maiï¿½sculo e 
+apresente o texto apï¿½s convertido. Observaï¿½ï¿½o: o cï¿½digo ASCII da letra ï¿½aï¿½ (minï¿½sculo) ï¿½ 97 e o cï¿½digo da 
+letra ï¿½Aï¿½ (maiï¿½sculo) ï¿½ 65, o cï¿½digo da letra ï¿½zï¿½ ï¿½ 122 e o cï¿½digo da letra ï¿½Zï¿½ ï¿½ 90. Nï¿½o utilize nenhuma funï¿½ï¿½o 
+alï¿½m das vistas na aula.*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#include <locale.h>
 #define TAM 15
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//DeclaraÃ§Ãµes
 	char text[TAM];
 	int i, posiMinusc;
 
-//Instruções
-	//printf("");
-	//scanf("%",&);
-
+//InstruÃ§Ãµes
 	printf("Digite um texto: ");
 	scanf("%s",&text);
 	

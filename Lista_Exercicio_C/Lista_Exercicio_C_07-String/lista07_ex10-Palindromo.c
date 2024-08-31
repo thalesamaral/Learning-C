@@ -1,36 +1,32 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "19/12/2021"
-/*	Objetivo: receba um texto e informe se é ou não palíndromo. Despreze espaços em branco e considere que não 
-será utilizado pontuação ou acentuação. Exemplos: aba, radar, reter, rever, rir, rotor, ovo, arara, “anotaram a 
-data da maratona”.*/
+/*	Objetivo: receba um texto e informe se ï¿½ ou nï¿½o palï¿½ndromo. Despreze espaï¿½os em branco e considere que nï¿½o 
+serï¿½ utilizado pontuaï¿½ï¿½o ou acentuaï¿½ï¿½o. Exemplos: aba, radar, reter, rever, rir, rotor, ovo, arara, ï¿½anotaram a 
+data da maratonaï¿½.*/
 //  Entrada.:
-//  Saída...:
+//  Saï¿½da...:
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#include <locale.h>
 #define TAM 30
 
+//Prototipo de funcoes
 int palindromo(char[]);
 
+//*** BLOCO PRINCIPAL *****************************************************
 int main(void){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//DeclaraÃ§Ãµes
 	char text[TAM];
 
-//Instruções
-	//printf("");
-	//scanf("%",&);
-
+//InstruÃ§Ãµes
 	printf("Digite um texto: ");
 	gets(text);
 	
 	if(palindromo(text))
-		printf("\nPalíndromo");
+		printf("\nPalï¿½ndromo");
 	else
-		printf("\nNão Palíndromo");
+		printf("\nNï¿½o Palï¿½ndromo");
 	
 	return 0;
 }
@@ -54,6 +50,4 @@ int palindromo(char str[]){
 	}
 	return 1;
 }
-
-// FIM *************************************************************************************************************************
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************

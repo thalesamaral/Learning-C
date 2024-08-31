@@ -2,24 +2,20 @@
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "18/12/2021"
 /*	Objetivo: receba 2 textos, concatene-os e apresente o texto concatenado. Exemplo: 
-primeiro = "Bom dia, " e segundo = "moçada!", então concatenado = "Bom dia, moçada!".*/
+primeiro = "Bom dia, " e segundo = "moï¿½ada!", entï¿½o concatenado = "Bom dia, moï¿½ada!".*/
 //  Entrada.:
-//  Saída...:
+//  Saï¿½da...:
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#include <locale.h>
 #define TAM 15
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//DeclaraÃ§Ãµes
 	char text1[TAM], text2[TAM];
 
-//Instruções
-	//printf("");
-	//scanf("%",&);
-
+//InstruÃ§Ãµes
 	printf("Digite uma palavra: ");
 	gets(text1);
 	printf("Digite a segunda..: ");
@@ -29,8 +25,4 @@ setlocale(LC_ALL,"Portuguese");
 	
 	return 0;
 }
-
-
-
-// FIM ***************************************************************************************************************************
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************

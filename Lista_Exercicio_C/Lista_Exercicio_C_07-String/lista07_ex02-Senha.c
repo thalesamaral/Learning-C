@@ -1,36 +1,27 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "19/12/2021"
-/*	Objetivo: */
+//  Data....: "18/12/2021"
+/*	Objetivo: receba uma senha e verifique se est� correta. A senha correta deve ser �pipoca�.*/
 //  Entrada.:
 //  Sa�da...:
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#define TAM 50
-
-void maiusculo(char[]);
+#define TAM 15
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
 	char text[TAM];
-
+	
 //Instruções
 	printf("Digite um texto: ");
 	gets(text);
 	
-	maiusculo(text);
-	printf("Texto em maiusculo: %s",text);
+	if(strcmp(text, "pipoca")== 0)
+		printf("Senha correta");
+	else
+		printf("Senha incorreta");
 	
 	return 0;
-}
-
-void maiusculo(char str[]){
-	int i;
-	
-	for(i=0; i<strlen(str); i++)
-		if((str[i] >= 'a') && (str[i] <= 'z'))
-			str[i] -= 32;
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************

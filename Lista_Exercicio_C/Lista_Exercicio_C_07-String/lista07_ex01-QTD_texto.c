@@ -1,36 +1,26 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "19/12/2021"
-/*	Objetivo: */
-//  Entrada.:
-//  Sa�da...:
+//  Data....: "31/08/2024"
+/*	Objetivo:
+1. Faça um programa em C que receba um texto e informe a quantidade de caracteres, 
+consoantes e conte a quantidade de palavras.
+*/
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-#define TAM 50
-
-void maiusculo(char[]);
+#define TAM 15
 
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
 	char text[TAM];
-
+	int i;
+	
 //Instruções
 	printf("Digite um texto: ");
 	gets(text);
 	
-	maiusculo(text);
-	printf("Texto em maiusculo: %s",text);
+	printf("Quantidade de caractertes: %d",strlen(text));
 	
 	return 0;
-}
-
-void maiusculo(char str[]){
-	int i;
-	
-	for(i=0; i<strlen(str); i++)
-		if((str[i] >= 'a') && (str[i] <= 'z'))
-			str[i] -= 32;
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************

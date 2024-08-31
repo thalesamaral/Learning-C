@@ -1,34 +1,30 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "19/12/2021"
-/*	Objetivo: receba um texto, criptografe com a código de César considerando o código 3 e apresente o texto criptografado. */
+/*	Objetivo: receba um texto, criptografe com a cï¿½digo de Cï¿½sar considerando o cï¿½digo 3 e apresente o texto criptografado. */
 //  Entrada.: texto
-//  Saída...: texto criptografado
+//  Saï¿½da...: texto criptografado
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#define TAM 15
 
-#include <locale.h>
-#define TAM 60
-main(){
-setlocale(LC_ALL,"Portuguese");
-//Variaveis
+//*** BLOCO PRINCIPAL *****************************************************
+int main(void){
+//DeclaraÃ§Ãµes
 	char text[TAM];
 	int i, posiMinusc=0, posiMaiusc=0, codigo;
 
-//Instruções
-	//printf("");
-	//scanf("%",&);
-
+//InstruÃ§Ãµes
 	printf("Digite um texto: ");
 	gets(text);
 	
-	printf("\nCódigo para criptografia: ");
+	printf("\nCï¿½digo para criptografia: ");
 	scanf("%d",&codigo);
 	
 	for(i=0; i<strlen(text); i++){
 		if((text[i] >= 97 && text[i] <= 122)||(text[i] >= 65 && text[i] <= 90)){
-			if(text[i] >= 97 && text[i] <= 122){//MÍNUSCULO: 97(a) - 122(z)
+			if(text[i] >= 97 && text[i] <= 122){//Mï¿½NUSCULO: 97(a) - 122(z)
 				posiMinusc = text[i] - 96;
 				if(26%posiMaiusc >= codigo)
 					text[i] = (96+codigo) + posiMinusc;
@@ -48,15 +44,9 @@ setlocale(LC_ALL,"Portuguese");
 	printf("\n====================\n");
 	printf("\nCriptografando...\n");
 	printf("====================\n\n");
-	
-	//system("pause");
-	
+		
 	printf("\nResultado: %s",text);
 	
 	return 0;
 }
-
-
-
-// FIM *************************************************************************************************************************
-
+//*** FIM DO BLOCO PRINCIPAL **********************************************
