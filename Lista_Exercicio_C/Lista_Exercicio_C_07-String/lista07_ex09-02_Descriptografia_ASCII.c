@@ -25,28 +25,20 @@ int main(void){
 	
 	printf("\nCodigo para descriptografia: ");
 	scanf("%d",&codigo);
-
+	
 	descriptografar(texto, codigo);
 	printf("\nTexto Descriptografado: %s",texto);
 	
 	return 0;
 }
-//*** FIM DO BLOCO PRINCIPAL **********************************************
 
-void descriptografar(char str[], int cod) {
-    for(size_t i = 0; i < strlen(str); i++){
-        char ch = str[i];
-        
-        // Verifica se o caractere é uma letra maiúscula
-        if (ch >= 'A' && ch <= 'Z') {
-            ch = (ch - 'A' - cod + 26) % 26 + 'A';
-        }
-        // Verifica se o caractere é uma letra minúscula (caso o texto possa ter letras minúsculas)
-        else if(ch >= 'a' && ch <= 'z'){
-            ch = (ch - 'a' - cod + 26) % 26 + 'a';
-        }
-        
-        // Atribui o caractere criptografado de volta à string
-        str[i] = ch;
-    }
+void descriptografar(char str[], int cod){
+	size_t i;
+	
+	for(i=0; i<strlen(str); i++){
+		if((str[i] >= 32) && (str[i] <= 126)){
+			str[i] = (((str[i]-32)-cod) % 95) + 32;
+		}
+	}
 }
+//*** FIM DO BLOCO PRINCIPAL **********************************************
