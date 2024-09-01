@@ -28,7 +28,7 @@ int main(void){
 //Instruções
 	printf("Digite um texto: ");
 	//fgets(texto, TAM, stdin);
-	//texto[strlen(texto)-1] = '\0'; //Ignora as casas não utilizadas
+	texto[strlen(texto)-1] = '\0'; //Ignora as casas não utilizadas
 	
 	printf("\nCodigo para criptografia: ");
 	scanf("%d",&codigo);
