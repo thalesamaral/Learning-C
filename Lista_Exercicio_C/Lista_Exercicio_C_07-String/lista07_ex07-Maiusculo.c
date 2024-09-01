@@ -11,6 +11,7 @@ da letra ‘Z’ é 90. Não utilize nenhuma função além das vistas na aula.
 #include <string.h>
 #define TAM 255
 
+//Protótipo de Função
 void maiusculo(char[]);
 
 //*** BLOCO PRINCIPAL *****************************************************
@@ -30,7 +31,7 @@ int main(void){
 }
 
 void maiusculo(char str[]){
-	int i;
+	size_t i;
 	
 	for(i=0; i<strlen(str); i++){
 		if((str[i] >= 'a') && (str[i] <= 'z')){
@@ -39,6 +40,7 @@ void maiusculo(char str[]){
 	}
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
+
 /*
 No código C, a variável texto[] é passada para a função maiusculo() como um argumento, e qualquer modificação feita na variável dentro da função maiusculo() é refletida no bloco principal (main). Isso ocorre porque, em C, arrays são passados para funções como ponteiros.
 
