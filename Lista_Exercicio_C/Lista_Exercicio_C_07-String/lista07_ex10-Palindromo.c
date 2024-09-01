@@ -1,4 +1,4 @@
-//  Sintese
+//  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "19/12/2021"
 /*	Objetivo:
