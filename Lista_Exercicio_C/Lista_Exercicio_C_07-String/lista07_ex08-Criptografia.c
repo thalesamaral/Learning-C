@@ -1,6 +1,6 @@
 //  Sintese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "19/12/2021"
+//  Data....: "01/09/2024"
 /*	Objetivo:
 8. Criptografia é um processo de codificação de dados que visa a privacidade de acesso às 
 informações e o Código de César é uma das mais conhecidas e simples técnicas para isso. 
@@ -22,19 +22,19 @@ void criptografar(char[], int);
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	char texto[] = "LIGEIRA";
-	int codigo = 3;
+	char texto[] = "A LIGEIRA RAPOSA MARROM SALTOU SOBRE O CACHORRO CANSADO";
+	int codigo;
 
 //Instruções
-	/*printf("Digite um texto: ");
-	fgets(texto, TAM, stdin);
-	texto[strlen(texto)-1] = '\0'; //Ignora as casas não utilizadas
+	printf("Digite um texto: ");
+	//fgets(texto, TAM, stdin);
+	//texto[strlen(texto)-1] = '\0'; //Ignora as casas não utilizadas
 	
 	printf("\nCodigo para criptografia: ");
-	scanf("%d",&codigo);*/
+	scanf("%d",&codigo);
 	
 	criptografar(texto, codigo);
-	printf("Texto criptografado: \n%s",texto);
+	printf("\nTexto criptografado: %s",texto);
 	
 	return 0;
 }
