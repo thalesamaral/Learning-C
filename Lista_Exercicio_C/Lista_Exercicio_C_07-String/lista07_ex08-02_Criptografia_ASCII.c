@@ -5,12 +5,8 @@
 8. Criptografia é um processo de codificação de dados que visa a privacidade de acesso às 
 informações e o Código de César é uma das mais conhecidas e simples técnicas para isso. 
 Neste método são feitas substituições onde cada letra do texto é substituída por outra abaixo 
-dela um número de vezes. Por exemplo, se for código três “A” é substituído por “D”, “B” por 
-“E”, “Z” por “C”, etc.
-Faça um programa em C que receba um texto, criptografe com a código de César 
-considerando o código 3 e apresente o texto criptografado. Exemplo: Texto = “A LIGEIRA 
-RAPOSA MARROM SALTOU SOBRE O CACHORRO CANSADO”. Criptografado = “D 
-OLJHLUD UDSRVD PDUURP VDOWRX VREUH R FDFKRUUR FDQVDGR”.
+dela um número de vezes.
+Por exemplo, se for código 3 "A" é substituído por "D", "z" por “}”, "space" por "#", etc.
 */
 #include <stdio.h>
 #include <string.h>
@@ -22,12 +18,12 @@ void criptografar(char[], int);
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	char texto[] = "A LIGEIRA RAPOSA MARROM SALTOU SOBRE O CACHORRO CANSADO";
+	char texto[TAM];
 	int codigo;
 
 //Instruções
 	printf("Digite um texto: ");
-	//fgets(texto, TAM, stdin);
+	fgets(texto, TAM, stdin);
 	texto[strlen(texto)-1] = '\0'; //Ignora as casas não utilizadas
 	
 	printf("\nCodigo para criptografia: ");

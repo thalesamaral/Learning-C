@@ -25,7 +25,7 @@ int main(void){
 	// #1
 	tamanhoTexto = strlen(texto);
 	printf("Quantidade de caractertes: %d",tamanhoTexto);
-
+	
 	// #2
 	for(i=0; i<tamanhoTexto; i++){
 		if((texto[i]!='a') && (texto[i]!='e') && (texto[i]!='i') && (texto[i]!='o') && (texto[i]!='u') && (texto[i]!=' ')){
