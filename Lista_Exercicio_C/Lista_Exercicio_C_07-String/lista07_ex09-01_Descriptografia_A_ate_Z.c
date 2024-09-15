@@ -4,8 +4,8 @@
 /*	Objetivo:
 9. Faça um programa em C que receba um texto criptografado pelo método da questão anterior, 
 descriptografe e apresente o texto.
-Ex.: Kjqne fvzjqj vzj ywfsxkjwj t vzj xfgj j fuwjsij t vzj jsxnsf. Htwf Htwfqnsf.
-Código 5
+Criptografado = "D OLJHLUD UDSRVD PDUURP VDOWRX VREUH R FDFKRUUR FDQVDGR"
+Criptografado = "Kjqne fvzjqj vzj ywfsxkjwj t vzj xfgj j fuwjsij t vzj jsxnsf. Htwf Htwfqnsf." Código 5
 */
 #include <stdio.h>
 #include <string.h>
