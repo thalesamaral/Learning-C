@@ -1,9 +1,11 @@
 //  Síntese
 //  Nome....: "Thales Amaral Lima"
-//  Data....: "01/09/2024"
+//  Data....: "15/09/2024"
 /*	Objetivo:
 9. Faça um programa em C que receba um texto criptografado pelo método da questão anterior, 
 descriptografe e apresente o texto.
+Ex.: Kjqne fvzjqj vzj ywfsxkjwj t vzj xfgj j fuwjsij t vzj jsxnsf. Htwf Htwfqnsf.
+Código 5
 */
 #include <stdio.h>
 #include <string.h>
@@ -15,19 +17,29 @@ void descriptografar(char[], int);
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	char texto[TAM];
+	char texto[TAM], textoAux[TAM];
 	int codigo;
 
 //Instruções
 	printf("Digite um texto: ");
 	fgets(texto, TAM, stdin);
 	texto[strlen(texto)-1] = '\0'; //Ignora as casas não utilizadas
-	
-	printf("\nCodigo para descriptografia: ");
-	scanf("%d",&codigo);
 
-	descriptografar(texto, codigo);
-	printf("\nTexto Descriptografado: %s",texto);
+	strcpy(textoAux, texto);
+
+	do{
+        printf("\nDigite - Codigo para descriptografia ou 0 para Sair");
+        printf("\nResposta: ");
+        scanf("%d",&codigo);
+
+        if(codigo){
+            descriptografar(texto, codigo);
+            printf("Texto Descriptografado: %s\n",texto);
+            strcpy(texto, textoAux);
+        }else{
+            printf("\n *** Fim do programa *** \n");
+        }
+    }while(codigo);
 	
 	return 0;
 }
