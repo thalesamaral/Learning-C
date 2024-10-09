@@ -1,4 +1,4 @@
-//  Sintese
+//  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "30/11/2021"
 /*  Objetivo:
@@ -10,15 +10,15 @@ Considere a fórmula: Farenheit = ((Celsius * 9) / 5) + 32.
 
 int main(void){
 //Declarações
-	float celsius;
-	float farenheit;
+    float celsius;
+    float farenheit;
 //Instruções
-	printf("Transformar Celsius em Farenheit\n\n");
-	printf("Digite os graus Celsius: ");
-	scanf("%f", &celsius);
-	
-	farenheit = ((celsius*9)/5) + 32;
-	printf("\nCelsius: %.1f = Farenheit: %.1f",celsius, farenheit);
-	return 0;
+    printf("Transformar Celsius em Farenheit\n\n");
+    printf("Digite os graus Celsius: ");
+    scanf("%f", &celsius);
+    
+    farenheit = ((celsius*9)/5) + 32;
+    printf("\nCelsius: %.1f = Farenheit: %.1f",celsius, farenheit);
+    return 0;
 }
 

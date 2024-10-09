@@ -1,7 +1,7 @@
-//  Sintese
+//  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "03/08/2024"
-/*	Objetivo:
+/*  Objetivo:
 Faça um programa em C que receba o valor total de uma compra e o valor pago pelo cliente, calcule e imprima o valor do troco.
 */
 #include<stdio.h>
@@ -9,18 +9,17 @@ Faça um programa em C que receba o valor total de uma compra e o valor pago pel
 
 int main(void){
 //Declarações
-	float valorCompra, valorPago, troco;
-	
+    float valorCompra, valorPago, troco;
+    
 //Instruções
-	printf("Digite o valor da compra: ");
-	scanf("%f",&valorCompra);
-	
-	printf("Digite o valor de pagamento: ");
-	scanf("%f",&valorPago);
+    printf("Digite o valor da compra: ");
+    scanf("%f",&valorCompra);
+    
+    printf("Digite o valor de pagamento: ");
+    scanf("%f",&valorPago);
 
-	troco = valorPago - valorCompra;
-	printf("\nTroco de %.2f reais", troco);
+    troco = valorPago - valorCompra;
+    printf("\nTroco de %.2f reais", troco);
 
-	return 0;
+    return 0;
 }
-

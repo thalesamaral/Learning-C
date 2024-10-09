@@ -1,7 +1,7 @@
-//  Sintese
+//  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "30/11/2021"
-/*	Objetivo:
+/*  Objetivo:
 Faça um programa em C que receba o valor do quilo de um restaurante e o peso do prato do cliente, calcule e imprima o valor a ser pago.
 */
 #include<stdio.h>
@@ -9,20 +9,19 @@ Faça um programa em C que receba o valor do quilo de um restaurante e o peso do
 
 int main(void){
 //Declarações
-	float valorKg;
-	float quilo;
-	float valorFinal;
-	
+    float valorKg;
+    float quilo;
+    float valorFinal;
+    
 //Instruções
-	printf("\nKg do prato: ");
-	scanf("%f", &quilo);
-	
-	printf("Valor de 1Kg em reais: ");
-	scanf("%f", &valorKg);
-	
-	valorFinal = valorKg * quilo;
-	printf("\nValor a ser pago %.2f reais",valorFinal);
-	
-	return 0;
+    printf("\nKg do prato: ");
+    scanf("%f", &quilo);
+    
+    printf("Valor de 1Kg em reais: ");
+    scanf("%f", &valorKg);
+    
+    valorFinal = valorKg * quilo;
+    printf("\nValor a ser pago %.2f reais",valorFinal);
+    
+    return 0;
 }
-

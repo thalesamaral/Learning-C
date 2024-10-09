@@ -1,7 +1,7 @@
-//  Sintese
+//  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "01/12/2021"
-/*	Objetivo:
+/*  Objetivo:
 Faça um programa em C que receba o preço do litro da gasolina e o valor que o motorista 
 deseja abastecer, calcule e imprima a quantidade de litros correspondente a este valor.
 */
@@ -10,18 +10,17 @@ deseja abastecer, calcule e imprima a quantidade de litros correspondente a este
 
 int main(void){
 //Declarações
-	float precoLgasolina;
-	float pagamento;
-	
+    float precoLgasolina;
+    float pagamento;
+    
 //Instruções
-	printf("\nPreco do litro da gasolina: ");
-	scanf("%f",&precoLgasolina);
-	
-	printf("Quantos reais deseja pagar: ");
-	scanf("%f",&pagamento);
-	
-	printf("Voce recebera %.4f Litros\n",pagamento/precoLgasolina);
-	
-	return 0;
+    printf("\nPreco do litro da gasolina: ");
+    scanf("%f",&precoLgasolina);
+    
+    printf("Quantos reais deseja pagar: ");
+    scanf("%f",&pagamento);
+    
+    printf("Voce recebera %.4f Litros\n",pagamento/precoLgasolina);
+    
+    return 0;
 }
-
