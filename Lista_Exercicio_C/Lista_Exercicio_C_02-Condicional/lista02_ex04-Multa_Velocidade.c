@@ -1,7 +1,7 @@
-//  Sintese
+//  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "03/08/2024"
-/*	Objetivo:
+/*  Objetivo:
 Faça um programa em C que receba a velocidade de um motorista na rodovia.
 Caso esta velocidade seja maior que 80 quilômetros por hora, 
 imprimir que O USUÁRIO ULTRAPASSOU A VELOCIDADE MÁXIMA E SERÁ MULTADO, 
@@ -13,18 +13,17 @@ caso contrário (velocidade igual ou menor que 80 km/h) imprimir que O USUÁRIO 
 
 int main(void){
 //Declarações
-	float speed;
-	
+    float speed;
+    
 //Instruções
-	printf("Informe a velocidade do motorista em Km/h: ");
-	scanf("%f",&speed);
-	printf("\n%.2f Km/h\n",speed);
-	
-	if(speed > Limite_Rodovia)
-		printf("O USUARIO ULTRAPASSOU A VELOCIDADE MAXIMA E SERA MULTADO");
-	else
-		printf("O USUARIO ESTA DENTRO DO LIMITE MAXIMO DE VELOCIDADE.");
-	
-	return 0;
+    printf("Informe a velocidade do motorista em Km/h: ");
+    scanf("%f",&speed);
+    printf("\n%.2f Km/h\n",speed);
+    
+    if(speed > Limite_Rodovia)
+        printf("O USUARIO ULTRAPASSOU A VELOCIDADE MAXIMA E SERA MULTADO");
+    else
+        printf("O USUARIO ESTA DENTRO DO LIMITE MAXIMO DE VELOCIDADE.");
+    
+    return 0;
 }
-

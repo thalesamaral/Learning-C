@@ -1,4 +1,4 @@
-//  Sintese
+//  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "02/12/2021"
 /*  Objetivo:
@@ -17,32 +17,31 @@ de trabalho do empregado, e a mensagem “Requerer aposentadoria” ou “Não r
 
 int main(void){
 //Declarações
-	int age;
-	int workTime;
-	int birthYear;
-	int firstYearJob;
-	
+    int age;
+    int workTime;
+    int birthYear;
+    int firstYearJob;
+    
 //Instruções
-	printf("Ano de Nascimento: ");
-	scanf("%d",&birthYear);
-	age = anoAtual - birthYear;
-	
-	printf("Ano de ingresso ao trabalho: ");
-	scanf("%d",&firstYearJob);
-	workTime = anoAtual - firstYearJob;
-	
-	printf("\nIdade: %d",age);
-	printf("\nTempo de Trabalho: %d\n",workTime);
-	
-	if(
-		(age >= 65)
-		|| (workTime >= 30)
-		|| ((age >= 60) && (workTime >= 25))
-	)
-		printf("Requerer aposentadoria");
-	else
-		printf("Nao requerer");
-	
-	return 0;
+    printf("Ano de Nascimento: ");
+    scanf("%d",&birthYear);
+    age = anoAtual - birthYear;
+    
+    printf("Ano de ingresso ao trabalho: ");
+    scanf("%d",&firstYearJob);
+    workTime = anoAtual - firstYearJob;
+    
+    printf("\nIdade: %d",age);
+    printf("\nTempo de Trabalho: %d\n",workTime);
+    
+    if(
+        (age >= 65)
+        || (workTime >= 30)
+        || ((age >= 60) && (workTime >= 25))
+    )
+        printf("Requerer aposentadoria");
+    else
+        printf("Nao requerer");
+    
+    return 0;
 }
-
