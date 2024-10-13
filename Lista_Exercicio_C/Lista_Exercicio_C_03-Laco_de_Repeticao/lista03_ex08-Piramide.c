@@ -1,7 +1,7 @@
-//  Sintese
+//  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "11/08/2024"
-/*	Objetivo:
+/*  Objetivo:
 Aproximadamente 3650 a.C., na época conhecida como das pirâmides, o faraó Djoser da III 
 dinastia construiu a primeira grande pirâmide de Sakkara no mesmo local onde se encontram 
 as construções funerárias mais antigas do Egito, em frente à Mênfis. Na ocasião, seu 
@@ -18,29 +18,28 @@ quando pronta.
 
 int main(void){
 //Declarações
-	int blocoBase, blocoTotal=0, i=0;
-	float blocoPeso;
-	
+    int blocoBase, blocoTotal=0, i=0;
+    float blocoPeso;
+    
 //Instruções
-	printf("Quantidade de blocos na base da piramide: ");
-	scanf("%d",&blocoBase);
-	
-	while(blocoBase > 0){
-		i++;
-		printf("%do Camada - Blocos: %d\n",i, blocoBase);
-		blocoTotal += blocoBase;
-		blocoBase -= 1;
-	}
+    printf("Quantidade de blocos na base da piramide: ");
+    scanf("%d",&blocoBase);
+    
+    while(blocoBase > 0){
+        i++;
+        printf("%do Camada - Blocos: %d\n",i, blocoBase);
+        blocoTotal += blocoBase;
+        blocoBase -= 1;
+    }
 
-	if(i){
-		printf("\nQual o peso do bloco em Kg: ");
-		scanf("%f",&blocoPeso);
-		
-		printf("\nO peso total da Piramide: %.2f Kg\n",blocoPeso * blocoTotal);
-	}else{
-		printf("\nQuantidade de bloco invalida!\n");
-	}
+    if(i){
+        printf("\nQual o peso do bloco em Kg: ");
+        scanf("%f",&blocoPeso);
+        
+        printf("\nO peso total da Piramide: %.2f Kg\n",blocoPeso * blocoTotal);
+    }else{
+        printf("\nQuantidade de bloco invalida!\n");
+    }
 
-	return 0;
+    return 0;
 }
-
