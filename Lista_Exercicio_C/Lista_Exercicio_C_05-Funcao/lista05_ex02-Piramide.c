@@ -1,7 +1,7 @@
 //  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "19/08/2024"
-/*	Objetivo:
+/*  Objetivo:
 2. Considerando que aproximadamente 3650 a.C., na época conhecida como das pirâmides, 
 o faraó Djoser da III dinastia construiu a primeira grande pirâmide de Sakkara no mesmo 
 local onde se encontram as construções funerárias mais antigas do Egito, em frente à Mênfis. 
@@ -25,66 +25,66 @@ float loop_float_positivo();
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	int qtdBlocoBase, qtdBlocoTotal;
-	float blocoPeso;
-	
+    int qtdBlocoBase, qtdBlocoTotal;
+    float blocoPeso;
+    
 //Instruções
-	
-	printf("Quantidade de blocos da camada base da piramide\n");
-	qtdBlocoBase = loop_int_positivo();
-	
-	qtdBlocoTotal = calcula_quantidade_blocos(qtdBlocoBase);
-	
-	if(qtdBlocoTotal){
-		printf("\nPeso do bloco em Kg\n");
-		blocoPeso = loop_float_positivo();
-		
-		printf("\nPeso total da Piramide. %.2f Kg\n",blocoPeso * qtdBlocoTotal);
-	}else{
-		printf("\nQuantidade de bloco invalida!\n");
-	}
+    
+    printf("Quantidade de blocos da camada base da piramide\n");
+    qtdBlocoBase = loop_int_positivo();
+    
+    qtdBlocoTotal = calcula_quantidade_blocos(qtdBlocoBase);
+    
+    if(qtdBlocoTotal){
+        printf("\nPeso do bloco em Kg\n");
+        blocoPeso = loop_float_positivo();
+        
+        printf("\nPeso total da Piramide. %.2f Kg\n",blocoPeso * qtdBlocoTotal);
+    }else{
+        printf("\nQuantidade de bloco invalida!\n");
+    }
 
-	return 0;
+    return 0;
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
 
 int loop_int_positivo(){
-	int valor;
-	
-	do{
-		printf("Insira o valor: ");
-		scanf("%d",&valor);
-		if(valor <= 0){
-			printf("Valor invalido, apenas numeros positivos\n\n");
-		}
-	}while(valor <= 0);
-	
-	return valor;
+    int valor;
+    
+    do{
+        printf("Insira o valor: ");
+        scanf("%d",&valor);
+        if(valor <= 0){
+            printf("Valor invalido, apenas numeros positivos\n\n");
+        }
+    }while(valor <= 0);
+    
+    return valor;
 }
 
 float loop_float_positivo(){
-	float valor;
-	
-	do{
-		printf("Insira o valor: ");
-		scanf("%f",&valor);
-		if(valor <= 0){
-			printf("Valor invalido, apenas numeros positivos\n\n");
-		}
-	}while(valor <= 0);
-	
-	return valor;
+    float valor;
+    
+    do{
+        printf("Insira o valor: ");
+        scanf("%f",&valor);
+        if(valor <= 0){
+            printf("Valor invalido, apenas numeros positivos\n\n");
+        }
+    }while(valor <= 0);
+    
+    return valor;
 }
 
 int calcula_quantidade_blocos(int qtdInicial){
-	int i=0, qtdTotal=0;
-	
-	while(qtdInicial > 0){
-		i++;
-		printf("%do Camada - Blocos: %d\n",i, qtdInicial);
-		qtdTotal += qtdInicial;
-		qtdInicial -= 1;
-	}
+    int i=0, qtdTotal=0;
+    
+    while(qtdInicial > 0){
+        i++;
+        printf("%do Camada - Blocos: %d\n",i, qtdInicial);
+        qtdTotal += qtdInicial;
+        qtdInicial -= 1;
+    }
 
-	return qtdTotal;
+    return qtdTotal;
 }
