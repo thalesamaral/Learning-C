@@ -1,7 +1,7 @@
 //  Síntese
 //  Nome....: "Thales Amaral Lima"
 //  Data....: "19/12/2021"
-/*	Objetivo:
+/*  Objetivo:
 10.Palíndromo é uma palavra, frase ou qualquer outra sequência de unidades (como uma 
 cadeia de DNA; Enzima de restrição) que tenha a propriedade de poder ser lida tanto da 
 direita para a esquerda como da esquerda para a direita. Num palíndromo, normalmente são 
@@ -21,43 +21,43 @@ int palindromo(char[]);
 //*** BLOCO PRINCIPAL *****************************************************
 int main(void){
 //Declarações
-	char texto[] = "anotaram a data da maratona";
+    char texto[] = "anotaram a data da maratona";
 
 //Instruções
-	/*
-	printf("Digite um texto: ");
-	fgets(texto, TAM, stdin);
-	texto[strlen(texto)-1] = '\0'; //Ignora as casas não utilizadas
-	*/
-	
-	if(palindromo(texto)){
-		printf("\nPalindromo\n");
-	}else{
-		printf("\nNao Palindromo\n");
-	}
-	
-	return 0;
+    /*
+    printf("Digite um texto: ");
+    fgets(texto, TAM, stdin);
+    texto[strlen(texto)-1] = '\0'; //Ignora as casas não utilizadas
+    */
+    
+    if(palindromo(texto)){
+        printf("\nPalindromo\n");
+    }else{
+        printf("\nNao Palindromo\n");
+    }
+    
+    return 0;
 }
 
 int palindromo(char str[]){
-	int ini, fim=strlen(str)-1;
+    int ini, fim=strlen(str)-1;
 
-	while(ini < fim){
-		if(str[ini] == ' '){
-			ini++;
-		}else{
-			if(str[fim] == ' ')
-				fim--;
-			else{
-				if(str[ini] != str[fim]){
-					return 0;
-				}
-				ini++;
-				fim--;
-			}
-		}
-	}
-	
-	return 1;
+    while(ini < fim){
+        if(str[ini] == ' '){
+            ini++;
+        }else{
+            if(str[fim] == ' ')
+                fim--;
+            else{
+                if(str[ini] != str[fim]){
+                    return 0;
+                }
+                ini++;
+                fim--;
+            }
+        }
+    }
+    
+    return 1;
 }
 //*** FIM DO BLOCO PRINCIPAL **********************************************
